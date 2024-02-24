@@ -1,8 +1,10 @@
 import QtQuick
+import QtQuick.Controls
 
-Window {
-    width: 640
-    height: 480
+ApplicationWindow {
+    id: applicationWindow
+    width: 430
+    height: 932
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Tarnów 1000 lat nowoczesności")
 }
