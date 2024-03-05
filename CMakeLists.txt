@@ -16,6 +16,17 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
     VERSION 1.0
     QML_FILES Main.qml
+    QML_FILES screens/HomeScreen.qml
+    QML_FILES screens/LocationsScreen.qml
+    QML_FILES screens/MapScreen.qml
+    QML_FILES screens/RoutesScreen.qml
+    QML_FILES screens/SettingsScreen.qml
+    RESOURCES icons/HomeIcon.png
+    RESOURCES icons/LocationsIcon.png
+    RESOURCES icons/MapIcon.png
+    RESOURCES icons/RoutesIcon.png
+    RESOURCES icons/SettingsIcon.png
+
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
