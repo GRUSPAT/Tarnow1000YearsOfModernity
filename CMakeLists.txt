@@ -4,6 +4,8 @@ project(Tarnow1000YearsOfModernity VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup()
@@ -11,19 +13,41 @@ qt_standard_project_setup()
 qt_add_executable(appTarnow1000YearsOfModernity
     main.cpp
 )
+if(APPLE)
+    if(IOS)
+        #Added .xcassets with app icon and images for ios-release
+        set(asset_catalog_path "${CMAKE_CURRENT_SOURCE_DIR}/ios/Resources.xcassets")
+        target_sources(appTarnow1000YearsOfModernity PRIVATE "${asset_catalog_path}")
+        set_source_files_properties( ${asset_catalog_path} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources
+        )
+
+        set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
+            MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/ios/Info.cmake.ios.plist"
+            QT_IOS_LAUNCH_SCREEN "${CMAKE_CURRENT_SOURCE_DIR}/ios/LaunchScreen.storyboard"
+            XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME AppIcon
+        )
+else()
+    set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
+        MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.cmake.macos.plist"
+    )
+endif()
+endif()
 
 qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
     VERSION 1.0
     QML_FILES Main.qml
-    RESOURCES LaunchScreen.storyboard
+    RESOURCES Info.cmake.macos.plist
+    RESOURCES ios/Info.cmake.ios.plist ios/LaunchScreen.storyboard
 )
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
 set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appTarnow1000YearsOfModernity
+    #    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appTarnow1000YearsOfModernity
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
