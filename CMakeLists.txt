@@ -26,7 +26,7 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
     RESOURCES icons/MapIcon.png
     RESOURCES icons/RoutesIcon.png
     RESOURCES icons/SettingsIcon.png
-
+    RESOURCES LaunchScreen.storyboard
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -4,10 +4,10 @@ import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
 
 ApplicationWindow {
-    width: 640
-    height: 480
+    width: 430
+    height: 932
     visible: true
-    title: qsTr("Tarnow 1000 Years Of Modernity")
+    title: qsTr("Tarnów 1000 lat nowoczesności")
 
     RowLayout {
         anchors{
