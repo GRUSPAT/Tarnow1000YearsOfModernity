@@ -3,13 +3,15 @@ cmake_minimum_required(VERSION 3.16)
 project(Tarnow1000YearsOfModernity VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Svg)
 
 qt_standard_project_setup()
 
 qt_add_executable(appTarnow1000YearsOfModernity
     main.cpp
+    resources.qrc
 )
 if(APPLE)
     if(IOS)
@@ -36,14 +38,19 @@ endif()
 qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES
+        Main.qml
+        screens/HomeScreen.qml
+        screens/LocationsScreen.qml
+        screens/MapScreen.qml
+        screens/RoutesScreen.qml
+        screens/SettingsScreen.qml
 
-    RESOURCES Info.cmake.macos.plist
-    RESOURCES ios/Info.cmake.ios.plist ios/LaunchScreen.storyboard
-
-    RESOURCES icons/HomeIcon.png icons/LocationsIcon.png icons/MapIcon.png icons/RoutesIcon.png icons/SettingsIcon.png
-    QML_FILES screens/HomeScreen.qml screens/LocationsScreen.qml screens/MapScreen.qml screens/RoutesScreen.qml screens/SettingsScreen.qml
-
+    RESOURCES
+        Info.cmake.macos.plist
+        ios/Info.cmake.ios.plist
+        ios/LaunchScreen.storyboard
+        resources.qrc
 )
 
 
@@ -60,6 +67,7 @@ set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
 
 target_link_libraries(appTarnow1000YearsOfModernity
     PRIVATE Qt6::Quick
+    PRIVATE Qt6::Svg
 )
 
 include(GNUInstallDirs)
