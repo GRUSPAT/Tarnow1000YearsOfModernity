@@ -43,7 +43,6 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
 
     RESOURCES icons/HomeIcon.png icons/LocationsIcon.png icons/MapIcon.png icons/RoutesIcon.png icons/SettingsIcon.png
     QML_FILES screens/HomeScreen.qml screens/LocationsScreen.qml screens/MapScreen.qml screens/RoutesScreen.qml screens/SettingsScreen.qml
-
 )
 
 
