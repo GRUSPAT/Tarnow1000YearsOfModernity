@@ -12,38 +12,53 @@ ApplicationWindow {
 
     RowLayout {
         anchors{
-            left: parent.left
+            horizontalCenter: parent.hohorizontalCenter
             bottom: parent.bottom
-            right: parent.right
         }
-        layoutDirection: Qt.LeftToRight
-        spacing: 10
+        height: parent.height * 0.12
+        width: parent.width
 
         Item {
-            width: 8
+            width: 10
         }
-        ToolButton {
-            icon.source: "icons/HomeIcon.png"
+
+        Button {
+            flat: true
+            icon.source: "qrc:/icons/HomeIcon.svg"
+            width: parent.width * 0.2
+            height: parent.height
             onClicked: stackView.push("screens/HomeScreen.qml")
         }
 
-        ToolButton {
-            icon.source: "icons/LocationsIcon.png"
+        Button {
+            flat: true
+            icon.source: "qrc:/icons/LocationsIcon.svg"
+            width: parent.width * 0.2
+            height: parent.height
             onClicked: stackView.push("screens/LocationsScreen.qml")
         }
 
-        ToolButton {
-            icon.source: "icons/MapIcon.png"
+        Button {
+            flat: true
+            icon.source: "qrc:/icons/MapIcon.svg"
+            width: parent.width * 0.2
+            height: parent.height
             onClicked: stackView.push("screens/MapScreen.qml")
         }
 
-        ToolButton {
-            icon.source: "icons/RoutesIcon.png"
+        Button {
+            flat: true
+            icon.source: "qrc:/icons/RoutesIcon.svg"
+            width: parent.width * 0.2
+            height: parent.height
             onClicked: stackView.push("screens/RoutesScreen.qml")
         }
 
-        ToolButton {
-            icon.source: "icons/SettingsIcon.png"
+        Button {
+            flat: true
+            icon.source: "/icons/SettingsIcon.svg"
+            width: parent.width * 0.2
+            height: parent.height
             onClicked: stackView.push("screens/SettingsScreen.qml")
         }
     }
@@ -52,5 +67,15 @@ ApplicationWindow {
         id: stackView
         initialItem: "screens/HomeScreen.qml"
         anchors.fill: parent
+        pushEnter: Transition {
+            from: "fromState"
+            to: "toState"
+            enabled: false
+        }
+        pushExit: Transition {
+            from: "fromState"
+            to: "toState"
+            enabled: false
+        }
     }
 }
