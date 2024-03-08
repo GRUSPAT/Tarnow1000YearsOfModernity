@@ -1,11 +1,11 @@
-<!DOCTYPE RCC>
-<RCC version="1.0">
-    <qresource>
+<RCC>
+    <qresource prefix="/">
         <file>icons/HomeIcon.svg</file>
         <file>icons/LocationsIcon.svg</file>
         <file>icons/MapIcon.svg</file>
         <file>icons/RoutesIcon.svg</file>
         <file>icons/SettingsIcon.svg</file>
         <file>images/AppIcon.png</file>
+        <file>json/context.json</file>
     </qresource>
 </RCC>
