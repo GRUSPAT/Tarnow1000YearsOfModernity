@@ -37,7 +37,8 @@ endif()
 
 qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
-    VERSION 1.0
+    VERSION 1.0 
+
     QML_FILES
         Main.qml
         screens/HomeScreen.qml
@@ -51,6 +52,7 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
         ios/Info.cmake.ios.plist
         ios/LaunchScreen.storyboard
         resources.qrc
+
 )
 
 
