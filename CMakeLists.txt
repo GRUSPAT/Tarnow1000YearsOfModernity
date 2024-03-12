@@ -5,7 +5,7 @@ project(Tarnow1000YearsOfModernity VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg Location Positioning)
 
 qt_standard_project_setup()
 
@@ -71,6 +71,8 @@ target_link_libraries(appTarnow1000YearsOfModernity
     PRIVATE Qt6::Quick
     PRIVATE Qt6::Qml
     PRIVATE Qt6::Svg
+    PRIVATE Qt6::Location
+    PRIVATE Qt6::Positioning
 )
 
 include(GNUInstallDirs)

@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QVariant>
+#include <QGeoRoute>
 
 int main(int argc, char *argv[])
 {
