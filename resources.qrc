@@ -7,5 +7,6 @@
         <file>icons/SettingsIcon.svg</file>
         <file>images/AppIcon.png</file>
         <file>json/context.json</file>
+        <file>json/routes.json</file>
     </qresource>
 </RCC>

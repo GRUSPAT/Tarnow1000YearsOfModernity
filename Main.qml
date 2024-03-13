@@ -12,18 +12,28 @@ ApplicationWindow {
 
     Component.onCompleted: loadData()
 
-    property var jsonObject
+    property var jsonContext
+    property var jsonRoutes
 
     function loadData(){
         let xhr = new XMLHttpRequest();
+        let xhr2 = new XMLHttpRequest();
         xhr.open("GET", "qrc:/json/context.json");
+        xhr2.open("GET", "qrc:/json/routes.json");
         xhr.onreadystatechange = function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) {
                 return;
             }
-            jsonObject = JSON.parse(xhr.responseText);
+            jsonContext = JSON.parse(xhr.responseText);
+        }
+        xhr2.onreadystatechange = function() {
+            if (xhr2.readyState !== XMLHttpRequest.DONE) {
+                return;
+            }
+            jsonRoutes = JSON.parse(xhr2.responseText);
         }
         xhr.send();
+        xhr2.send();
     }
 
     Rectangle{

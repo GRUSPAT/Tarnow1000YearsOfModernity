@@ -1,0 +1,40 @@
+{
+    "routes_pl":
+    [
+        {
+            "id": 0,
+            "name": "Pomniki w Mościcach",
+            "location": "Mościce",
+            "size": 4,
+            "longitude": [["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"]],
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+        },
+        {
+            "id": 1,
+            "name": "Pomniki w Tarnowie",
+            "location": "Tarnów",
+            "size": 4,
+            "longitude": [["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"]],
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+        }
+    ],
+    "routes_en":
+    [
+        {
+            "id": 0,
+            "name": "Pomniki w Mościcach",
+            "location": "Mościce",
+            "size": 4,
+            "longitude": [["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"]],
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+        },
+        {
+            "id": 1,
+            "name": "Pomniki w Tarnowie",
+            "location": "Tarnów",
+            "size": 4,
+            "longitude": [["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"],["50.014753735200316, 20.921002035842427"]],
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+        }
+    ]
+}

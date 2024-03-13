@@ -71,7 +71,7 @@ Item {
         ListView {
             width: parent.width
             height: parent.height
-            model: rootWindow.jsonObject.context_pl
+            model: rootWindow.jsonContext.context_pl
             spacing: 10
 
             delegate:
