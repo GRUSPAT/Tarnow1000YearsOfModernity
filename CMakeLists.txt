@@ -13,8 +13,11 @@ qt_add_executable(appTarnow1000YearsOfModernity
     main.cpp
     resources.qrc
 )
+
 if(APPLE)
     if(IOS)
+        #Added name of app
+        set_target_properties(appTarnow1000YearsOfModernity PROPERTIES OUTPUT_NAME "Tarnów 1000")
         #Added .xcassets with app icon and images
         set(asset_catalog_path "${CMAKE_CURRENT_SOURCE_DIR}/ios/Resources.xcassets")
         target_sources(appTarnow1000YearsOfModernity PRIVATE "${asset_catalog_path}")
