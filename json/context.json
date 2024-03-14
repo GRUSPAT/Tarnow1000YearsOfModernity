@@ -6,18 +6,261 @@
             "name": "Budynek Dyrekcji Zakładów Azotowych w Tarnowie S.A.",
             "location": "Mościce",
             "address": "ul. Kwiatkowskiego 8",
-            "longitude": "50.014753735200316, 20.921002035842427",
+            "longitude": "50.0147018432549, 20.920893595991636",
             "photos": ["zdjecie1.jpg", "zdjecie2.jpg", "zdjecie3.jpg"],
-            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie bramy zakładowej. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadząca wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami osiedla pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, podobnie jak pałacyk dyrektora, odpowiada funkcji obiektu. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
         },
         {
             "id": 1,
-            "name": "Zabytek B",
-            "location": "Tarnów",
-            "address": "ul. Wałowa 17",
-            "longitude": "51.014753735200316, 22.921002035842427",
+            "name": "Portiernia Zakładów Azotowych w Tarnowie-Mościcach S.A.",
+            "location": "Mościce",
+            "address": "ul. Kwiatkowskiego 8",
+            "longitude": "50.0147018432549, 20.920893595991636",
             "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
-            "description": "To jest opis Zabytku B w Tarnowie."
+            "description": "Budynek portierni, usytuowany w bezpośrednim sąsiedztwie bramy, został wzniesiony jako jeden z pierwszych obiektów fabrycznych. Murowany, piętrowy budynek z tarczą zegarową w partii górnej, do dziś tylko nieznacznie zmienił swój wygląd. Nadal pełni funkcję zakładowej portierni i biura przepustek. Na jej tle wykonano wiele zdjęć pracowników i przedwojennych wycieczek wizytujących fabrykę. Od samego początku otwarcia fabryki, aż do października 1931 roku, funkcjonował także jako zakładowa kaplica. Nowa, drewniana, wolnostojąca kaplica powstała przy ulicy Jesionowej (obecnie ks. Indyka)."
+        },
+        {
+            "id": 2,
+            "name": "Restauracja Kasyno, dawne Kasyno Urzędnicze",
+            "location": "Mościce",
+            "address": "ul. Kwiatkowskiego 20",
+            "longitude": "50.01289475102858, 20.91757159731313",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Budynek tzw. Nowego Kasyna został wzniesiony na przełomie 1937/1938 roku, według projektu inż. Stefana Żeleńskiego z Warszawy. Swą formą architektoniczną nawiązuje do budynku Dyrekcji. Usytuowany centralnie, z reprezentacyjnym podjazdem i gazonem od frontu, wyznacza oś założenia, z dwoma bocznymi, piętrowymi budynkami ze spadzistymi dachami, pierwotnie pełniącymi funkcję hoteli dla kawalerów. Na parterze mieścił ogród zimowy, sale klubowe, jadalnia i bufet. Na I piętrze m.in. osobna jadalnia, pokoje klubowe i gabinety oraz bilard i bridż. Po II wojnie światowej pełnił m.in. funkcję zakładowego Domu Kultury i przychodni, osiedlowego przedszkola. Obecnie mieści restaurację. Mieścił się tu bardzo popularny państwowy zakład fryzjerski, miejsce towarzyskich spotkań, gry w szachy, warcaby, a także czytelni gazet. Budynek usytuowany został w otoczeniu zieleni, w strefie publicznej osiedla, zgodnie z koncepcją miasta-ogrodu, według której zaprojektowano międzywojenne Mościce. Od strony ogrodu znajduje się taras ze schodami, na którym w lecie koncertowała Orkiestra Dęta Państwowej Fabryki Związków Azotowych w Mościcach pod batutą Kazimierza Abratowskiego (1893 – 1974). W latach 50. XX wieku, na tyłach domu powstała niewielka muszla koncertowa, obecnie rozebrana."
+        },
+        {
+            "id": 3,
+            "name": "Dworek dwurodzinny",
+            "location": "Mościce",
+            "address": "ul. Topolowa 2",
+            "longitude": "50.01315581783689, 20.918799083344567",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dworek należy do grupy pierwszych 12 domów mieszkalnych, wzniesionych przez fabrykę, zaprojektowanych dla inżynierów, budowniczych P.F.Z.A. Murowany, stosunkowo niski, z ogrodem, utrzymany został w modnym na początku XX wieku stylu dworkowym. Posiada stromy dach i osiowo zaznaczony portyk kolumnowy. Mieszkanie zajmuje powierzchnię 248 m2 i standardowo posiada 5 pokoi, obszerną kuchnię ze służbówką i inne pomieszczenia pomocnicze. W późniejszych, realizowanych w ramach COP-u budynkach, wielkość zajmowanej powierzchni była stała i zależała od stanowiska zajmowanego w fabryce. Funkcje: reprezentacyjne (parter) i prywatne (piętro), tradycyjnie umieszczono na dwóch oddzielnych poziomach. Usytuowany wzdłuż ulicy, w sąsiedztwie parku i ogólnodostępnych terenów zielonych. Nieco dalej, wzdłuż drogi prowadzącej do kościoła, znajdują się dwie kamienne ławki. Nazwy ulic w Mościcach przyjęto od gatunków zasadzonych wzdłuż nich drzew."
+        },
+        {
+            "id": 4,
+            "name": "Dworek",
+            "location": "Mościce",
+            "address": "ul. Jarzębinowa 1",
+            "longitude": "50.01177523694808, 20.919755259603495",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Usytuowany jest u zbiegu ulic Jarzębinowej i Topolowej, pierwotnie w bezpośrednim sąsiedztwie domu dyrektora fabryki, symetryczny w stosunku do domu drugiego wicedyrektora (ulica Jarzębinowa 11). Jako inwestycja państwowa, w pełni sfinansowana przez fabrykę, posiada tradycyjne polskie formy (proporcje, układ przestrzenny, stromy dach, portyk kolumnowy, ganek) i historyzujące detale architektoniczne: uproszczone gzymsy, fryzy, głowice i kapitele. Jednopiętrowa wolnostojąca willa w ogrodzie, zajmuje powierzchnię 231 m2 i posiada 7 pokoi, kuchnię ze służbówką oraz pomieszczenia pomocnicze. Wielkość domu oraz jego usytuowanie na osiedlu podkreślały status zajmowanego w fabryce stanowiska i nie zależały od liczebności rodziny. W ogrodzie wybudowano wolnostojący murowany garaż oraz komórkę na opał i narzędzia ogrodnicze."
+        },
+        {
+            "id": 5,
+            "name": "Ławki przy ulicy Topolowej",
+            "location": "Mościce",
+            "address": "ul. Topolowa",
+            "longitude": "50.01088571579699, 20.91963200714813",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Po dwóch stronach ulicy Topolowej, naprzeciwko siebie, ustawione zostały dwie niemalże identyczne, masywne, kamienne - betonowe ławki (wys. 80 cm, szer. 95 cm, dł. 600 cm), znakomicie wpisujące się w otoczenie zielonych Mościc. Szeroka dwukierunkowa ulica prowadzi na tzw. „górkę”, do kościoła. Obok niej pierwotnie przebiegała linia kolejki wąskotorowej, idąca bezpośrednio do fabryki. Ich płynna linia, tworząca zaplecek i siedzisko, zwieńczona jest kamienną kulą. Warto zwrócić uwagę na wykute na nich napisy: na pierwszej, usytuowanej od strony Parku Kwiatkowskiego, znajduje się data powstania ławki P.F.Z.A. — 1929 rok. Pod nią widoczna jest linia, która oznaczała najwyższy poziom jaki osiągnęła woda w dniu 17 lipca 1934 roku, w czasie największej powodzi która nawiedziła Mościcew 1934 roku. Na drugiej ławce widoczny jest napis — skrót P.F.Z.A. (Państwowa Fabryka Związków Azotowych)."
+        },
+        {
+            "id": 6,
+            "name": "Kościół pw. Matki Bożej Królowej Polski w Mościcach",
+            "location": "Mościce",
+            "address": "ul. Zbylitowska 5",
+            "longitude": "50.009289134711274, 20.91975151837038",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W latach 30., w sprawie budowy tego kościoła, interweniowano u samego prezydenta Ignacego Mościckiego. Świątynia została wzniesiona dopiero w latach 1948-1956. Pod budowę wybrano teren „na górce”, w pobliżu parku, szkoły, przychodni i kasyna. Po odrzuceniu wielu projektów (m.in. Bohdana Pniewskiego, autor projektu Świątyni Opatrzności Bożej w Warszawie, Konstantego Jakimowicza, Czesława Boratyńskiego, Stefana Świszczowskiego), ostatecznie do realizacji wybrano projekt inżynierów Stanisława Gałęzowskiego i Władysława Pieńkowskiego. Potężna, kubistyczna bryła kościoła murowana z cegły i żelazobetonu, jest trójnawowa, przykryta kasetonowym stropem z drewnianą okładziną. Nad prezbiterium góruje kopuła z latarnią, nad fasadą zredukowana wieża. Kamienne figury, tworzące kompozycję rzeźbiarską Śluby Jana Kazimierza na dziedzińcu kościelnym, pochodzą z pierwotnego ołtarza. Nad główna absydą, od strony Zakładów Azotowych, umieszczono kapliczkę z figurą św. Józefa, patrona ludzi pracy."
+        },
+        {
+            "id": 7,
+            "name": "Pałacyk Kwiatkowskiego",
+            "location": "Mościce",
+            "address": "ul. Jarzębinowa 9",
+            "longitude": "50.01197292958892, 20.922081843107907",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Najokazalszy i najbardziej reprezentacyjny budynek osiedla przyfabrycznego, tzw. pałacyk Kwiatkowskiego, zwany również Dyrektorówką, usytuowany jest na wprost budynku Dyrekcji. Wybudowany dla inż. Tadeusza Zwisłockiego, pierwszego dyrektora fabryki, jako jeden z pierwszych budynków, w przeciągu niespełna jednego roku (1928). Zaprojektowany przez inż. Konrada Kłosa z Warszawy, pełnił funkcje mieszkalne i reprezentacyjne, rozlokowane na dwóch oddzielnych poziomach. W sąsiedztwie budynku znajdowały się: cieplarnia oraz budynek gospodarczy z pomieszczeniem służbowym. Sąsiaduje z parkiem Kwiatkowskiego, od ulicy odgrodzony bramą i budynkiem kordegardy. Willa została wzniesiona na planie prostokąta, z portykiem i gankiem. Modernistyczne, dwukondygnacyjne rozwiązanie budynku, zostało wzbogacone skromnym, neoklasycystycznym detalem architektonicznym, podkreślającym prestiż i znaczenie tego obiektu. W samym pałacyku zaprojektowano: 8 pokoi, 2 służbówki, spiżarnię, 2 łazienki, 4 toalety, hol, garderobę, kredens, korytarz, sień, pasaż i obszerną klatkę schodową. Dodatkowo 2 balkony, taras i ganek otwierały się na otaczający ogród. Budynek posiadał własna instalację elektryczną, wodno-kanalizacyjną i system centralnego ogrzewania. Jako jedyny indywidualny obiekt na terenie Mościc, został wpisany do rejestru zabytków i posiada swoją kartę ewidencyjną. Po II wojnie światowej pełnił liczne funkcje, obecnie budynek znajduje się w gestii tarnowskich Zakładów Azotowych S.A. Od 2011 roku poddany jest gruntowanemu remontowi wraz z otaczającym go ogrodem."
+        },
+        {
+            "id": 8,
+            "name": "Blok wielorodzinny",
+            "location": "Mościce",
+            "address": "ul. Czerwonych Klonów 6",
+            "longitude": "50.01294664882572, 20.92439411004617",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Jeden z pierwszych czterech murowanych domów wielorodzinnych na osiedlu przyfabrycznym, zaprojektowany przez inż. A. Kiełbasińskiego. Sfinansowany przez fabrykę. Niewielkie mieszkania, o tradycyjnym układzie przestrzennym, z kuchnią i własną łazienką, gwarantowały komfort życia jego mieszkańcom. Zaplecze od strony podwórza, w postaci komórki na opał i zwierzęta, pozwalały na łatwiejszą adaptację ludzi w większości pochodzących ze wsi w mieście. Przy bloku pierwotnie znajdowały się przydomowe ogródki, pozwalające na uprawę niezbędnych warzyw i owoców, dla własnych potrzeb."
+        },
+        {
+            "id": 9,
+            "name": "Spółdzielnia mieszkaniowa MOŚCICE",
+            "location": "Mościce",
+            "address": "ul. Akacjowa 6",
+            "longitude": "50.01376082375588, 20.926132197802477",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Niski, podłużny budynek, parterowy budynek, pierwotnie pełnił funkcje usługowe dla przyzakładowego osiedla (np. naprawa lodówek, zegarmistrz, złotnik). Z czasem zmieniony na pawilon handlowy ZURT-u (Zakładu Usług Radiotechnicznych i Telewizyjnych). Modernizowany w latach 80. XX wieku, z przeznaczeniem na sklep spożywczy. Ustawiony wzdłuż ulicy, z uskokową elewacją, z przeszklonymi oknami od strony południowej, otwartymi na otoczenie i zieleń. Wrażenie lekkości uzyskano poprzez wprowadzenie dużych tafli szklanych w fasadzie budynku. Szkło zostało skontrastowane z monotonnymi, płaskimi elewacjami ścian bocznych."
+        },
+        {
+            "id": 10,
+            "name": "Blok wielorodzinny",
+            "location": "Mościce",
+            "address": "ul. Kasztanowa 16",
+            "longitude": "50.01099342558305, 20.92759245886765",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Blok wielorodzinny, dwupiętrowy, 5-klatkowy. Zaprojektowany w 1939 roku, zrealizowany w czasie II wojny światowej. Podłużna symetryczna bryła budynku z płaskim dachem, z dwoma owalnymi wykuszami (z klatkami schodowymi) na jego osiach, zrealizowana w nieco uproszczonej formie – bez okulusów okiennych od podwórka. Balkony z masywnymi, murowanymi parapetami. Początkowo kuchnie opalane węglem i piece, w latach 70. zastąpiono gazowymi. Centralne ogrzewanie doprowadzono z fabryki. Zaprojektowano wygodne mieszkania: dwu- (około 60 m2) i trzypokojowe (powyżej 100 m2), kuchnię ze spiżarką, osobną toaletą i łazienką z oknem. W budynku mieścił się strych, a w piwnicach, w każdej klatce - pralnia."
+        },
+        {
+            "id": 11,
+            "name": "Miejski Dom Sportu",
+            "location": "Mościce",
+            "address": "ul. Traugutta 5a",
+            "longitude": "50.01012492602066, 20.93257414455164",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom Sportu projektowany w latach 1965-1967, został oddany do użytku w 1969 roku. Jego pierwotny plan był wynikiem współpracy zespołu architektów: Bogumiła Zaufala, Stanisława Karpiela (współautorów pierwotnego projektu dawnego Domu Kultury) oraz Władysława Cukiera. Wnętrze opracowała Pracownia Sztuk Plastycznych w Krakowie. Ten niski budynek stanowi wraz z zespołem dwóch odkrytych basenów z wieżą do skoków, jeden z najważniejszych obiektów sportowych Tarnowa. Wokół obiektu zaprojektowano zieleń, stanowiącą formę izolacji od otoczenia przyfabrycznego osiedla. Po remoncie zakończonym w 2015 roku, po blisko 50-ciu latach funkcjonowania obiektu, zmieniono jego elewację od strony odkrytych basenów (zamurowano przeszklone kurtynowe ściany pływalni), wprowadzając w to miejsce owalne okna. Zewnętrzne filary w kształcie litery „V”, wypełniono betonem. Spłycono nieckę basenu, zrealizowano mini park wodny dla dzieci, usunięto błękitną mozaikę ceramiczną autorstwa Bogusława Zagajewskiego. Remontowi poddano salę sportową i zaplecze, dodatkowo wprowadzając w to miejsce siłownię i kręgielnię. Z dawnego wystroju wnętrza pozostawiono jedynie brązową mozaikę ceramiczną w holu, autorstwa Jerzego Sachy. Wszystkie ceramiczne kafle wykonano w Spółdzielni „Kamionka” w Łysej Górze w 1965 roku. Prace renowacyjne przeprowadził Krzysztof Sacha."
+        },
+        {
+            "id": 12,
+            "name": "Centrum Sztuki Mościce",
+            "location": "Mościce",
+            "address": "ul. Traugutta 1",
+            "longitude": "50.009836799181876, 20.927055166360127",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Budynek zrealizowany w 1971 roku, według projektu Zbigniewa S. Bielaka, Bogumiła Zaufala, Bronisława Stefanika i Stanisława Karpiela. Stanowił formę niskiej platformy, z trzema pionowymi akcentami, z elewacją w drewnie. Projekt budynku pierwotnie przeznaczony był dla rejonów podgórskich. Poprzez lata, wrósł w klimat i otoczenie Mościc. Jednak zły stan techniczny obiektu, przestarzałe rozwiązania wynikające z dawnej funkcji zakładowego domu kultury, zadecydowały o jego remoncie. W latach 2017-2018 poddany gruntownej modernizacji, w trakcie której zmieniono dachy i elewacje z układem okien. Zachowano zewnętrzny taras ze schodami, prowadzącymi na poziom I piętra. W budynku wprowadzono profesjonalne nagłośnienie, dostosowano przestrzeń dla osób z niepełnosprawnościami oraz poprawiono komfort miejsc na widowni. Dodatkowo zadbano o sale ćwiczeń, edukacyjne i wprowadzono nowoczesne rozwiązanie pozwalające na realizację najbardziej skomplikowanych działań artystycznych."
+        },
+        {
+            "id": 13,
+            "name": "Dworzec kolejowy Tarnów Mościce",
+            "location": "Mościce",
+            "address": "ul. Chemiczna",
+            "longitude": "50.0065189008731, 20.92532596680347",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dworzec kolejowy Tarnów-Mościce, usytuowany przy ulicy Chemicznej, wybudowany został w latach 1972-1976, w miejscu niewielkiego przystanku kolejowego. Projekt dworca obejmował budynek stacji, tunel (pozwalający na szybką komunikację - dojście na perony, łączący dwie strony osiedla) oraz parking. Autorem realizacji jest Biuro Projektów Kolejowych – Kraków, Stanisław Wilkosz. W okresie największego zatrudnienia w Zakładach Azotowych, stanowił jedno z najbardziej ruchliwych miejsc w Mościcach. Zaprojektowany na rzucie kwadratu, z płaskim dachem wychodzącym poza zasadniczą bryłę, ponad schody prowadzące bezpośrednio na peron, podtrzymywany jest przez masywne, rytmicznie rozstawione podpory. Duże, przeszklone elewacje, otwierają przestrzeń dworca na otaczającą zieleń i wprowadzają do środka światło dzienne, wydobywające detale architektoniczne wnętrza: kasetonowy sufit, lampy oświetleniowe, rzędy ławek, kasy biletowe, schody na antresolę (poczekalnię) i porfirowe posadzki. Szklane powierzchnie ścian, zestawiono z masywnym, szalowanym drewnem dachem. Całościowo zaprojektowany i zrealizowany bardzo szczegółowo, pomimo swego zaniedbania i postępującej dewastacji, nadal przemawia przemyślną, czystą, elegancką, modernistyczną formą. Zamknięty w 2012 roku. W 2021 roku, na wniosek Małopolskiego Wojewódzkiego Konserwatora Zabytków, został wpisany (układ i wystrój wnętrza) do rejestru zabytków. 29 sierpnia 2010 roku obok dworca odsłonięto instalację `28.03.1983`, mościczanina Wilhelma Sasnala."
+        },
+        {
+            "id": 14,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Willowa 2",
+            "longitude": "50.00334657227323, 20.92866079616954",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom jednorodzinny, wolnostojący, jednopiętrowy, na zamknięciu ulicy. Wybudowany w 1934 roku jako pierwszy dom w tej części późniejszego osiedla Za Torem. Zrealizowany został według indywidualego planu, dla inż. Stanisława Kubińskiego, pierwszego wójta gminy Mościce (w pobliżu skwer jego imienia), uwzględniając funkcje i potrzeby jego użytkowników. Posiada nowoczesną bryłę w postaci przenikających się w planie prostopadłościanów, płaski dach, ganek z wejściem, taras ze schodami od ogrodu, narożne okna i osobny garaż. Funkcjonalna pralnia usytuowana została w piwnicy. Pomieszczenia gospodarcze: kuchnia, ze spiżarnią i służbówką, stanowią integralną część domu, z osobnym wejściem. Posiada wyraźnie wyodrębnioną część prywatną na I piętrze i część reprezentacyjną z zapleczem kuchenno-gospodarczym na parterze. Tutaj też znajduje się gabinet wójta gminy, z osobnym wejściem z przedpokoju. Willa ta, usytuowana w ogrodzie, bliższa jest już awangardzie lat 20. i 30. XX wieku i nawiązuje do innych tego typu realizacji w kraju. Dom pozostaje nadal w rękach jednej rodziny."
+        },
+        {
+            "id": 15,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Willowa 3",
+            "longitude": "50.0027549046518, 20.928063691794904",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom jednorodzinny, wolnostojący, w ogrodzie, powstał jako drugi obiekt na tej ulicy. Zaprojektowany został w 1940 roku przez znanego lwowskiego architekta Andrzeja Frydeckiego dla inż. Karola Huelle i jego rodziny. Podłużna, płaska forma budynku, artykułowana pionowymi oknami i balkonami z masywnymi obramieniami, zestawiona została z pionową półokrągłą formą z owalnym oknem, obłożoną piaskowcem. Dwukondygnacyjny, oszklony, usytuowany od południa ogród zimowy, otwierający się bezpośrednio na otaczającą zieleń zaprojektowany ze względu na zainteresowania żony Marii, z domu Fiedler (jednej z pierwszych kobiet, które ukończyły Politechnikę Lwowską). Płaski dach, przenikające się bryły budynku odpowiadające ich funkcji, poziome rytmiczne rzędy okien, kamienna okładzina elewacji zestawiona z gładką powierzchnią ścian, decydują o elegancji tej willi. Garaż połączony jest bezpośrednio z domem. Indywidualne, zaprojektowane dla użytkowników domu rozwiązania przestrzenne, użyty materiał, stawiają ten dom w rzędzie najciekawszych realizacji architektonicznych międzywojennych Mościc."
+        },
+        {
+            "id": 16,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 7",
+            "longitude": "50.003024708836065, 20.92680989886903",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Ulica Norwida, stanowi główną oś założenia osiedla Za Torem. Opracowaniem jego planów zajęła się komisja powołana przez ówczesnego dyrektora fabryki Eugeniusza Kwiatkowskiego oraz inżynierów: Andrzeja Miziewicza, Stanisława Hüpscha i Edwarda Mrowca. Część planów opracowali także członkowie kadry kierowniczej zakładu, inżynierowie: Z. Sajewicz i W. Wojtasiewicz, od 1938 roku pełniący funkcję Kierownika Wydziału Budowlanego. Grunty na budowę pochodziły ze Skarbu Państwa i rozparcelowane zostały przez fabrykę na rzecz poszczególnych spółdzielni mieszkaniowych. Plany tej części osiedla pochodziły z lwowskiej pracowni inżynierów Jurasza i Zachariewicza. Nie zostały jednak zrealizowane. Kolejne plany domów noszą pieczęcie tarnowskiego architekta – inż. Edwarda Okonia. Wszystkie domy projektowane dla inżynierów posiadają te same plany: dwie kubiczne lekko cofnięte względem siebie formy, z płaskimi dachami oraz prostokątne okna na dłuższych i krótszych bokach. Brak detalu architektonicznego i oszczędność formy, nawiązują do stylu międzynarodowego w dwudziestoleciu międzywojennym. W większości przypadków, modernizowane i przebudowane po II wojnie."
+        },
+        {
+            "id": 17,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 10",
+            "longitude": "50.0025079636104, 20.92743890424334",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom ten, jako jeden z dwóch domów na osiedlu inżynierskim Za Torem, posiada indywidualny, dostosowany do potrzeb zamawiającego plan. Jako jeden z nielicznych na tym osiedlu, od daty zakończenia budowy w 1938 roku, nie został przebudowany i zmieniony. Zarówno tynki elewacji, stolarka okienna i drzwiowa oraz metalowe poręcze i balustrady, są nadal oryginalne. Podobnie jak kajnerowy uchwyt i maszt na flagę, a także przydomowy garaż. Nadal także zamieszkiwany jest przez kolejne pokolenie rodziny Józefa Peterko. Podobnie we wnętrzu zachowano dawne podziały i wystrój z epoki. Na uwagę zasługuje także starannie utrzymany przydomowy ogród, z oczkiem wodnym i ze starym drzewostanem."
+        },
+        {
+            "id": 18,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 14",
+            "longitude": "50.00176485260068, 20.927496193049464",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Narożna, większa od pozostałych zarówno kubaturą, jak i powierzchnią ogrodu, willa. To drugi dom na tej ulicy, posiadający indywidualną formę i plan, odpowiadający zapotrzebowaniom użytkowników. W części przebudowany po II wojnie światowej, z poszanowaniem pierwotnego układu i funkcji pomieszczeń. Charakterystyczne okna, wychodzące na ogród z drzewem — pomnikiem przyrody. Podobnie jak w pozostałych domach, podział na parterze na część oficjalną (salon, gabinet pana domu) i pomieszczenia gospodarcze z kuchnią od wschodu, ze służbówką, osobną łazienką i wejściem gospodarczym od ogrodu."
+        },
+        {
+            "id": 19,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 8",
+            "longitude": "50.0031979301919, 20.926193016691375",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Usytuowana wzdłuż szerokiej, wysadzanej lipami ulicy, jedna z piękniejszych i najbardziej reprezentacyjnych ulic osiedla Za Torem. Szeroka, z osobnym chodnikiem dla pieszych i pasem zieleni, oddzielała domy inżynierów od pozostałej części osiedla, finansowanej z funduszy spółdzielni dla robotników „Nasz Dom”. Domy te, znacznie mniejsze, w niewielkich ogródkach, posiadały strome dachy i tradycyjne formy. W pobliżu skwer z tablicą erekcyjną upamiętniającą datę rozpoczęcia budowy osiedla, 2 czerwca 1934 roku. W ramach działalności Spółdzielni Mieszkaniowo-Budowlanej Pracowników Umysłowych Z.P.Z.A. w Mościcach „Osiedle”, do 1939 roku wybudowano 12 z 20 domów. Każdy członek spółdzielni zobowiązany był wnieść wkład w wysokości 4 tys. zł. Koszt budowy domu o pow. 540 m² wyniósł 15 tys. zł. Kanalizację oraz energię elektryczną fabryka doprowadziła na swój koszt. Dom ten, podobnie jak pozostałe domy na tej ulicy, posiada typowy plan wnętrza, z podziałem na część oficjalną i prywatną oraz modernistyczne, funkcjonalne rozwiązania."
+        },
+        {
+            "id": 20,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 10",
+            "longitude": "50.00278995023848, 20.9262485819777",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Plan domu, podobnie jak w przypadku większości willi opracowany został przez Pracownię Projektowo-Budowlaną inż. Edwarda Okonia z Tarnowa. Jako jeden z nielicznych na tej ulicy, zachowany w pierwotnej formie. Posiada analogiczny układ z pozostałymi willami inżynierskimi w ogrodach, z garażem. Z wysokim wąskim oknem klatki schodowej. Zarówno tej willi, jak i pozostałym domom, brak jednak bardziej wysublimowanej struktury i elementów typowych dla modernizmu: przeźroczystości, lekkości ażurowych konstrukcji czy prześwitów. Elewacja domu utrzymana w prostej, pozbawionej ornamentu i wszelkich odniesień historycznych formie, jest przejawem mody i ducha czasu. Proste, asymetryczne, geometryczne kształty stanowią jedyny wyraz nowoczesności. Dom pozostaje nadal w rękach jednej rodziny."
+        },
+        {
+            "id": 21,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 14",
+            "longitude": "50.00202187236836, 20.926349535603666",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Podobnie jak pozostałe domy na tej ulicy, posiada plan i układ przestrzenny zbliżony do pozostałych. Kubiczna, uproszczona forma budynku, została przerobiona i zmieniona po II wojnie światowej. Jako jedyny zachowany budynek posiada w elewacji owalne okno. Pomimo nowoczesnej formy domu, podział wnętrza odpowiada tradycyjnemu układowi przestrzennemu domu szlacheckiego ze służbą. Kadra inżynierska, w społeczności międzywojennej, najlepiej wykształcona i zarabiająca warstwa społeczna, w hierarchii fabrycznej stanowiła najbardziej uprzywilejowaną część społeczności Mościc."
+        },
+        {
+            "id": 22,
+            "name": "Willa Państwa Książków",
+            "location": "Tarnów",
+            "address": "ul. Chopina 16",
+            "longitude": "50.01409179519927, 20.979454451078595",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Jest połączeniem domu i pracowni rentgenowskiej. Budynek zaprojektowany przez Wojciecha Pietrzyka (autora kościoła Arki Pana w Krakowie), jako dzieło totalne. Architekt zaprojektował nie tylko bryłę, ale także wnętrze (w tym meble i detale, takie jak wieszaki w poczekalni), posadzki, garaż, czy ogród. Wszystko wykonane w szlachetnych, wysokiej klasy materiałach. Precyzyjnie rozrysował układ bloków tworzących ogrodzenie. Ujednolicił kolorystykę i detale architektoniczne. Na elewację zostały wprowadzone dwie duże, kwadratowe, nieznacznie różniące się detalami mozaiki (ceramika i szkło). Wykonali je - w Przegorzałach pod Krakowem - Helena i Roman Husarscy. Trzecia kompozycja zdobi ścianę, ogrodzenie zamykające posesję. Budowa domu trwała 10 lat (1967-1977). Ten specyficzny dom, który ociera się już o modernistyczny manieryzm, jest jedną z najciekawszych tego typu budowli w Polsce. Dzięki staraniom właścicieli, począwszy od lat 70., kiedy go ukończono, aż do dnia dzisiejszego, dom prawie nie uległ zmianie."
+        },
+        {
+            "id": 23,
+            "name": "Kościół p.w. Najświętszego Serca Jezusowego",
+            "location": "Tarnów",
+            "address": "ul. Lwowska 102",
+            "longitude": "50.014486853225954, 21.009815147380795",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W 1935 roku rozpoczęto przygotowania do budowy kościoła w Tarnowie na Grabówce. Prace nad projektem poprzedziło opracowanie programu zawierającego szczegółowe wytyczne dotyczące wyglądu świątyni. Precyzyjną odpowiedź na te założenia stanowił niezrealizowany projekt inżyniera Witolda Giżberta-Studnickiego, zakładający m.in. umieszczenie na wieży serca z krzyżem, które zaświecone w czasie uroczystości, symbolizować miało płonące Serce Jezusowe. Ostatecznie wybrano projekt Konstantego Jakimowicza. Prace budowlane przerwała wojna. Smukłe, dwie prostokątne wieże ukończono w 1952 roku, uroczyste poświęcenie świątyni nastąpiło dopiero w 1984 roku Murowany, ceglany (z użyciem żelazobetonu) kościół posiada bazylikowy, trzynawowy korpus z transeptem oraz charakterystyczną fasadę z wieżami równej wysokości. Nad głównym wejściem, poprzedzonym kolumnowym portykiem, znajduje się wysoka na 6 metrów mozaika przedstawiająca Chrystusa Dobrego Pasterza, zrealizowana w latach 70. XX wieku. Przy jej realizacji wykorzystano, biały cement, barwne bryły szklane i czarny kamień z Szydłowca. Jej autorami są tarnowscy artyści: Bogdana i Anatol Drwalowie."
+        },
+        {
+            "id": 24,
+            "name": "Kościół p.w. Błogosławionej Karoliny Kózki",
+            "location": "Tarnów",
+            "address": "ul. Jana Pawła II 1",
+            "longitude": "50.025275868458586, 21.01789852375743",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Decyzja o wzniesieniu świątyni była odpowiedzią na plany przewidujące budowę 60 tyś. osiedla w tej części miasta (byłaby to największa parafia w diecezji). Pozwolenie na budowę zostało wydane w 1983 roku. Autorami projektu są Zdzisława i Leszek Kaczor. W czerwcu 1987 roku miała tu miejsce wizyta papieża Jana Pawła II, w trakcie której uroczyście beatyfikowano Karolinę Kózkę. Systematyczną liturgię w tzw. kościele dolnym zainaugurowano w 1992 roku. W lipcu 1993 roku erygowano parafię pw. Bł. Karoliny. W 2001 roku pierwsze uroczystości odbyły się w górnym kościele. Ceglana budowla, usytuowana na wzniesieniu, z wysoką na prawie 70 metrów wieżą, góruje nad okolicą i stanowi punkt orientacyjny Tarnowa. Prace wykończeniowe przy kościele trwają do dziś. Planowane gigantyczne osiedle nie powstało, a kościół stoi obecnie na skraju pól. Ta jedna z najbardziej spektakularnych klęsk tarnowskiej urbanistyki, udowadnia, jak ryzykowne jest tworzenie planów zagospodarowanie miasta na wiele lat do przodu."
+        },
+        {
+            "id": 25,
+            "name": "Zbiornik wodny Bania",
+            "location": "Tarnów",
+            "address": "os. Jasna",
+            "longitude": "50.02473093751886, 21.00671024680868",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Górująca nad osiedlem Jasna konstrukcja, która swym kształtem przypomina futurystycznego pająka, to zaprojektowany w 1980 roku zbiornik wody, potocznie zwany banią. Wysoka na 32 metry wieża zbudowana została według projektu pracowników Warszawskiej Politechniki i przez wiele lat wykorzystywana była do dystrybucji wody dla mieszkańców otaczających ją bloków. Obecnie funkcjonuje jako zbiornik i stabilizator ciśnienia wody w tym obszarze miasta. Złożona jest z 24 profilowanych słupów, wzmocnionych czterema poprzecznymi pierścieniami. Imponujące, metalowe podpory podtrzymują olbrzymi torus o średnicy 6 m i pojemności 3.000 m³. Mimo swej monumentalności bania jest ażurową, bardzo lekką formą, charakterystyczną dla pejzażu miasta."
+        },
+        {
+            "id": 26,
+            "name": "Kościół pw. Św. Józefa i Matki Bożej Fatimskiej",
+            "location": "Tarnów",
+            "address": "al. Matki Bożej Fatimskiej 39",
+            "longitude": "50.019500775882726, 20.993815857870583",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Prace nad budową kościoła trwały od 1957 do 1960 roku. Projekt to dzieło zespołu architektów: Jerzego Kozłowskiego, Krystiana Seiberta oraz Zbigniewa Wolaka. Jest to trzynawowy, ceglany (z użyciem kamienia oraz żelazobetonu) kościół z prezbiterium i Kaplicą Martyrologii Polskiej od wschodu. Na szczególną uwagę zasługują: sklepienie oraz elementy wyposażenia: konfesjonały i ławki oraz rzeźby autorstwa Marii Pinińskiej-Bereś i Jerzego Beresia (Św. Rodzina, Serce Jezusa, Chrystus Ukrzyżowany). Ten sam zespół architektów zaprojektował także plebanię (1965). Nad wejściem od zachodu umieszczono kompozycję (7x3 m) przedstawiającą Pietę, zrealizowaną w 1960 roku przez małżeństwo krakowskich ceramików Helenę i Romana Husarskich. Wykonana została w technice „piropiktury” , tzw. „malarstwa ogniowego” (bez konieczności wypalania w piecu). Wewnątrz, w Kaplicy Martyrologii Polskiej zw. Oświęcimską, warszawska artystka Maria Hiszpańska-Neumann, więźniarka obozu w Ravensbrück, wykonała - ze szkła i betonu - płaskorzeźbę przedstawiającą marsz śmierci. 14 czerwca 1940 roku z Tarnowa wyruszył pierwszy transport do obozu KL Auschwitz. Ten nowoczesny Kościół jest sztandarową, jedną z najbardziej znanych, modernistycznych budowli kościelnych w powojennej Polsce, wielokrotnie naśladowaną w innych miejscach w kraju."
+        },
+        {
+            "id": 27,
+            "name": "Zabudowa wielorodzinna",
+            "location": "Tarnów",
+            "address": "ul. Dwernickiego",
+            "longitude": "50.02160307719928, 20.99239318424379",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W 1934 roku Komitet Ekonomiczny Ministrów powołał do życia Towarzystwo Osiedli Robotniczych. Jego celem była budowa i eksploatacja mieszkań dla pracowników o średnim i niższym wynagrodzeniu, szczególnie dla robotników. Dzięki tej inicjatywie w latach 30. XX wieku powstały te murowane, wielorodzinne, piętrowe bloki mieszkalne. Usytuowane na granicy miasta, na niewielkim wzniesieniu, w dobrej odległości od siebie – nie zasłaniają sobie światła. Posiadają płaskie dachy, duże i narożne okna oraz mieszkania z osobnymi kuchniami i łazienkami. W dwudziestoleciu międzywojennym, marzenie większości współczesnych. Posiada skromne, proste elewacje, Jedynym elementem zdobniczym jest pojedynczy wazon, umieszczony na szczycie jednego z bloków. Budowa domów robotniczych oparta była na systemie spłaty zadłużenia w postaci comiesięcznych rat potrącanych bezpośrednio z pensji. System ten miał już swoją tradycję w Tarnowie. Wprowadzono go w 1922 roku, w związku z budową Zakładów Naprawczych Taboru Kolejowego i osiedla kolejarskiego. Opracowanie tekstów: Barbara Bułdys, Aleksandra Idler, Katarzyna Nalezińska, Dawid Radziszewski"
+        },
+        {
+            "id": 28,
+            "name": "Hotel Tarnovia",
+            "location": "Tarnów",
+            "address": "ul. Kościuszki 10",
+            "longitude": "50.00922728094979, 20.975301651432684",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Zaprojektowany przez Andrzeja Kowalewskiego, przy współpracy Stanisława Fijałkowskiego, został oddany do użytku w grudniu 1975 roku. Podłużny, czterokondygnacyjny budynek z płaskim dachem i poziomymi pasami okien. Od północy z zaokrągloną, przeszklona klatką schodową,  nawiązującą do motywu okrętu. Na fasadzie od południa, na ścianie sali bankietowo-konferencyjnej na parterze, wprowadzono dziewięć uskoków muru (z pionowymi oknami), z mozaiką autorstwa plastyka Kazimierz Gąsiorowskiego z warszawskiej Spółdzielni Plastycznej. Monumentalna abstrakcyjna kompozycja, wykonana została z rzecznych otoczaków, bryłek barwnego szkła i z syntetycznych przetopionych materiałów, odpadów pochodzących Zakładów Radiowych im. Kasprzaka w Warszawie. Przedstawia wizję bitwy pod Aleppo. Na jednej z płaszczyzn ściany przedstawiono (w czerni) gen. Bema na koniu. Była to ostatnia zwycięska bitwa, pod przywództwem Bema, stoczona w 1850 roku. Pod koniec lat 70. XX wieku był to największy i najbardziej nowoczesny hotel w Tarnowie."
         }
     ],
     "context_en":
@@ -27,18 +270,261 @@
             "name": "Budynek Dyrekcji Zakładów Azotowych w Tarnowie S.A.",
             "location": "Mościce",
             "address": "ul. Kwiatkowskiego 8",
-            "longitude": "50.014753735200316, 20.921002035842427",
+            "longitude": "50.0147018432549, 20.920893595991636",
             "photos": ["zdjecie1.jpg", "zdjecie2.jpg", "zdjecie3.jpg"],
-            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie zakładowej bramy. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadzącą wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, nawiązuje do architektury pałacyku dyrektora fabryki. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
+            "description": "Początkowo administracja fabryki zajmowała drewniany barak mieszczący się w bezpośrednim sąsiedztwie bramy zakładowej. Budowę obecnego budynku Dyrekcji rozpoczęto w 1934 roku według projektu inż. Antoniego Kiełbasińskiego i zakończono cztery lata później. Symetryczny, trójskrzydłowy, dwupiętrowy, murowany budynek z kolumnowym portykiem z podjazdem, został usytuowany na wprost dyrektorskiej willi. Wyznacza główną oś przyfabrycznego osiedla. Ulica Głogowa, prowadząca wzdłuż willowej dworkowej architektury domów inżynierskich, wśród szpaleru drzew, pozwalała na pokonanie odległości pomiędzy tymi dwoma głównymi obiektami osiedla pieszo. Prosta forma budynku, z płaskim dachem i rytmicznymi podziałami okiennymi, podobnie jak pałacyk dyrektora, odpowiada funkcji obiektu. Na pierwszym piętrze, na osiach obydwóch budynków, z kolumnowymi gankami, znajdują się pomieszczenia reprezentacyjne."
         },
         {
             "id": 1,
-            "name": "Zabytek B",
-            "location": "Tarnów",
-            "address": "ul. Wałowa 17",
-            "longitude": "51.014753735200316, 22.921002035842427",
+            "name": "Portiernia Zakładów Azotowych w Tarnowie-Mościcach S.A.",
+            "location": "Mościce",
+            "address": "ul. Kwiatkowskiego 8",
+            "longitude": "50.0147018432549, 20.920893595991636",
             "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
-            "description": "To jest opis Zabytku B w Tarnowie."
+            "description": "Budynek portierni, usytuowany w bezpośrednim sąsiedztwie bramy, został wzniesiony jako jeden z pierwszych obiektów fabrycznych. Murowany, piętrowy budynek z tarczą zegarową w partii górnej, do dziś tylko nieznacznie zmienił swój wygląd. Nadal pełni funkcję zakładowej portierni i biura przepustek. Na jej tle wykonano wiele zdjęć pracowników i przedwojennych wycieczek wizytujących fabrykę. Od samego początku otwarcia fabryki, aż do października 1931 roku, funkcjonował także jako zakładowa kaplica. Nowa, drewniana, wolnostojąca kaplica powstała przy ulicy Jesionowej (obecnie ks. Indyka)."
+        },
+        {
+            "id": 2,
+            "name": "Restauracja Kasyno, dawne Kasyno Urzędnicze",
+            "location": "Mościce",
+            "address": "ul. Kwiatkowskiego 20",
+            "longitude": "50.01289475102858, 20.91757159731313",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Budynek tzw. Nowego Kasyna został wzniesiony na przełomie 1937/1938 roku, według projektu inż. Stefana Żeleńskiego z Warszawy. Swą formą architektoniczną nawiązuje do budynku Dyrekcji. Usytuowany centralnie, z reprezentacyjnym podjazdem i gazonem od frontu, wyznacza oś założenia, z dwoma bocznymi, piętrowymi budynkami ze spadzistymi dachami, pierwotnie pełniącymi funkcję hoteli dla kawalerów. Na parterze mieścił ogród zimowy, sale klubowe, jadalnia i bufet. Na I piętrze m.in. osobna jadalnia, pokoje klubowe i gabinety oraz bilard i bridż. Po II wojnie światowej pełnił m.in. funkcję zakładowego Domu Kultury i przychodni, osiedlowego przedszkola. Obecnie mieści restaurację. Mieścił się tu bardzo popularny państwowy zakład fryzjerski, miejsce towarzyskich spotkań, gry w szachy, warcaby, a także czytelni gazet. Budynek usytuowany został w otoczeniu zieleni, w strefie publicznej osiedla, zgodnie z koncepcją miasta-ogrodu, według której zaprojektowano międzywojenne Mościce. Od strony ogrodu znajduje się taras ze schodami, na którym w lecie koncertowała Orkiestra Dęta Państwowej Fabryki Związków Azotowych w Mościcach pod batutą Kazimierza Abratowskiego (1893 – 1974). W latach 50. XX wieku, na tyłach domu powstała niewielka muszla koncertowa, obecnie rozebrana."
+        },
+        {
+            "id": 3,
+            "name": "Dworek dwurodzinny",
+            "location": "Mościce",
+            "address": "ul. Topolowa 2",
+            "longitude": "50.01315581783689, 20.918799083344567",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dworek należy do grupy pierwszych 12 domów mieszkalnych, wzniesionych przez fabrykę, zaprojektowanych dla inżynierów, budowniczych P.F.Z.A. Murowany, stosunkowo niski, z ogrodem, utrzymany został w modnym na początku XX wieku stylu dworkowym. Posiada stromy dach i osiowo zaznaczony portyk kolumnowy. Mieszkanie zajmuje powierzchnię 248 m2 i standardowo posiada 5 pokoi, obszerną kuchnię ze służbówką i inne pomieszczenia pomocnicze. W późniejszych, realizowanych w ramach COP-u budynkach, wielkość zajmowanej powierzchni była stała i zależała od stanowiska zajmowanego w fabryce. Funkcje: reprezentacyjne (parter) i prywatne (piętro), tradycyjnie umieszczono na dwóch oddzielnych poziomach. Usytuowany wzdłuż ulicy, w sąsiedztwie parku i ogólnodostępnych terenów zielonych. Nieco dalej, wzdłuż drogi prowadzącej do kościoła, znajdują się dwie kamienne ławki. Nazwy ulic w Mościcach przyjęto od gatunków zasadzonych wzdłuż nich drzew."
+        },
+        {
+            "id": 4,
+            "name": "Dworek",
+            "location": "Mościce",
+            "address": "ul. Jarzębinowa 1",
+            "longitude": "50.01177523694808, 20.919755259603495",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Usytuowany jest u zbiegu ulic Jarzębinowej i Topolowej, pierwotnie w bezpośrednim sąsiedztwie domu dyrektora fabryki, symetryczny w stosunku do domu drugiego wicedyrektora (ulica Jarzębinowa 11). Jako inwestycja państwowa, w pełni sfinansowana przez fabrykę, posiada tradycyjne polskie formy (proporcje, układ przestrzenny, stromy dach, portyk kolumnowy, ganek) i historyzujące detale architektoniczne: uproszczone gzymsy, fryzy, głowice i kapitele. Jednopiętrowa wolnostojąca willa w ogrodzie, zajmuje powierzchnię 231 m2 i posiada 7 pokoi, kuchnię ze służbówką oraz pomieszczenia pomocnicze. Wielkość domu oraz jego usytuowanie na osiedlu podkreślały status zajmowanego w fabryce stanowiska i nie zależały od liczebności rodziny. W ogrodzie wybudowano wolnostojący murowany garaż oraz komórkę na opał i narzędzia ogrodnicze."
+        },
+        {
+            "id": 5,
+            "name": "Ławki przy ulicy Topolowej",
+            "location": "Mościce",
+            "address": "ul. Topolowa",
+            "longitude": "50.01088571579699, 20.91963200714813",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Po dwóch stronach ulicy Topolowej, naprzeciwko siebie, ustawione zostały dwie niemalże identyczne, masywne, kamienne - betonowe ławki (wys. 80 cm, szer. 95 cm, dł. 600 cm), znakomicie wpisujące się w otoczenie zielonych Mościc. Szeroka dwukierunkowa ulica prowadzi na tzw. „górkę”, do kościoła. Obok niej pierwotnie przebiegała linia kolejki wąskotorowej, idąca bezpośrednio do fabryki. Ich płynna linia, tworząca zaplecek i siedzisko, zwieńczona jest kamienną kulą. Warto zwrócić uwagę na wykute na nich napisy: na pierwszej, usytuowanej od strony Parku Kwiatkowskiego, znajduje się data powstania ławki P.F.Z.A. — 1929 rok. Pod nią widoczna jest linia, która oznaczała najwyższy poziom jaki osiągnęła woda w dniu 17 lipca 1934 roku, w czasie największej powodzi która nawiedziła Mościcew 1934 roku. Na drugiej ławce widoczny jest napis — skrót P.F.Z.A. (Państwowa Fabryka Związków Azotowych)."
+        },
+        {
+            "id": 6,
+            "name": "Kościół pw. Matki Bożej Królowej Polski w Mościcach",
+            "location": "Mościce",
+            "address": "ul. Zbylitowska 5",
+            "longitude": "50.009289134711274, 20.91975151837038",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W latach 30., w sprawie budowy tego kościoła, interweniowano u samego prezydenta Ignacego Mościckiego. Świątynia została wzniesiona dopiero w latach 1948-1956. Pod budowę wybrano teren „na górce”, w pobliżu parku, szkoły, przychodni i kasyna. Po odrzuceniu wielu projektów (m.in. Bohdana Pniewskiego, autor projektu Świątyni Opatrzności Bożej w Warszawie, Konstantego Jakimowicza, Czesława Boratyńskiego, Stefana Świszczowskiego), ostatecznie do realizacji wybrano projekt inżynierów Stanisława Gałęzowskiego i Władysława Pieńkowskiego. Potężna, kubistyczna bryła kościoła murowana z cegły i żelazobetonu, jest trójnawowa, przykryta kasetonowym stropem z drewnianą okładziną. Nad prezbiterium góruje kopuła z latarnią, nad fasadą zredukowana wieża. Kamienne figury, tworzące kompozycję rzeźbiarską Śluby Jana Kazimierza na dziedzińcu kościelnym, pochodzą z pierwotnego ołtarza. Nad główna absydą, od strony Zakładów Azotowych, umieszczono kapliczkę z figurą św. Józefa, patrona ludzi pracy."
+        },
+        {
+            "id": 7,
+            "name": "Pałacyk Kwiatkowskiego",
+            "location": "Mościce",
+            "address": "ul. Jarzębinowa 9",
+            "longitude": "50.01197292958892, 20.922081843107907",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Najokazalszy i najbardziej reprezentacyjny budynek osiedla przyfabrycznego, tzw. pałacyk Kwiatkowskiego, zwany również Dyrektorówką, usytuowany jest na wprost budynku Dyrekcji. Wybudowany dla inż. Tadeusza Zwisłockiego, pierwszego dyrektora fabryki, jako jeden z pierwszych budynków, w przeciągu niespełna jednego roku (1928). Zaprojektowany przez inż. Konrada Kłosa z Warszawy, pełnił funkcje mieszkalne i reprezentacyjne, rozlokowane na dwóch oddzielnych poziomach. W sąsiedztwie budynku znajdowały się: cieplarnia oraz budynek gospodarczy z pomieszczeniem służbowym. Sąsiaduje z parkiem Kwiatkowskiego, od ulicy odgrodzony bramą i budynkiem kordegardy. Willa została wzniesiona na planie prostokąta, z portykiem i gankiem. Modernistyczne, dwukondygnacyjne rozwiązanie budynku, zostało wzbogacone skromnym, neoklasycystycznym detalem architektonicznym, podkreślającym prestiż i znaczenie tego obiektu. W samym pałacyku zaprojektowano: 8 pokoi, 2 służbówki, spiżarnię, 2 łazienki, 4 toalety, hol, garderobę, kredens, korytarz, sień, pasaż i obszerną klatkę schodową. Dodatkowo 2 balkony, taras i ganek otwierały się na otaczający ogród. Budynek posiadał własna instalację elektryczną, wodno-kanalizacyjną i system centralnego ogrzewania. Jako jedyny indywidualny obiekt na terenie Mościc, został wpisany do rejestru zabytków i posiada swoją kartę ewidencyjną. Po II wojnie światowej pełnił liczne funkcje, obecnie budynek znajduje się w gestii tarnowskich Zakładów Azotowych S.A. Od 2011 roku poddany jest gruntowanemu remontowi wraz z otaczającym go ogrodem."
+        },
+        {
+            "id": 8,
+            "name": "Blok wielorodzinny",
+            "location": "Mościce",
+            "address": "ul. Czerwonych Klonów 6",
+            "longitude": "50.01294664882572, 20.92439411004617",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Jeden z pierwszych czterech murowanych domów wielorodzinnych na osiedlu przyfabrycznym, zaprojektowany przez inż. A. Kiełbasińskiego. Sfinansowany przez fabrykę. Niewielkie mieszkania, o tradycyjnym układzie przestrzennym, z kuchnią i własną łazienką, gwarantowały komfort życia jego mieszkańcom. Zaplecze od strony podwórza, w postaci komórki na opał i zwierzęta, pozwalały na łatwiejszą adaptację ludzi w większości pochodzących ze wsi w mieście. Przy bloku pierwotnie znajdowały się przydomowe ogródki, pozwalające na uprawę niezbędnych warzyw i owoców, dla własnych potrzeb."
+        },
+        {
+            "id": 9,
+            "name": "Spółdzielnia mieszkaniowa MOŚCICE",
+            "location": "Mościce",
+            "address": "ul. Akacjowa 6",
+            "longitude": "50.01376082375588, 20.926132197802477",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Niski, podłużny budynek, parterowy budynek, pierwotnie pełnił funkcje usługowe dla przyzakładowego osiedla (np. naprawa lodówek, zegarmistrz, złotnik). Z czasem zmieniony na pawilon handlowy ZURT-u (Zakładu Usług Radiotechnicznych i Telewizyjnych). Modernizowany w latach 80. XX wieku, z przeznaczeniem na sklep spożywczy. Ustawiony wzdłuż ulicy, z uskokową elewacją, z przeszklonymi oknami od strony południowej, otwartymi na otoczenie i zieleń. Wrażenie lekkości uzyskano poprzez wprowadzenie dużych tafli szklanych w fasadzie budynku. Szkło zostało skontrastowane z monotonnymi, płaskimi elewacjami ścian bocznych."
+        },
+        {
+            "id": 10,
+            "name": "Blok wielorodzinny",
+            "location": "Mościce",
+            "address": "ul. Kasztanowa 16",
+            "longitude": "50.01099342558305, 20.92759245886765",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Blok wielorodzinny, dwupiętrowy, 5-klatkowy. Zaprojektowany w 1939 roku, zrealizowany w czasie II wojny światowej. Podłużna symetryczna bryła budynku z płaskim dachem, z dwoma owalnymi wykuszami (z klatkami schodowymi) na jego osiach, zrealizowana w nieco uproszczonej formie – bez okulusów okiennych od podwórka. Balkony z masywnymi, murowanymi parapetami. Początkowo kuchnie opalane węglem i piece, w latach 70. zastąpiono gazowymi. Centralne ogrzewanie doprowadzono z fabryki. Zaprojektowano wygodne mieszkania: dwu- (około 60 m2) i trzypokojowe (powyżej 100 m2), kuchnię ze spiżarką, osobną toaletą i łazienką z oknem. W budynku mieścił się strych, a w piwnicach, w każdej klatce - pralnia."
+        },
+        {
+            "id": 11,
+            "name": "Miejski Dom Sportu",
+            "location": "Mościce",
+            "address": "ul. Traugutta 5a",
+            "longitude": "50.01012492602066, 20.93257414455164",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom Sportu projektowany w latach 1965-1967, został oddany do użytku w 1969 roku. Jego pierwotny plan był wynikiem współpracy zespołu architektów: Bogumiła Zaufala, Stanisława Karpiela (współautorów pierwotnego projektu dawnego Domu Kultury) oraz Władysława Cukiera. Wnętrze opracowała Pracownia Sztuk Plastycznych w Krakowie. Ten niski budynek stanowi wraz z zespołem dwóch odkrytych basenów z wieżą do skoków, jeden z najważniejszych obiektów sportowych Tarnowa. Wokół obiektu zaprojektowano zieleń, stanowiącą formę izolacji od otoczenia przyfabrycznego osiedla. Po remoncie zakończonym w 2015 roku, po blisko 50-ciu latach funkcjonowania obiektu, zmieniono jego elewację od strony odkrytych basenów (zamurowano przeszklone kurtynowe ściany pływalni), wprowadzając w to miejsce owalne okna. Zewnętrzne filary w kształcie litery „V”, wypełniono betonem. Spłycono nieckę basenu, zrealizowano mini park wodny dla dzieci, usunięto błękitną mozaikę ceramiczną autorstwa Bogusława Zagajewskiego. Remontowi poddano salę sportową i zaplecze, dodatkowo wprowadzając w to miejsce siłownię i kręgielnię. Z dawnego wystroju wnętrza pozostawiono jedynie brązową mozaikę ceramiczną w holu, autorstwa Jerzego Sachy. Wszystkie ceramiczne kafle wykonano w Spółdzielni „Kamionka” w Łysej Górze w 1965 roku. Prace renowacyjne przeprowadził Krzysztof Sacha."
+        },
+        {
+            "id": 12,
+            "name": "Centrum Sztuki Mościce",
+            "location": "Mościce",
+            "address": "ul. Traugutta 1",
+            "longitude": "50.009836799181876, 20.927055166360127",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Budynek zrealizowany w 1971 roku, według projektu Zbigniewa S. Bielaka, Bogumiła Zaufala, Bronisława Stefanika i Stanisława Karpiela. Stanowił formę niskiej platformy, z trzema pionowymi akcentami, z elewacją w drewnie. Projekt budynku pierwotnie przeznaczony był dla rejonów podgórskich. Poprzez lata, wrósł w klimat i otoczenie Mościc. Jednak zły stan techniczny obiektu, przestarzałe rozwiązania wynikające z dawnej funkcji zakładowego domu kultury, zadecydowały o jego remoncie. W latach 2017-2018 poddany gruntownej modernizacji, w trakcie której zmieniono dachy i elewacje z układem okien. Zachowano zewnętrzny taras ze schodami, prowadzącymi na poziom I piętra. W budynku wprowadzono profesjonalne nagłośnienie, dostosowano przestrzeń dla osób z niepełnosprawnościami oraz poprawiono komfort miejsc na widowni. Dodatkowo zadbano o sale ćwiczeń, edukacyjne i wprowadzono nowoczesne rozwiązanie pozwalające na realizację najbardziej skomplikowanych działań artystycznych."
+        },
+        {
+            "id": 13,
+            "name": "Dworzec kolejowy Tarnów Mościce",
+            "location": "Mościce",
+            "address": "ul. Chemiczna",
+            "longitude": "50.0065189008731, 20.92532596680347",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dworzec kolejowy Tarnów-Mościce, usytuowany przy ulicy Chemicznej, wybudowany został w latach 1972-1976, w miejscu niewielkiego przystanku kolejowego. Projekt dworca obejmował budynek stacji, tunel (pozwalający na szybką komunikację - dojście na perony, łączący dwie strony osiedla) oraz parking. Autorem realizacji jest Biuro Projektów Kolejowych – Kraków, Stanisław Wilkosz. W okresie największego zatrudnienia w Zakładach Azotowych, stanowił jedno z najbardziej ruchliwych miejsc w Mościcach. Zaprojektowany na rzucie kwadratu, z płaskim dachem wychodzącym poza zasadniczą bryłę, ponad schody prowadzące bezpośrednio na peron, podtrzymywany jest przez masywne, rytmicznie rozstawione podpory. Duże, przeszklone elewacje, otwierają przestrzeń dworca na otaczającą zieleń i wprowadzają do środka światło dzienne, wydobywające detale architektoniczne wnętrza: kasetonowy sufit, lampy oświetleniowe, rzędy ławek, kasy biletowe, schody na antresolę (poczekalnię) i porfirowe posadzki. Szklane powierzchnie ścian, zestawiono z masywnym, szalowanym drewnem dachem. Całościowo zaprojektowany i zrealizowany bardzo szczegółowo, pomimo swego zaniedbania i postępującej dewastacji, nadal przemawia przemyślną, czystą, elegancką, modernistyczną formą. Zamknięty w 2012 roku. W 2021 roku, na wniosek Małopolskiego Wojewódzkiego Konserwatora Zabytków, został wpisany (układ i wystrój wnętrza) do rejestru zabytków. 29 sierpnia 2010 roku obok dworca odsłonięto instalację `28.03.1983`, mościczanina Wilhelma Sasnala."
+        },
+        {
+            "id": 14,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Willowa 2",
+            "longitude": "50.00334657227323, 20.92866079616954",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom jednorodzinny, wolnostojący, jednopiętrowy, na zamknięciu ulicy. Wybudowany w 1934 roku jako pierwszy dom w tej części późniejszego osiedla Za Torem. Zrealizowany został według indywidualego planu, dla inż. Stanisława Kubińskiego, pierwszego wójta gminy Mościce (w pobliżu skwer jego imienia), uwzględniając funkcje i potrzeby jego użytkowników. Posiada nowoczesną bryłę w postaci przenikających się w planie prostopadłościanów, płaski dach, ganek z wejściem, taras ze schodami od ogrodu, narożne okna i osobny garaż. Funkcjonalna pralnia usytuowana została w piwnicy. Pomieszczenia gospodarcze: kuchnia, ze spiżarnią i służbówką, stanowią integralną część domu, z osobnym wejściem. Posiada wyraźnie wyodrębnioną część prywatną na I piętrze i część reprezentacyjną z zapleczem kuchenno-gospodarczym na parterze. Tutaj też znajduje się gabinet wójta gminy, z osobnym wejściem z przedpokoju. Willa ta, usytuowana w ogrodzie, bliższa jest już awangardzie lat 20. i 30. XX wieku i nawiązuje do innych tego typu realizacji w kraju. Dom pozostaje nadal w rękach jednej rodziny."
+        },
+        {
+            "id": 15,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Willowa 3",
+            "longitude": "50.0027549046518, 20.928063691794904",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom jednorodzinny, wolnostojący, w ogrodzie, powstał jako drugi obiekt na tej ulicy. Zaprojektowany został w 1940 roku przez znanego lwowskiego architekta Andrzeja Frydeckiego dla inż. Karola Huelle i jego rodziny. Podłużna, płaska forma budynku, artykułowana pionowymi oknami i balkonami z masywnymi obramieniami, zestawiona została z pionową półokrągłą formą z owalnym oknem, obłożoną piaskowcem. Dwukondygnacyjny, oszklony, usytuowany od południa ogród zimowy, otwierający się bezpośrednio na otaczającą zieleń zaprojektowany ze względu na zainteresowania żony Marii, z domu Fiedler (jednej z pierwszych kobiet, które ukończyły Politechnikę Lwowską). Płaski dach, przenikające się bryły budynku odpowiadające ich funkcji, poziome rytmiczne rzędy okien, kamienna okładzina elewacji zestawiona z gładką powierzchnią ścian, decydują o elegancji tej willi. Garaż połączony jest bezpośrednio z domem. Indywidualne, zaprojektowane dla użytkowników domu rozwiązania przestrzenne, użyty materiał, stawiają ten dom w rzędzie najciekawszych realizacji architektonicznych międzywojennych Mościc."
+        },
+        {
+            "id": 16,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 7",
+            "longitude": "50.003024708836065, 20.92680989886903",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Ulica Norwida, stanowi główną oś założenia osiedla Za Torem. Opracowaniem jego planów zajęła się komisja powołana przez ówczesnego dyrektora fabryki Eugeniusza Kwiatkowskiego oraz inżynierów: Andrzeja Miziewicza, Stanisława Hüpscha i Edwarda Mrowca. Część planów opracowali także członkowie kadry kierowniczej zakładu, inżynierowie: Z. Sajewicz i W. Wojtasiewicz, od 1938 roku pełniący funkcję Kierownika Wydziału Budowlanego. Grunty na budowę pochodziły ze Skarbu Państwa i rozparcelowane zostały przez fabrykę na rzecz poszczególnych spółdzielni mieszkaniowych. Plany tej części osiedla pochodziły z lwowskiej pracowni inżynierów Jurasza i Zachariewicza. Nie zostały jednak zrealizowane. Kolejne plany domów noszą pieczęcie tarnowskiego architekta – inż. Edwarda Okonia. Wszystkie domy projektowane dla inżynierów posiadają te same plany: dwie kubiczne lekko cofnięte względem siebie formy, z płaskimi dachami oraz prostokątne okna na dłuższych i krótszych bokach. Brak detalu architektonicznego i oszczędność formy, nawiązują do stylu międzynarodowego w dwudziestoleciu międzywojennym. W większości przypadków, modernizowane i przebudowane po II wojnie."
+        },
+        {
+            "id": 17,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 10",
+            "longitude": "50.0025079636104, 20.92743890424334",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Dom ten, jako jeden z dwóch domów na osiedlu inżynierskim Za Torem, posiada indywidualny, dostosowany do potrzeb zamawiającego plan. Jako jeden z nielicznych na tym osiedlu, od daty zakończenia budowy w 1938 roku, nie został przebudowany i zmieniony. Zarówno tynki elewacji, stolarka okienna i drzwiowa oraz metalowe poręcze i balustrady, są nadal oryginalne. Podobnie jak kajnerowy uchwyt i maszt na flagę, a także przydomowy garaż. Nadal także zamieszkiwany jest przez kolejne pokolenie rodziny Józefa Peterko. Podobnie we wnętrzu zachowano dawne podziały i wystrój z epoki. Na uwagę zasługuje także starannie utrzymany przydomowy ogród, z oczkiem wodnym i ze starym drzewostanem."
+        },
+        {
+            "id": 18,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Norwida 14",
+            "longitude": "50.00176485260068, 20.927496193049464",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Narożna, większa od pozostałych zarówno kubaturą, jak i powierzchnią ogrodu, willa. To drugi dom na tej ulicy, posiadający indywidualną formę i plan, odpowiadający zapotrzebowaniom użytkowników. W części przebudowany po II wojnie światowej, z poszanowaniem pierwotnego układu i funkcji pomieszczeń. Charakterystyczne okna, wychodzące na ogród z drzewem — pomnikiem przyrody. Podobnie jak w pozostałych domach, podział na parterze na część oficjalną (salon, gabinet pana domu) i pomieszczenia gospodarcze z kuchnią od wschodu, ze służbówką, osobną łazienką i wejściem gospodarczym od ogrodu."
+        },
+        {
+            "id": 19,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 8",
+            "longitude": "50.0031979301919, 20.926193016691375",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Usytuowana wzdłuż szerokiej, wysadzanej lipami ulicy, jedna z piękniejszych i najbardziej reprezentacyjnych ulic osiedla Za Torem. Szeroka, z osobnym chodnikiem dla pieszych i pasem zieleni, oddzielała domy inżynierów od pozostałej części osiedla, finansowanej z funduszy spółdzielni dla robotników „Nasz Dom”. Domy te, znacznie mniejsze, w niewielkich ogródkach, posiadały strome dachy i tradycyjne formy. W pobliżu skwer z tablicą erekcyjną upamiętniającą datę rozpoczęcia budowy osiedla, 2 czerwca 1934 roku. W ramach działalności Spółdzielni Mieszkaniowo-Budowlanej Pracowników Umysłowych Z.P.Z.A. w Mościcach „Osiedle”, do 1939 roku wybudowano 12 z 20 domów. Każdy członek spółdzielni zobowiązany był wnieść wkład w wysokości 4 tys. zł. Koszt budowy domu o pow. 540 m² wyniósł 15 tys. zł. Kanalizację oraz energię elektryczną fabryka doprowadziła na swój koszt. Dom ten, podobnie jak pozostałe domy na tej ulicy, posiada typowy plan wnętrza, z podziałem na część oficjalną i prywatną oraz modernistyczne, funkcjonalne rozwiązania."
+        },
+        {
+            "id": 20,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 10",
+            "longitude": "50.00278995023848, 20.9262485819777",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Plan domu, podobnie jak w przypadku większości willi opracowany został przez Pracownię Projektowo-Budowlaną inż. Edwarda Okonia z Tarnowa. Jako jeden z nielicznych na tej ulicy, zachowany w pierwotnej formie. Posiada analogiczny układ z pozostałymi willami inżynierskimi w ogrodach, z garażem. Z wysokim wąskim oknem klatki schodowej. Zarówno tej willi, jak i pozostałym domom, brak jednak bardziej wysublimowanej struktury i elementów typowych dla modernizmu: przeźroczystości, lekkości ażurowych konstrukcji czy prześwitów. Elewacja domu utrzymana w prostej, pozbawionej ornamentu i wszelkich odniesień historycznych formie, jest przejawem mody i ducha czasu. Proste, asymetryczne, geometryczne kształty stanowią jedyny wyraz nowoczesności. Dom pozostaje nadal w rękach jednej rodziny."
+        },
+        {
+            "id": 21,
+            "name": "Willa",
+            "location": "Mościce",
+            "address": "ul. Obrońców Lwowa 14",
+            "longitude": "50.00202187236836, 20.926349535603666",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Podobnie jak pozostałe domy na tej ulicy, posiada plan i układ przestrzenny zbliżony do pozostałych. Kubiczna, uproszczona forma budynku, została przerobiona i zmieniona po II wojnie światowej. Jako jedyny zachowany budynek posiada w elewacji owalne okno. Pomimo nowoczesnej formy domu, podział wnętrza odpowiada tradycyjnemu układowi przestrzennemu domu szlacheckiego ze służbą. Kadra inżynierska, w społeczności międzywojennej, najlepiej wykształcona i zarabiająca warstwa społeczna, w hierarchii fabrycznej stanowiła najbardziej uprzywilejowaną część społeczności Mościc."
+        },
+        {
+            "id": 22,
+            "name": "Willa Państwa Książków",
+            "location": "Tarnów",
+            "address": "ul. Chopina 16",
+            "longitude": "50.01409179519927, 20.979454451078595",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Jest połączeniem domu i pracowni rentgenowskiej. Budynek zaprojektowany przez Wojciecha Pietrzyka (autora kościoła Arki Pana w Krakowie), jako dzieło totalne. Architekt zaprojektował nie tylko bryłę, ale także wnętrze (w tym meble i detale, takie jak wieszaki w poczekalni), posadzki, garaż, czy ogród. Wszystko wykonane w szlachetnych, wysokiej klasy materiałach. Precyzyjnie rozrysował układ bloków tworzących ogrodzenie. Ujednolicił kolorystykę i detale architektoniczne. Na elewację zostały wprowadzone dwie duże, kwadratowe, nieznacznie różniące się detalami mozaiki (ceramika i szkło). Wykonali je - w Przegorzałach pod Krakowem - Helena i Roman Husarscy. Trzecia kompozycja zdobi ścianę, ogrodzenie zamykające posesję. Budowa domu trwała 10 lat (1967-1977). Ten specyficzny dom, który ociera się już o modernistyczny manieryzm, jest jedną z najciekawszych tego typu budowli w Polsce. Dzięki staraniom właścicieli, począwszy od lat 70., kiedy go ukończono, aż do dnia dzisiejszego, dom prawie nie uległ zmianie."
+        },
+        {
+            "id": 23,
+            "name": "Kościół p.w. Najświętszego Serca Jezusowego",
+            "location": "Tarnów",
+            "address": "ul. Lwowska 102",
+            "longitude": "50.014486853225954, 21.009815147380795",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W 1935 roku rozpoczęto przygotowania do budowy kościoła w Tarnowie na Grabówce. Prace nad projektem poprzedziło opracowanie programu zawierającego szczegółowe wytyczne dotyczące wyglądu świątyni. Precyzyjną odpowiedź na te założenia stanowił niezrealizowany projekt inżyniera Witolda Giżberta-Studnickiego, zakładający m.in. umieszczenie na wieży serca z krzyżem, które zaświecone w czasie uroczystości, symbolizować miało płonące Serce Jezusowe. Ostatecznie wybrano projekt Konstantego Jakimowicza. Prace budowlane przerwała wojna. Smukłe, dwie prostokątne wieże ukończono w 1952 roku, uroczyste poświęcenie świątyni nastąpiło dopiero w 1984 roku Murowany, ceglany (z użyciem żelazobetonu) kościół posiada bazylikowy, trzynawowy korpus z transeptem oraz charakterystyczną fasadę z wieżami równej wysokości. Nad głównym wejściem, poprzedzonym kolumnowym portykiem, znajduje się wysoka na 6 metrów mozaika przedstawiająca Chrystusa Dobrego Pasterza, zrealizowana w latach 70. XX wieku. Przy jej realizacji wykorzystano, biały cement, barwne bryły szklane i czarny kamień z Szydłowca. Jej autorami są tarnowscy artyści: Bogdana i Anatol Drwalowie."
+        },
+        {
+            "id": 24,
+            "name": "Kościół p.w. Błogosławionej Karoliny Kózki",
+            "location": "Tarnów",
+            "address": "ul. Jana Pawła II 1",
+            "longitude": "50.025275868458586, 21.01789852375743",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Decyzja o wzniesieniu świątyni była odpowiedzią na plany przewidujące budowę 60 tyś. osiedla w tej części miasta (byłaby to największa parafia w diecezji). Pozwolenie na budowę zostało wydane w 1983 roku. Autorami projektu są Zdzisława i Leszek Kaczor. W czerwcu 1987 roku miała tu miejsce wizyta papieża Jana Pawła II, w trakcie której uroczyście beatyfikowano Karolinę Kózkę. Systematyczną liturgię w tzw. kościele dolnym zainaugurowano w 1992 roku. W lipcu 1993 roku erygowano parafię pw. Bł. Karoliny. W 2001 roku pierwsze uroczystości odbyły się w górnym kościele. Ceglana budowla, usytuowana na wzniesieniu, z wysoką na prawie 70 metrów wieżą, góruje nad okolicą i stanowi punkt orientacyjny Tarnowa. Prace wykończeniowe przy kościele trwają do dziś. Planowane gigantyczne osiedle nie powstało, a kościół stoi obecnie na skraju pól. Ta jedna z najbardziej spektakularnych klęsk tarnowskiej urbanistyki, udowadnia, jak ryzykowne jest tworzenie planów zagospodarowanie miasta na wiele lat do przodu."
+        },
+        {
+            "id": 25,
+            "name": "Zbiornik wodny Bania",
+            "location": "Tarnów",
+            "address": "os. Jasna",
+            "longitude": "50.02473093751886, 21.00671024680868",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Górująca nad osiedlem Jasna konstrukcja, która swym kształtem przypomina futurystycznego pająka, to zaprojektowany w 1980 roku zbiornik wody, potocznie zwany banią. Wysoka na 32 metry wieża zbudowana została według projektu pracowników Warszawskiej Politechniki i przez wiele lat wykorzystywana była do dystrybucji wody dla mieszkańców otaczających ją bloków. Obecnie funkcjonuje jako zbiornik i stabilizator ciśnienia wody w tym obszarze miasta. Złożona jest z 24 profilowanych słupów, wzmocnionych czterema poprzecznymi pierścieniami. Imponujące, metalowe podpory podtrzymują olbrzymi torus o średnicy 6 m i pojemności 3.000 m³. Mimo swej monumentalności bania jest ażurową, bardzo lekką formą, charakterystyczną dla pejzażu miasta."
+        },
+        {
+            "id": 26,
+            "name": "Kościół pw. Św. Józefa i Matki Bożej Fatimskiej",
+            "location": "Tarnów",
+            "address": "al. Matki Bożej Fatimskiej 39",
+            "longitude": "50.019500775882726, 20.993815857870583",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Prace nad budową kościoła trwały od 1957 do 1960 roku. Projekt to dzieło zespołu architektów: Jerzego Kozłowskiego, Krystiana Seiberta oraz Zbigniewa Wolaka. Jest to trzynawowy, ceglany (z użyciem kamienia oraz żelazobetonu) kościół z prezbiterium i Kaplicą Martyrologii Polskiej od wschodu. Na szczególną uwagę zasługują: sklepienie oraz elementy wyposażenia: konfesjonały i ławki oraz rzeźby autorstwa Marii Pinińskiej-Bereś i Jerzego Beresia (Św. Rodzina, Serce Jezusa, Chrystus Ukrzyżowany). Ten sam zespół architektów zaprojektował także plebanię (1965). Nad wejściem od zachodu umieszczono kompozycję (7x3 m) przedstawiającą Pietę, zrealizowaną w 1960 roku przez małżeństwo krakowskich ceramików Helenę i Romana Husarskich. Wykonana została w technice „piropiktury” , tzw. „malarstwa ogniowego” (bez konieczności wypalania w piecu). Wewnątrz, w Kaplicy Martyrologii Polskiej zw. Oświęcimską, warszawska artystka Maria Hiszpańska-Neumann, więźniarka obozu w Ravensbrück, wykonała - ze szkła i betonu - płaskorzeźbę przedstawiającą marsz śmierci. 14 czerwca 1940 roku z Tarnowa wyruszył pierwszy transport do obozu KL Auschwitz. Ten nowoczesny Kościół jest sztandarową, jedną z najbardziej znanych, modernistycznych budowli kościelnych w powojennej Polsce, wielokrotnie naśladowaną w innych miejscach w kraju."
+        },
+        {
+            "id": 27,
+            "name": "Zabudowa wielorodzinna",
+            "location": "Tarnów",
+            "address": "ul. Dwernickiego",
+            "longitude": "50.02160307719928, 20.99239318424379",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "W 1934 roku Komitet Ekonomiczny Ministrów powołał do życia Towarzystwo Osiedli Robotniczych. Jego celem była budowa i eksploatacja mieszkań dla pracowników o średnim i niższym wynagrodzeniu, szczególnie dla robotników. Dzięki tej inicjatywie w latach 30. XX wieku powstały te murowane, wielorodzinne, piętrowe bloki mieszkalne. Usytuowane na granicy miasta, na niewielkim wzniesieniu, w dobrej odległości od siebie – nie zasłaniają sobie światła. Posiadają płaskie dachy, duże i narożne okna oraz mieszkania z osobnymi kuchniami i łazienkami. W dwudziestoleciu międzywojennym, marzenie większości współczesnych. Posiada skromne, proste elewacje, Jedynym elementem zdobniczym jest pojedynczy wazon, umieszczony na szczycie jednego z bloków. Budowa domów robotniczych oparta była na systemie spłaty zadłużenia w postaci comiesięcznych rat potrącanych bezpośrednio z pensji. System ten miał już swoją tradycję w Tarnowie. Wprowadzono go w 1922 roku, w związku z budową Zakładów Naprawczych Taboru Kolejowego i osiedla kolejarskiego. Opracowanie tekstów: Barbara Bułdys, Aleksandra Idler, Katarzyna Nalezińska, Dawid Radziszewski"
+        },
+        {
+            "id": 28,
+            "name": "Hotel Tarnovia",
+            "location": "Tarnów",
+            "address": "ul. Kościuszki 10",
+            "longitude": "50.00922728094979, 20.975301651432684",
+            "photos": ["zdjecie4.jpg", "zdjecie5.jpg", "zdjecie6.jpg"],
+            "description": "Zaprojektowany przez Andrzeja Kowalewskiego, przy współpracy Stanisława Fijałkowskiego, został oddany do użytku w grudniu 1975 roku. Podłużny, czterokondygnacyjny budynek z płaskim dachem i poziomymi pasami okien. Od północy z zaokrągloną, przeszklona klatką schodową,  nawiązującą do motywu okrętu. Na fasadzie od południa, na ścianie sali bankietowo-konferencyjnej na parterze, wprowadzono dziewięć uskoków muru (z pionowymi oknami), z mozaiką autorstwa plastyka Kazimierz Gąsiorowskiego z warszawskiej Spółdzielni Plastycznej. Monumentalna abstrakcyjna kompozycja, wykonana została z rzecznych otoczaków, bryłek barwnego szkła i z syntetycznych przetopionych materiałów, odpadów pochodzących Zakładów Radiowych im. Kasprzaka w Warszawie. Przedstawia wizję bitwy pod Aleppo. Na jednej z płaszczyzn ściany przedstawiono (w czerni) gen. Bema na koniu. Była to ostatnia zwycięska bitwa, pod przywództwem Bema, stoczona w 1850 roku. Pod koniec lat 70. XX wieku był to największy i najbardziej nowoczesny hotel w Tarnowie."
         }
     ]
 }

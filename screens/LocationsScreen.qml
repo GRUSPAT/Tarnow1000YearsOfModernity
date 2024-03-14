@@ -11,6 +11,7 @@ Item {
             width: rootWindow.width
             height: rootWindow.height * 0.2
             color: "red"
+            z:1
             Column{
                 width: parent.width
                 height: parent.height
@@ -68,57 +69,61 @@ Item {
                 }
             }
         }
-        ListView {
+        ScrollView {
             width: parent.width
             height: parent.height
-            model: rootWindow.jsonContext.context_pl
-            spacing: 10
+            ListView {
+                width: parent.width
+                height: parent.height
+                model: rootWindow.jsonContext.context_pl
+                spacing: 10
 
-            delegate:
-                Rectangle{
-                width: parent.width - 40
-                height: 200
-                anchors.margins: 20
-                anchors.horizontalCenter: parent.horizontalCenter
-                radius: 20
-                color: "blue"
-                Column{
-                    width: parent.width
-                    height: parent.height
-                    Image {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        width: 300
-                        height: 100
-                        id: objectImage
-                        source: "qrc:/images/AppIcon.png"
-                    }
-                    Text{
-                        width: parent.width - 50
-                        height: 40
-                        text: `${modelData.id + 1}. ${modelData.name}`
-                    }
-                    Row{
-                        width: parent.width - 50
-                        height: 40
-                        spacing: 20
-                        IconImage {
-                            anchors.margins: 4
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: 30
-                            height: 30
-                            source: "qrc:/icons/SettingsIcon.svg"
+                delegate:
+                    Rectangle{
+                    width: parent.width - 40
+                    height: 200
+                    anchors.margins: 20
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    radius: 20
+                    color: "blue"
+                    Column{
+                        width: parent.width
+                        height: parent.height
+                        Image {
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: 300
+                            height: 100
+                            id: objectImage
+                            source: "qrc:/images/AppIcon.png"
                         }
-                        Text {
-                            text: `${modelData.address}`
+                        Text{
+                            width: parent.width - 50
+                            height: 40
+                            text: `${modelData.id + 1}. ${modelData.name}`
                         }
-                        Button{
-                            text: "Więcej"
+                        Row{
+                            width: parent.width - 50
+                            height: 40
+                            spacing: 20
+                            IconImage {
+                                anchors.margins: 4
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: 30
+                                height: 30
+                                source: "qrc:/icons/SettingsIcon.svg"
+                            }
+                            Text {
+                                text: `${modelData.address}`
+                            }
+                            Button{
+                                text: "Więcej"
+                            }
                         }
                     }
+                    //Text {
+                    //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
+                    //}
                 }
-                //Text {
-                //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
-                //}
             }
         }
     }
