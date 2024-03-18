@@ -12,6 +12,8 @@ ApplicationWindow {
 
     Component.onCompleted: loadData()
 
+
+
     property var jsonContext
     property var jsonRoutes
 

@@ -8,5 +8,9 @@
         <file>images/AppIcon.png</file>
         <file>json/context.json</file>
         <file>json/routes.json</file>
+        <file>images/Tarnow1000LatLogo.png</file>
+        <file>images/objects/object_1/miniature_1.png</file>
+        <file>images/objects/objectBG.svg</file>
+        <file>fonts/Montserrat-Bold.ttf</file>
     </qresource>
 </RCC>
