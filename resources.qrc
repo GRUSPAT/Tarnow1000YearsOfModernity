@@ -29,5 +29,9 @@
         <file>offline_tiles/osm_100-l-3-2-3-1.png</file>
         <file>offline_tiles/osm_100-l-3-2-3-2.png</file>
         <file>offline_tiles/osm_100-l-3-2-3-3.png</file>
+        <file>images/Tarnow1000LatLogo.png</file>
+        <file>images/objects/object_1/miniature_1.png</file>
+        <file>images/objects/objectBG.svg</file>
+        <file>fonts/Montserrat-Bold.ttf</file>
     </qresource>
 </RCC>
