@@ -5,17 +5,19 @@ import QtLocation
 import QtPositioning
 
 Item {
-    Plugin {
-        id: mapPlugin
-        name: "osm"
-    }
-
     Map {
         id: map
         anchors.fill: parent
-        plugin: mapPlugin
-        center: QtPositioning.coordinate(50.01, 20.98)
-        zoomLevel: 14
+        activeMapType: map.supportedMapTypes[1]
+        zoomLevel: 1
+        plugin: Plugin {
+            name: "osm"
+            PluginParameter {
+                name: 'osm.mapping.offline.directory'
+                value: ':/offline_tiles/'
+            }
+        }
+        //center: QtPositioning.coordinate(50.01, 20.98)
 
         property geoCoordinate startCentroid
 
