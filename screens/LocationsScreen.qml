@@ -17,8 +17,8 @@ Item {
     }
     Column{
 
-         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-         Component.onCompleted: console.log(font.name)
+        FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
+        Component.onCompleted: console.log(font.name)
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
@@ -50,9 +50,9 @@ Item {
                             anchors.leftMargin: 20
                             anchors.topMargin: 45
                             font.family: font.font.family
-                                //    font.weight: font.font.weight
-                                 //   font.styleName: font.font.styleName
-                           // font.family: font.name
+                            //    font.weight: font.font.weight
+                            //   font.styleName: font.font.styleName
+                            // font.family: font.name
                             id:topBarLabel
                             text: "OBIEKTY"
                             font.pixelSize: 32
@@ -112,7 +112,9 @@ Item {
             width: parent.width
             height: parent.height - rootWindow.height * 0.07
             leftPadding: 20
-            contentWidth: parent.width -20
+            topPadding: 10
+            bottomPadding: 180
+            contentWidth: parent.width - 20
             contentHeight: objectsList.height
             //ScrollBar.vertical.policy: ScrollBar.AlwaysOn
             ListView {
@@ -123,11 +125,10 @@ Item {
 
                 delegate:
                     Rectangle{
-                    FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-                    width: objectsList.width-20
                     id:objectCard
-
-                    height: 320
+                    FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
+                    width: objectsList.width - 20
+                    height: 260
                     radius: 20
                     color: primaryColor
                     /*Image {
@@ -144,16 +145,16 @@ Item {
                         leftPadding: 16
                         rightPadding: 16
                         Rectangle{
-                            width: 357
-                            height: 171
+                            width: parent.width - 32
+                            height: parent.height * 0.55
                             radius: 12
                             Image {
-                                anchors.fill: parent
+                                id: objectImage
+                                //anchors.fill: parent
                                 width: parent.width
                                 height: parent.height
-                                fillMode: Image.PreserveAspectCrop
-                                clip:true
-                                id: objectImage
+                                //fillMode: Image.PreserveAspectCrop
+                                //clip:true
                                 source: "qrc:/images/objects/object_1/miniature_1.png"
                             }
                             Row{
@@ -168,7 +169,7 @@ Item {
                                     color: accentColor
                                     Text{
                                         anchors.centerIn: parent
-                                        text: "TESTOWY"
+                                        text: `${modelData.location}`
                                         font.family: font2.font.family
                                         font.pixelSize: 8
                                         color: primaryColor
@@ -178,10 +179,10 @@ Item {
                             }
                         }
                         Row{
-                            topPadding: 13
-                            width: parent.width -32
+                            topPadding: 10
+                            width: parent.width - 32
                             Text{
-                                width: parent.width -32
+                                width: parent.width - 32
                                 wrapMode: Text.WordWrap
                                 font.pixelSize: 15
                                 font.family: font2.name
@@ -192,13 +193,14 @@ Item {
                         }
                         Row{
                             width: parent.width - 32
-                            height: 50
-                            topPadding: 14
+                            height: 46
 
                             Rectangle{
-                                width: parent.width * 0.5
+                                width: parent.width * 0.65
                                 height: 44
                                 Row{
+                                    width: parent.width
+                                    height: parent.height
                                     spacing: 10
                                     IconImage {
                                         //anchors.margins: 4
@@ -216,7 +218,7 @@ Item {
 
                             }
                             Rectangle{
-                                width: parent.width * 0.5
+                                width: parent.width * 0.35
                                 height: 44
                                 RoundButton{
                                     width: 105
