@@ -9,6 +9,14 @@ Item {
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
 
+    Component.onCompleted: {
+        homeButton.icon.color = textColor
+        objectsButton.icon.color = accentColor
+        mapButton.icon.color = textColor
+        routesButton.icon.color = textColor
+        settingsButton.icon.color = textColor
+    }
+
     Rectangle{
         anchors.fill: parent
         z:0

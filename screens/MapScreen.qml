@@ -5,10 +5,13 @@ import QtLocation
 import QtPositioning
 
 Item {
+
+
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
+
     Column {
         width: rootWindow.width
         height: rootWindow.height
@@ -60,6 +63,15 @@ Item {
                         source: "qrc:/images/Tarnow1000LatLogo.png"
                     }
                 }
+
+                Component.onCompleted: {
+                    homeButton.icon.color = textColor
+                    objectsButton.icon.color = textColor
+                    mapButton.icon.color = accentColor
+                    routesButton.icon.color = textColor
+                    settingsButton.icon.color = textColor
+                }
+
             }
         }
         Map {
