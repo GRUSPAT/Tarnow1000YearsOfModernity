@@ -5,7 +5,17 @@ import QtQuick.Controls.Material 2.15
 Item{
     width: rootWindow.width
     height: rootWindow.height
+    property color backgroundColor: "#F2F3F3"
+    property color primaryColor: "#FCFCFC"
+    property color textColor: "#000000"
+    property color accentColor: "#5A8A98"
+    Rectangle{
+        anchors.fill: parent
+        z:0
+        color: backgroundColor
+    }
     Column{
+        FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
         width: rootWindow.width
         height: rootWindow.height
         Text {
@@ -18,11 +28,12 @@ Item{
             height: 100
             text: "WPROWADZENIE"
             font.pixelSize: 24
+            font.family: font.font.family
         }
         SwipeView {
             id: idSwipeView
             width: rootWindow.width
-            height: 260
+            height: 300
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
@@ -35,7 +46,7 @@ Item{
                 Rectangle{
                     width: idSwipeView.width - 20
                     height: idSwipeView.height
-                    color: "red"
+                    color: primaryColor
                     radius: 20
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
@@ -53,6 +64,11 @@ Item{
                             radius: 20
                             anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
+                            Image {
+                                anchors.fill: parent
+                                id: firstItemImage
+                                source: "qrc:/images/main/main_1_miniature.png"
+                            }
                         }
                         Text {
                             id: titleText
@@ -66,6 +82,7 @@ Item{
                             text: "Poznaj historię Tarnów 1000 lat Nowoczesności"
                             font.bold: true
                             font.pixelSize: 17
+                            font.family: font.font.family
                             wrapMode: Text.WordWrap
                         }
                         RoundButton {
@@ -75,15 +92,16 @@ Item{
                             radius: 5
                             contentItem: Text {
                                 text: "Więcej"
-                                color: "white"
+                                color: primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
                                 font.bold: true
+                                font.family: font.font.family
                             }
                             background: Rectangle {
                                 radius: detailsButton.radius
-                                color: "blue"
+                                color: accentColor
                             }
                             anchors.right: parent.right
                             anchors.rightMargin: 8
@@ -99,7 +117,7 @@ Item{
                 Rectangle{
                     width: idSwipeView.width - 20
                     height: idSwipeView.height
-                    color: "blue"
+                    color: primaryColor
                     radius: 20
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
@@ -117,6 +135,11 @@ Item{
                             radius: 20
                             anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
+                            Image {
+                                anchors.fill: parent
+                                id: secondItemImage
+                                source: "qrc:/images/main/main_2_miniature.png"
+                            }
                         }
                         Text {
                             id: titleTextSecond
@@ -130,6 +153,7 @@ Item{
                             text: "Odkryj twórczość Jana Głuszaka Dagamary"
                             font.bold: true
                             font.pixelSize: 17
+                            font.family: font.font.family
                             wrapMode: Text.WordWrap
                         }
                         RoundButton {
@@ -139,15 +163,16 @@ Item{
                             radius: 5
                             contentItem: Text {
                                 text: "Więcej"
-                                color: "white"
+                                color: primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
                                 font.bold: true
+                                font.family: font.font.family
                             }
                             background: Rectangle {
                                 radius: detailsButton.radius
-                                color: "red"
+                                color: accentColor
                             }
                             anchors.right: parent.right
                             anchors.rightMargin: 8
@@ -173,10 +198,11 @@ Item{
             height: 50
             text: "POLECANE TRASY"
             font.pixelSize: 24
+            font.family: font.font.family
         }
         SwipeView {
             id: idSwipeViewSecond
-            width: rootWindow.width * 0.5
+            width: rootWindow.width
             height: 260
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
@@ -185,60 +211,216 @@ Item{
 
             Item {
                 id: firstRoute
-                width: idSwipeViewSecond.width
+                width: idSwipeViewSecond.width * 0.5
                 height: idSwipeViewSecond.height
-                Rectangle{
-                    width: firstRoute.width - 20
-                    height: firstRoute.height
-                    color: "red"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
+                Row{
+                    leftPadding: 10
+                    rightPadding: 10
+                    spacing: 10
+                    Rectangle{
+                        width: firstRoute.width *0.5 - 15
+                        height: firstRoute.height
+                        color: primaryColor
+                        radius: 20
+                        Rectangle{
+                            width: 63
+                            height: 17
+                            color: accentColor
+                            z:1
+                            anchors.top: parent.top
+                            anchors.topMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            Text{
+                                anchors.centerIn: parent
+                                text: "Mościce"
+                                font.pixelSize: 10
+                                font.family: font.font.family
+                                color: primaryColor
+                            }
+                        }
+                        Column{
+                            topPadding: 13
+                            rightPadding: 13
+                            leftPadding: 13
+                            width: parent.width
+                            height: parent.height
+                            spacing: 7
+                            z:0
+                            Rectangle{
+                                id: imageContainer
+                                width: parent.width - 26
+                                height: parent.width - 26
+                                border.width: 2
+                                border.color: accentColor
+                                color: "transparent"
+                                z:0
+                                Image {
+                                    anchors.centerIn: parent
+
+                                    width: parent.width-4
+                                    height: parent.width-4
+                                    id: pathImageMini
+                                    source: "qrc:/images/paths/path_example.png"
+                                   z:0
+                                }
+                            }
+
+                            Text{
+                                text: "Przez mościckie wille"
+                                font.pixelSize: 12
+                                font.family: font.font.family
+                            }
+                            RoundButton{
+                                width: parent.width * 0.5
+                                height: parent.height *0.13
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                contentItem: Text {
+                                    text: "Więcej"
+                                    font.pixelSize: 12
+                                    font.family: font.name
+                                    color: primaryColor
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                    elide: Text.ElideRight
+                                }
+
+                                background: Rectangle {
+                                    anchors.fill: parent
+                                    width: parent.width
+                                    height: parent.height
+                                    color: accentColor
+                                    radius: 3
+                                }
+                            }
+                        }
+
+                        // anchors.horizontalCenter: parent.horizontalCenter
+                    }
+                    Rectangle{
+                        width: firstRoute.width *0.5 - 15
+                        height: firstRoute.height
+                        color: primaryColor
+                        radius: 20
+                        Rectangle{
+                            width: 63
+                            height: 17
+                            color: accentColor
+                            z:1
+                            anchors.top: parent.top
+                            anchors.topMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            Text{
+                                anchors.centerIn: parent
+                                text: "Mościce"
+                                font.pixelSize: 10
+                                font.family: font.font.family
+                                color: primaryColor
+                            }
+                        }
+                        Column{
+                            topPadding: 13
+                            rightPadding: 13
+                            leftPadding: 13
+                            width: parent.width
+                            height: parent.height
+                            spacing: 7
+                            z:0
+                            Rectangle{
+                                width: parent.width - 26
+                                height: parent.width - 26
+                                border.width: 2
+                                border.color: accentColor
+                                color: backgroundColor
+                                Image {
+                                    anchors.centerIn: parent
+
+                                    width: parent.width-4
+                                    height: parent.width-4
+                                    id: pathImageMini2
+                                    source: "qrc:/images/paths/path_example.png"
+                                   z:0
+                                }
+                            }
+                            Text{
+                                text: "Przez mościckie wille"
+                                font.pixelSize: 12
+                                font.family: font.font.family
+                            }
+                            RoundButton{
+                                width: parent.width * 0.5
+                                height: parent.height *0.13
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                contentItem: Text {
+                                    text: "Więcej"
+                                    font.pixelSize: 12
+                                    font.family: font.name
+                                    color: primaryColor
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                    elide: Text.ElideRight
+                                }
+
+                                background: Rectangle {
+                                    anchors.fill: parent
+                                    width: parent.width
+                                    height: parent.height
+                                    color: accentColor
+                                    radius: 3
+                                }
+                            }
+                        }
+                        // anchors.horizontalCenter: parent.horizontalCenter
+                    }
                 }
+
             }
             Item {
                 id: secondRoute
-                width: idSwipeViewSecond.width
+                width: idSwipeViewSecond.width * 0.5
                 height: idSwipeViewSecond.height
-                Rectangle{
-                    width: secondRoute.width - 20
-                    height: secondRoute.height
-                    color: "blue"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
+                Row{
+                    leftPadding: 10
+                    rightPadding: 10
+                    spacing: 10
+                    Rectangle{
+                        width: firstRoute.width *0.5 - 15
+                        height: firstRoute.height
+                        color: primaryColor
+                        radius: 20
+
+                        // anchors.horizontalCenter: parent.horizontalCenter
+                    }
+                    Rectangle{
+                        width: firstRoute.width *0.5 - 15
+                        height: firstRoute.height
+                        color: accentColor
+                        radius: 20
+                        RoundButton{
+                            anchors.fill: parent
+                            contentItem: Text {
+                                anchors.centerIn: parent
+                                text: "Zobacz \n Wszystkie"
+                                font.pixelSize: 20
+                                font.family: font.name
+                                color: primaryColor
+                                horizontalAlignment: Text.AlignHCenter
+                                verticalAlignment: Text.AlignVCenter
+                                elide: Text.ElideRight
+                            }
+
+                            background: Rectangle {
+                                anchors.fill: parent
+                                color: accentColor
+                                radius: 20
+                            }
+                        }
+
+                        // anchors.horizontalCenter: parent.horizontalCenter
+                    }
                 }
             }
-            Item {
-                id: thirdRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: thirdRoute.width - 20
-                    height: thirdRoute.height
-                    color: "green"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-            }
-            Item {
-                id: fourtRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: fourtRoute.width - 20
-                    height: fourtRoute.height
-                    color: "black"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-            }
+
+
         }
         PageIndicator {
             id: indicatorSecond

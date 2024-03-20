@@ -33,5 +33,8 @@
         <file>images/objects/object_1/miniature_1.png</file>
         <file>images/objects/objectBG.svg</file>
         <file>fonts/Montserrat-Bold.ttf</file>
+        <file>images/main/main_1_miniature.png</file>
+        <file>images/main/main_2_miniature.png</file>
+        <file>images/paths/path_example.png</file>
     </qresource>
 </RCC>

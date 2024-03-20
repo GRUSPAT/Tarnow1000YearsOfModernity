@@ -27,6 +27,7 @@ ApplicationWindow {
                 return;
             }
             jsonContext = JSON.parse(xhr.responseText);
+            console.log(jsonContext.context_pl[0].name)
         }
         xhr2.onreadystatechange = function() {
             if (xhr2.readyState !== XMLHttpRequest.DONE) {

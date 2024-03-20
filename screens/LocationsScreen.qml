@@ -3,7 +3,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Effects
 
-
 Item {
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
@@ -18,7 +17,7 @@ Item {
     Column{
 
         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-        Component.onCompleted: console.log(font.name)
+        //Component.onCompleted: console.log(font.name)
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
