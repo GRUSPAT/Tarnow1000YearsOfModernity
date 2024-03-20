@@ -3,80 +3,196 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 
 Item {
-    Column{
+    property color backgroundColor: "#F2F3F3"
+    property color primaryColor: "#FCFCFC"
+    property color textColor: "#000000"
+    property color accentColor: "#5A8A98"
+
+    Rectangle{
+        anchors.fill: parent
+        z:0
+        color: backgroundColor
+    }
+    Column {
         width: rootWindow.width
         height: rootWindow.height
-        Rectangle{
-            anchors.topMargin: 10
+        FontLoader {
+            id: font
+            source: "qrc:/fonts/Montserrat-Bold.ttf"
+        }
+        Rectangle {
+            id: topBar
             width: rootWindow.width
-            height: rootWindow.height * 0.1
-            color: "red"
+            height: rootWindow.height * 0.12
+            color: primaryColor
+            z:1
             Row{
-                width: parent.width
-                height: parent.height
-                spacing: 150
-                Text {
-                    id:topBarLabel
-                    anchors.leftMargin: 10
+                height: topBar.height
+                width: topBar.width
+                topPadding: 36
+                leftPadding: 20
+                rightPadding: 20
+                Rectangle{
                     anchors.bottom: parent.bottom
-                    width: parent.width * 0.5 - 10
-                    height: parent.height
-                    text: "TRASY"
-                    font.pixelSize: 24
+                    width: topBar.width * 0.65 - 20
+                    height: topBar.height - 45
+                    color: primaryColor
+                    id: objekty
+                    z:1
+                    Text {
+                        id:topBarLabel
+                        anchors.leftMargin: 20
+                        anchors.topMargin: 45
+                        font.family: font.font.family
+                        //    font.weight: font.font.weight
+                        //   font.styleName: font.font.styleName
+                        // font.family: font.name
+                        text: rootWindow.selectedLanguage === "pl" ? "TRASY" : "ROUTES"
+                        font.pixelSize: 32
+                    }
                 }
-                Image {
-                    id: topBarLogo
-                    anchors.rightMargin: 10
-                    anchors.bottom: parent.bottom
-                    width: 50
-                    height: 50
-                    source: "qrc:/images/AppIcon.png"
+                Rectangle{
+                    width: topBar.width * 0.35 - 20
+                    height: topBar.height - 36
+                    color: primaryColor
+                    z:1
+                    Image {
+                        anchors.right: parent.right
+                        id: topBarLogo
+                        width: 93
+                        height: 44
+                        source: "qrc:/images/Tarnow1000LatLogo.png"
+                    }
                 }
             }
         }
-        ListView {
+        ScrollView {
             width: parent.width
-            height: parent.height
-            model: rootWindow.jsonRoutes.routes_pl
-            spacing: 10
+            height: parent.height - rootWindow.height * 0.07
+            leftPadding: 20
+            topPadding: 10
+            bottomPadding: 180
+            contentWidth: parent.width - 20
+            contentHeight: objectsList.height
+            //ScrollBar.vertical.policy: ScrollBar.AlwaysOn
+            ListView {
+                id: objectsList
+                width: parent.width
+                model: rootWindow.jsonRoutes.routes_pl
+                spacing: 20
 
-            delegate:
-                Rectangle{
-                width: parent.width - 40
-                height: 200
-                anchors.margins: 20
-                anchors.horizontalCenter: parent.horizontalCenter
-                radius: 20
-                color: "blue"
-                Column{
-                    width: parent.width
-                    height: parent.height
-                    Image {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        width: 300
-                        height: 100
-                        id: objectImage
-                        source: "qrc:/images/AppIcon.png"
-                    }
-                    Text{
-                        width: parent.width - 50
-                        height: 40
-                        text: `${modelData.name}`
-                    }
-                    Row{
-                        width: parent.width - 50
-                        height: 40
-                        spacing: 20
-                        Button{
-                            anchors.verticalCenter: parent.verticalCenter
-                            text: "Więcej"
+                delegate:
+                    Rectangle{
+                    id:objectCard
+                    FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
+                    width: objectsList.width - 20
+                    height: 260
+                    radius: 20
+                    color: primaryColor
+                    /*Image {
+                        id: objectBG
+                        source: "qrc:/images/objects/objectBG.svg"
+                        anchors.fill: parent
+                        width: parent.width
+                        height: parent.height
+                    }*/
+                    Column{
+                        width: parent.width
+                        height: parent.height
+                        topPadding: 16
+                        leftPadding: 16
+                        rightPadding: 16
+                        Rectangle{
+                            width: parent.width - 32
+                            height: parent.height * 0.55
+                            radius: 12
+                            Image {
+                                id: objectImage
+                                //anchors.fill: parent
+                                width: parent.width
+                                height: parent.height
+                                //fillMode: Image.PreserveAspectCrop
+                                //clip:true
+                                source: "qrc:/images/objects/object_1/miniature_1.png"
+                            }
                         }
-                        Button{
-                            anchors.verticalCenter: parent.verticalCenter
-                            text: "Nawiguj po trasie"
+                        Row{
+                            topPadding: 10
+                            width: parent.width - 32
+                            Text{
+                                width: parent.width - 32
+                                wrapMode: Text.WordWrap
+                                font.pixelSize: 15
+                                font.family: font2.name
+                                height: 40
+                                text: `${modelData.name}`
+                            }
+                        }
+                        Row{
+                            width: parent.width - 32
+                            height: 46
+                            Rectangle{
+                                width: parent.width * 0.35
+                                height: 44
+                                RoundButton{
+                                    width: 105
+                                    height: 44
+                                    radius: 5
+                                    anchors.left: parent.left
+                                    contentItem: Text {
+                                        text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
+                                        font.pixelSize: 15
+                                        font.family: font2.name
+                                        color: primaryColor
+                                        horizontalAlignment: Text.AlignHCenter
+                                        verticalAlignment: Text.AlignVCenter
+                                        elide: Text.ElideRight
+                                    }
+
+                                    background: Rectangle {
+                                        implicitWidth: 105
+                                        implicitHeight: 34
+                                        color: accentColor
+                                        radius: 5
+                                    }
+                                }
+
+                            }
+                            Rectangle{
+                                width: parent.width * 0.65
+                                height: 44
+                                RoundButton{
+                                    width: 105
+                                    height: 44
+                                    radius: 5
+                                    anchors.right: parent.right
+                                    contentItem: Text {
+                                        text: rootWindow.selectedLanguage === "pl" ? "Nawiguj po trasie" : "Navigate the route"
+                                        font.pixelSize: 15
+                                        font.family: font2.name
+                                        color: primaryColor
+                                        horizontalAlignment: Text.AlignHCenter
+                                        verticalAlignment: Text.AlignVCenter
+                                        elide: Text.ElideRight
+                                    }
+
+                                    background: Rectangle {
+                                        implicitWidth: 105
+                                        implicitHeight: 34
+                                        color: accentColor
+                                        radius: 5
+                                    }
+                                }
+                            }
+
                         }
                     }
+
                 }
+
+                //Text {
+                //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
+                //}
             }
         }
     }
