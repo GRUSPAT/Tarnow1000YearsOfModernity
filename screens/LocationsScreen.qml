@@ -16,9 +16,7 @@ Item {
         color: backgroundColor
     }
     Column{
-
         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-        Component.onCompleted: console.log(font.name)
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
@@ -30,7 +28,6 @@ Item {
             color: primaryColor
             z:1
             Column{
-
                 width: parent.width
                 height: parent.height
                 Row{
@@ -54,7 +51,7 @@ Item {
                             //   font.styleName: font.font.styleName
                             // font.family: font.name
                             id:topBarLabel
-                            text: "OBIEKTY"
+                            text: rootWindow.selectedLanguage === "pl" ? "OBIEKTY" : "OBJECTS"
                             font.pixelSize: 32
                         }
                     }
@@ -100,7 +97,7 @@ Item {
                                 width: parent.width - 48
                                 height: 42
                                 font.family: font.font.family
-                                placeholderText: "Wyszukaj"
+                                placeholderText: rootWindow.selectedLanguage === "pl" ? "Wyszukaj" : "Search"
                             }
                         }
                     }
@@ -226,7 +223,7 @@ Item {
                                     radius: 5
                                     anchors.right: parent.right
                                     contentItem: Text {
-                                        text: "Więcej"
+                                        text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                         font.pixelSize: 15
                                         font.family: font2.name
                                         color: primaryColor

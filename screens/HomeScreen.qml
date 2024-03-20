@@ -178,65 +178,27 @@ Item{
             id: idSwipeViewSecond
             width: rootWindow.width * 0.5
             height: 260
+            contentWidth: rootWindow.width
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
             //height: 120
 
-            Item {
-                id: firstRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: firstRoute.width - 20
-                    height: firstRoute.height
-                    color: "red"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-            }
-            Item {
-                id: secondRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: secondRoute.width - 20
-                    height: secondRoute.height
-                    color: "blue"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-            }
-            Item {
-                id: thirdRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: thirdRoute.width - 20
-                    height: thirdRoute.height
-                    color: "green"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
-                }
-            }
-            Item {
-                id: fourtRoute
-                width: idSwipeViewSecond.width
-                height: idSwipeViewSecond.height
-                Rectangle{
-                    width: fourtRoute.width - 20
-                    height: fourtRoute.height
-                    color: "black"
-                    radius: 20
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    anchors.horizontalCenter: parent.horizontalCenter
+            Repeater {
+                model: 3
+                Item {
+                    id: firstRoute
+                    width: idSwipeViewSecond.width
+                    height: idSwipeViewSecond.height
+                    Rectangle{
+                        width: idSwipeViewSecond.width - 20
+                        height: firstRoute.height
+                        color: "red"
+                        radius: 20
+                        anchors.leftMargin: 10
+                        anchors.rightMargin: 10
+                        //anchors.horizontalCenter: firstRoute.horizontalCenter
+                    }
                 }
             }
         }
