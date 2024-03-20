@@ -204,10 +204,12 @@ Item{
             id: idSwipeViewSecond
             width: rootWindow.width
             height: 260
+            contentWidth: rootWindow.width
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
             //height: 120
+
 
             Item {
                 id: firstRoute
@@ -261,7 +263,7 @@ Item{
                                     height: parent.width-4
                                     id: pathImageMini
                                     source: "qrc:/images/paths/path_example.png"
-                                   z:0
+                                    z:0
                                 }
                             }
 
@@ -338,7 +340,7 @@ Item{
                                     height: parent.width-4
                                     id: pathImageMini2
                                     source: "qrc:/images/paths/path_example.png"
-                                   z:0
+                                    z:0
                                 }
                             }
                             Text{
@@ -416,6 +418,7 @@ Item{
                         }
 
                         // anchors.horizontalCenter: parent.horizontalCenter
+
                     }
                 }
             }

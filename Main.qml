@@ -12,10 +12,9 @@ ApplicationWindow {
 
     Component.onCompleted: loadData()
 
-
-
     property var jsonContext
     property var jsonRoutes
+    property string selectedLanguage: "pl"
 
     function loadData(){
         let xhr = new XMLHttpRequest();
@@ -56,7 +55,7 @@ ApplicationWindow {
                 icon.source: "qrc:/icons/HomeIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
-                onClicked: stackView.push("screens/HomeScreen.qml")
+                onClicked: stackView.push("qrc:/screens/HomeScreen.qml")
             }
 
             Button {
@@ -64,7 +63,7 @@ ApplicationWindow {
                 icon.source: "qrc:/icons/LocationsIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
-                onClicked: stackView.push("screens/LocationsScreen.qml")
+                onClicked: stackView.push("qrc:/screens/LocationsScreen.qml")
             }
 
             Button {
@@ -72,7 +71,7 @@ ApplicationWindow {
                 icon.source: "qrc:/icons/MapIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
-                onClicked: stackView.push("screens/MapScreen.qml")
+                onClicked: stackView.push("qrc:/screens/MapScreen.qml")
             }
 
             Button {
@@ -80,7 +79,7 @@ ApplicationWindow {
                 icon.source: "qrc:/icons/RoutesIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
-                onClicked: stackView.push("screens/RoutesScreen.qml")
+                onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
             }
 
             Button {
@@ -88,14 +87,14 @@ ApplicationWindow {
                 icon.source: "qrc:/icons/SettingsIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
-                onClicked: stackView.push("screens/SettingsScreen.qml")
+                onClicked: stackView.push("qrc:/screens/SettingsScreen.qml")
             }
         }
     }
 
     StackView {
         id: stackView
-        initialItem: "screens/HomeScreen.qml"
+        initialItem: "qrc:/screens/HomeScreen.qml"
         anchors.fill: parent
         pushEnter: Transition {
             from: "fromState"

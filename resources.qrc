@@ -36,5 +36,31 @@
         <file>images/main/main_1_miniature.png</file>
         <file>images/main/main_2_miniature.png</file>
         <file>images/paths/path_example.png</file>
+        <file>screens/HomeScreen.qml</file>
+        <file>screens/LocationsScreen.qml</file>
+        <file>screens/MapScreen.qml</file>
+        <file>screens/RoutesScreen.qml</file>
+        <file>screens/SettingsScreen.qml</file>
+        <file>screens/AboutAppScreen.qml</file>
+        <file>screens/AuthorsScreen.qml</file>
+        <file>screens/LicensesScreen.qml</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18285-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18286-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18287-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18285-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18286-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18287-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18288-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18288-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18289-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18289-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18290-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18290-11108.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18291-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18292-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18293-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18294-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18295-11107.png</file>
+        <file>offline_tiles_2/osm_100-l-1-15-18297-11107.png</file>
     </qresource>
 </RCC>

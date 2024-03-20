@@ -9,6 +9,10 @@ Item {
         id: map
         anchors.fill: parent
         //activeMapType: map.supportedMapTypes[1]
+
+        minimumZoomLevel: 14
+        maximumZoomLevel: 16
+
         zoomLevel: 15
         plugin: Plugin {
             name: "osm"
@@ -16,7 +20,7 @@ Item {
                // name: "osm.mapping.providersrepository.address"
                  // value: "qrc:/"
                 name: 'osm.mapping.offline.directory'
-                value: ':/offline_tiles/'
+                value: 'qrc:/offline_tiles_2/'
             }
         }
         center: QtPositioning.coordinate(50.01, 20.98)

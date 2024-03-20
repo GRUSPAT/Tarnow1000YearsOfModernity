@@ -44,11 +44,6 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
 
     QML_FILES
         Main.qml
-        screens/HomeScreen.qml
-        screens/LocationsScreen.qml
-        screens/MapScreen.qml
-        screens/RoutesScreen.qml
-        screens/SettingsScreen.qml
 
     RESOURCES
         Info.cmake.macos.plist
