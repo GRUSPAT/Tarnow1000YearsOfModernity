@@ -15,8 +15,8 @@ Item {
         plugin: Plugin {
             name: "osm"
             PluginParameter {
-                name: 'osm.mapping.providersrepository.address'
-                value: 'qrc:/offline_tiles_2/map.osm'
+                name: 'osm.mapping.offline.directory'
+                value: 'qrc:/offline_tiles_2/'
             }
         }
         center: QtPositioning.coordinate(50.01, 20.98)
