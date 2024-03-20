@@ -9,6 +9,16 @@ Item{
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
+    property color borderColor: "#C5C5C5"
+
+    Component.onCompleted: {
+        homeButton.icon.color = accentColor
+        objectsButton.icon.color = textColor
+        mapButton.icon.color = textColor
+        routesButton.icon.color = textColor
+        settingsButton.icon.color = textColor
+    }
+
     Rectangle{
         anchors.fill: parent
         z:0
@@ -16,8 +26,10 @@ Item{
     }
     Column{
         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
+        //FontLoader { id: font22; source: "qrc:/fonts/Montserrat-VariableFont_wght.ttf" }
         width: rootWindow.width
         height: rootWindow.height
+        //spacing: 5
         Text {
             id: firtsText
             horizontalAlignment: Text.AlignLeft
@@ -28,6 +40,7 @@ Item{
             height: 100
             text: "WPROWADZENIE"
             font.pixelSize: 24
+            //font.weight: 900
             font.family: font.font.family
         }
         SwipeView {
@@ -51,18 +64,21 @@ Item{
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
                     anchors.horizontalCenter: parent.horizontalCenter
+                    border.width: 1
+                    border.color: borderColor
                     Column {
                         width: parent.width
                         height: parent.height
                         topPadding: 12
                         bottomPadding: 12
+                        spacing: 8
                         Rectangle {
                             id: imageRectangle
                             width: parent.width - 24
                             height: parent.height * 0.58
                             color: "blue"
                             radius: 20
-                            anchors.margins: 12
+                           // anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
                             Image {
                                 anchors.fill: parent
@@ -122,11 +138,14 @@ Item{
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
                     anchors.horizontalCenter: parent.horizontalCenter
+                    border.width: 1
+                    border.color: borderColor
                     Column {
                         width: parent.width
                         height: parent.height
                         topPadding: 12
                         bottomPadding: 12
+                        spacing: 8
                         Rectangle {
                             id: imageRectangleSecond
                             width: parent.width - 24
@@ -183,10 +202,29 @@ Item{
             }
         }
         PageIndicator {
+            topPadding: 30
+            bottomPadding: 30
             id: indicator
             count: idSwipeView.count
             currentIndex: idSwipeView.currentIndex
             anchors.horizontalCenter: idSwipeView.horizontalCenter
+            delegate: Rectangle {
+                    implicitWidth: 8
+                    implicitHeight: 8
+
+                    radius: width / 2
+                    color: accentColor
+
+                    opacity: index === indicator.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
+
+                    required property int index
+
+                    Behavior on opacity {
+                        OpacityAnimator {
+                            duration: 100
+                        }
+                    }
+                }
         }
         Text {
             id: secondText
@@ -224,6 +262,8 @@ Item{
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
+                        border.width: 1
+                        border.color: borderColor
                         Rectangle{
                             width: 63
                             height: 17
@@ -303,6 +343,8 @@ Item{
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
+                        border.width: 1
+                        border.color: borderColor
                         Rectangle{
                             width: 63
                             height: 17
@@ -389,14 +431,87 @@ Item{
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
+                        border.width: 1
+                        border.color: borderColor
+                        Rectangle{
+                            width: 63
+                            height: 17
+                            color: accentColor
+                            z:1
+                            anchors.top: parent.top
+                            anchors.topMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            Text{
+                                anchors.centerIn: parent
+                                text: "Mościce"
+                                font.pixelSize: 10
+                                font.family: font.font.family
+                                color: primaryColor
+                            }
+                        }
+                        Column{
+                            topPadding: 13
+                            rightPadding: 13
+                            leftPadding: 13
+                            width: parent.width
+                            height: parent.height
+                            spacing: 7
+                            z:0
+                            Rectangle{
+                                id: imageContainer3
+                                width: parent.width - 26
+                                height: parent.width - 26
+                                border.width: 2
+                                border.color: accentColor
+                                color: "transparent"
+                                z:0
+                                Image {
+                                    anchors.centerIn: parent
 
-                        // anchors.horizontalCenter: parent.horizontalCenter
+                                    width: parent.width-4
+                                    height: parent.width-4
+                                    id: pathImageMini3
+                                    source: "qrc:/images/paths/path_example.png"
+                                    z:0
+                                }
+                            }
+
+                            Text{
+                                text: "Przez mościckie wille"
+                                font.pixelSize: 12
+                                font.family: font.font.family
+                            }
+                            RoundButton{
+                                width: parent.width * 0.5
+                                height: parent.height *0.13
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                contentItem: Text {
+                                    text: "Więcej"
+                                    font.pixelSize: 12
+                                    font.family: font.name
+                                    color: primaryColor
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                    elide: Text.ElideRight
+                                }
+
+                                background: Rectangle {
+                                    anchors.fill: parent
+                                    width: parent.width
+                                    height: parent.height
+                                    color: accentColor
+                                    radius: 3
+                                }
+                            }
+                        }
                     }
                     Rectangle{
                         width: firstRoute.width *0.5 - 15
                         height: firstRoute.height
                         color: accentColor
                         radius: 20
+                        border.width: 1
+                        border.color: borderColor
                         RoundButton{
                             anchors.fill: parent
                             contentItem: Text {
@@ -426,10 +541,28 @@ Item{
 
         }
         PageIndicator {
+            topPadding: 30
             id: indicatorSecond
             count: idSwipeViewSecond.count
             currentIndex: idSwipeViewSecond.currentIndex
             anchors.horizontalCenter: parent.horizontalCenter
+            delegate: Rectangle {
+                    implicitWidth: 8
+                    implicitHeight: 8
+
+                    radius: width / 2
+                    color: accentColor
+
+                    opacity: index === indicatorSecond.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
+
+                    required property int index
+
+                    Behavior on opacity {
+                        OpacityAnimator {
+                            duration: 100
+                        }
+                    }
+                }
         }
     }
 }

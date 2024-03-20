@@ -3,6 +3,20 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 
 Item {
+
+    property color backgroundColor: "#F2F3F3"
+    property color primaryColor: "#FCFCFC"
+    property color textColor: "#000000"
+    property color accentColor: "#5A8A98"
+
+    Component.onCompleted: {
+        homeButton.icon.color = textColor
+        objectsButton.icon.color = textColor
+        mapButton.icon.color = textColor
+        routesButton.icon.color = accentColor
+        settingsButton.icon.color = textColor
+    }
+
     Column{
         width: rootWindow.width
         height: rootWindow.height

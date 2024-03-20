@@ -62,5 +62,6 @@
         <file>offline_tiles_2/osm_100-l-1-15-18294-11107.png</file>
         <file>offline_tiles_2/osm_100-l-1-15-18295-11107.png</file>
         <file>offline_tiles_2/osm_100-l-1-15-18297-11107.png</file>
+        <file>fonts/Montserrat-VariableFont_wght.ttf</file>
     </qresource>
 </RCC>

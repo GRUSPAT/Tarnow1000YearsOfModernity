@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.15
 
 ApplicationWindow {
     id: rootWindow
+    flags: Qt.Window | Qt.MaximizeUsingFullscreenGeometryHint;
     width: 430
     height: 932
     visible: true
@@ -43,50 +44,70 @@ ApplicationWindow {
             horizontalCenter: parent.hohorizontalCenter
             bottom: parent.bottom
         }
-        height: parent.height * 0.07
+        height: parent.height * 0.08
         width: parent.width
         z:1
         color: "white"
-        RowLayout {
-            anchors.centerIn: parent
+        Rectangle{
 
+        z:1
+        anchors.top: parent.top
+        height: 1
+        width: parent.width
+        color: "#C5C5C5"
+        }
+        RowLayout {
+           // anchors.centerIn: parent
+           anchors.top: parent.top
+           anchors.horizontalCenter: parent.horizontalCenter
             Button {
+                id:homeButton
                 flat: true
                 icon.source: "qrc:/icons/HomeIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
+                icon.height: 25
                 onClicked: stackView.push("qrc:/screens/HomeScreen.qml")
             }
 
             Button {
+                id:objectsButton
                 flat: true
                 icon.source: "qrc:/icons/LocationsIcon.svg"
-                width: parent.width * 0.2
+                width: parent.width * 0.05
+                icon.width: 20
+                icon.height: 25
                 height: parent.height
                 onClicked: stackView.push("qrc:/screens/LocationsScreen.qml")
             }
 
             Button {
+                id:mapButton
                 flat: true
                 icon.source: "qrc:/icons/MapIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
+                icon.height: 25
                 onClicked: stackView.push("qrc:/screens/MapScreen.qml")
             }
 
             Button {
+                id:routesButton
                 flat: true
                 icon.source: "qrc:/icons/RoutesIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
+                icon.height: 25
                 onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
             }
 
             Button {
+                id:settingsButton
                 flat: true
                 icon.source: "qrc:/icons/SettingsIcon.svg"
                 width: parent.width * 0.2
                 height: parent.height
+                icon.height: 25
                 onClicked: stackView.push("qrc:/screens/SettingsScreen.qml")
             }
         }
