@@ -82,7 +82,7 @@ Item {
             minimumZoomLevel: 13
             maximumZoomLevel: 15.5
 
-            zoomLevel: 15
+            zoomLevel: rootWindow.lastMapZoom
             plugin: Plugin {
                 name: "osm"
                 PluginParameter {
@@ -150,6 +150,9 @@ Item {
             }
             onCenterChanged: {
                 rootWindow.lastMapCenter = center
+            }
+            onZoomLevelChanged: {
+                rootWindow.lastMapZoom = map.zoomLevel
             }
         }
     }

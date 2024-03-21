@@ -506,7 +506,7 @@ Item{
                         }
                     }
                     Rectangle{
-                        width: firstRoute.width *0.5 - 15
+                        width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
                         color: accentColor
                         radius: 20
@@ -530,6 +530,7 @@ Item{
                                 color: accentColor
                                 radius: 20
                             }
+                            onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
                         }
 
                         // anchors.horizontalCenter: parent.horizontalCenter

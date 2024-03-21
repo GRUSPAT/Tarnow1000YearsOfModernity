@@ -246,6 +246,9 @@ Item {
                                         color: accentColor
                                         radius: 5
                                     }
+                                    onClicked: {
+                                        stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})
+                                    }
                                 }
                             }
 
