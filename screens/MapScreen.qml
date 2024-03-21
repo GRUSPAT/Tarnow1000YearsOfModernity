@@ -5,8 +5,6 @@ import QtLocation
 import QtPositioning
 
 Item {
-
-
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
@@ -82,7 +80,7 @@ Item {
             activeMapType: map.supportedMapTypes[0]
 
             minimumZoomLevel: 13
-            maximumZoomLevel: 15
+            maximumZoomLevel: 15.5
 
             zoomLevel: 15
             plugin: Plugin {
@@ -93,11 +91,11 @@ Item {
                 }
             }
 
-            center: QtPositioning.coordinate(50.01, 20.98)
+            center: rootWindow.lastMapCenter
 
             property geoCoordinate startCentroid
-            property var maxTopLeft: QtPositioning.coordinate(50.0429, 20.8852)
-            property var maxBottomRight: QtPositioning.coordinate(49.9583, 21.0167)
+            property geoCoordinate maxTopLeft: QtPositioning.coordinate(50.0429, 20.8852)
+            property geoCoordinate maxBottomRight: QtPositioning.coordinate(49.9583, 21.0167)
             property var region: QtPositioning.rectangle(maxTopLeft, maxBottomRight)
 
             PinchHandler {
@@ -107,55 +105,51 @@ Item {
                                      map.startCentroid = map.toCoordinate(pinch.centroid.position, false)
                                  }
                 onScaleChanged: (delta) => {
-                                    if (map.zoomLevel <= map.maximumZoomLevel){
+                                    if (map.zoomLevel + Math.log2(delta) < map.maximumZoomLevel){
                                         map.zoomLevel += Math.log2(delta)
-                                        map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                     } else {
                                         map.zoomLevel = map.maximumZoomLevel
-                                        map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                     }
-                                    if (map.zoomLevel >= map.minimumZoomLevel){
+                                    if (map.zoomLevel + Math.log2(delta) > map.minimumZoomLevel){
                                         map.zoomLevel += Math.log2(delta)
-                                        map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                     } else {
                                         map.zoomLevel = map.minimumZoomLevel
-                                        map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                     }
+                                    map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                 }
                 grabPermissions: PointerHandler.TakeOverForbidden
             }
             DragHandler {
                 id: drag
                 target: null
+
                 onTranslationChanged: (delta) => {
-                                          var topLeft = map.toCoordinate(Qt.point(0, 0))
-                                          var bottomRight = map.toCoordinate(Qt.point(map.width, map.height))
+                                          var topLeft = map.toCoordinate(Qt.point(0, 0), false)
+                                          var bottomRight = map.toCoordinate(Qt.point(parseInt(map.width), parseInt(map.height)), false)
                                           var isTopLeftEdgeInRegion = map.region.contains(topLeft);
                                           var isBottomRightEdgeInRegion = map.region.contains(bottomRight);
 
                                           if (!isTopLeftEdgeInRegion){
                                               if(topLeft.longitude < map.maxTopLeft.longitude){
                                                   map.center.longitude += map.maxTopLeft.longitude - topLeft.longitude
-                                              } else if (topLeft.latitude > map.maxTopLeft.latitude){
-                                                  map.center.latitude += map.maxTopLeft.latitude - topLeft.latitude
-                                              } else {
-                                                  map.pan(-delta.x, -delta.y);
                                               }
-                                          } else {
-                                              map.pan(-delta.x, -delta.y);
+                                              if (topLeft.latitude > map.maxTopLeft.latitude){
+                                                  map.center.latitude += map.maxTopLeft.latitude - topLeft.latitude
+                                              }
                                           }
                                           if (!isBottomRightEdgeInRegion){
                                               if(bottomRight.longitude > map.maxBottomRight.longitude){
                                                   map.center.longitude += map.maxBottomRight.longitude - bottomRight.longitude
-                                              } else if (bottomRight.latitude < map.maxBottomRight.latitude){
-                                                  map.center.latitude += map.maxBottomRight.latitude - bottomRight.latitude
-                                              } else {
-                                                  map.pan(-delta.x, -delta.y);
                                               }
-                                          } else {
-                                              map.pan(-delta.x, -delta.y);
+                                              if (bottomRight.latitude < map.maxBottomRight.latitude){
+                                                  map.center.latitude += map.maxBottomRight.latitude - bottomRight.latitude
+                                              }
                                           }
+                                          map.pan(-delta.x, -delta.y);
                                       }
+            }
+            onCenterChanged: {
+                rootWindow.lastMapCenter = center
             }
         }
     }

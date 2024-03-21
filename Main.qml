@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
+import QtPositioning
 
 ApplicationWindow {
     id: rootWindow
@@ -16,6 +17,7 @@ ApplicationWindow {
     property var jsonContext
     property var jsonRoutes
     property string selectedLanguage: "pl"
+    property geoCoordinate lastMapCenter: QtPositioning.coordinate(50.01, 20.98)
 
     function loadData(){
         let xhr = new XMLHttpRequest();
