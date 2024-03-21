@@ -8,6 +8,7 @@ Item {
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
+    property color borderColor: "#C5C5C5"
 
     Component.onCompleted: {
         homeButton.icon.color = textColor
@@ -136,6 +137,8 @@ Item {
                     height: 260
                     radius: 20
                     color: primaryColor
+                    border.width: 1
+                    border.color: borderColor
                     /*Image {
                         id: objectBG
                         source: "qrc:/images/objects/objectBG.svg"
@@ -218,6 +221,7 @@ Item {
                                         anchors.verticalCenter: parent.verticalCenter
                                         text: `${modelData.address}`
                                         font.family: font2.name
+                                        font.pixelSize: 13
                                     }
                                 }
 
