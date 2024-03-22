@@ -89,6 +89,10 @@ Item {
                     name: 'osm.mapping.offline.directory'
                     value: ':/offline_tiles/'
                 }
+                PluginParameter{
+                    name: "osm.mapping.providersrepository.disabled"
+                    value: "true"
+                }
             }
 
             center: rootWindow.lastMapCenter
@@ -118,6 +122,31 @@ Item {
                                     map.alignCoordinateToPoint(map.startCentroid, pinch.centroid.position)
                                 }
                 grabPermissions: PointerHandler.TakeOverForbidden
+                onTranslationChanged: (delta) => {
+                                          var topLeft = map.toCoordinate(Qt.point(0, 0), false)
+                                          var bottomRight = map.toCoordinate(Qt.point(parseInt(map.width), parseInt(map.height)), false)
+                                          var isTopLeftEdgeInRegion = map.region.contains(topLeft);
+                                          var isBottomRightEdgeInRegion = map.region.contains(bottomRight);
+
+                                          if (!isTopLeftEdgeInRegion){
+                                              if(topLeft.longitude < map.maxTopLeft.longitude){
+                                                  map.center.longitude += map.maxTopLeft.longitude - topLeft.longitude
+                                              }
+                                              if (topLeft.latitude > map.maxTopLeft.latitude){
+                                                  map.center.latitude += map.maxTopLeft.latitude - topLeft.latitude
+                                              }
+                                          }
+                                          if (!isBottomRightEdgeInRegion){
+                                              if(bottomRight.longitude > map.maxBottomRight.longitude){
+                                                  map.center.longitude += map.maxBottomRight.longitude - bottomRight.longitude
+                                              }
+                                              if (bottomRight.latitude < map.maxBottomRight.latitude){
+                                                  map.center.latitude += map.maxBottomRight.latitude - bottomRight.latitude
+                                              }
+                                          }
+                                      }
+
+
             }
             DragHandler {
                 id: drag
@@ -157,3 +186,4 @@ Item {
         }
     }
 }
+

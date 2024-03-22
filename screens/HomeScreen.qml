@@ -203,7 +203,7 @@ Item{
         }
         PageIndicator {
             topPadding: 30
-            bottomPadding: 30
+            bottomPadding: 15
             id: indicator
             count: idSwipeView.count
             currentIndex: idSwipeView.currentIndex
@@ -242,7 +242,7 @@ Item{
             id: idSwipeViewSecond
             width: rootWindow.width
             height: 260
-            contentWidth: rootWindow.width
+            //contentWidth: rootWindow.width
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
