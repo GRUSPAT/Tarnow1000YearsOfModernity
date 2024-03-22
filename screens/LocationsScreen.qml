@@ -9,6 +9,25 @@ Item {
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
 
+    function searchLocations(text) {
+        var searchingText = text.toLocaleLowerCase()
+        var tempContext = []
+        var resultContext = []
+        if(rootWindow.selectedLanguage === "pl"){
+            tempContext = rootWindow.jsonContext.context_pl
+        } else{
+            tempContext = rootWindow.jsonContext.context_en
+        }
+        var count = tempContext.length
+        for (var i = 0; i < count; ++i){
+            var name = tempContext[i].name.toLocaleLowerCase()
+            if (name.indexOf(searchingText) !== -1) {
+                resultContext.push(tempContext[i])
+            }
+        }
+        objectsList.model = resultContext
+    }
+
     Component.onCompleted: {
         homeButton.icon.color = textColor
         objectsButton.icon.color = accentColor
@@ -24,7 +43,6 @@ Item {
     }
     Column{
         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
@@ -35,11 +53,12 @@ Item {
             height: rootWindow.height * 0.2
             color: primaryColor
             z:1
+            radius: 18
             Column{
                 width: parent.width
                 height: parent.height
                 Row{
-                    height: topBar.height *0.5
+                    height: topBar.height * 0.5
                     width: topBar.width
                     topPadding: 36
                     leftPadding: 20
@@ -76,41 +95,54 @@ Item {
                             source: "qrc:/images/Tarnow1000LatLogo.png"
                         }
                     }
-
                 }
                 Row{
-                    height: topBar.height *0.5
+                    height: topBar.height  * 0.5
                     width: topBar.width
-                    topPadding: 10
+                    topPadding: 18
                     leftPadding: 20
                     rightPadding: 20
                     Rectangle{
-
                         height: 42
-                        width: parent.width -40
-                        radius: 10
-                        color:backgroundColor
-                        border.width: 2
+                        width: parent.width - 40
+                        radius: 16
+                        color: primaryColor
+                        border.width: 1
                         border.color: accentColor
                         z:1
                         Row{
+                            anchors.verticalCenter: parent.verticalCenter
                             width: parent.width
-                            height: 42
+                            height: 38
+                            padding: 2
                             IconImage{
-                                width: 42
-                                height: 42
+                                width: 36
+                                height: 36
                                 source: "qrc:/icons/SettingsIcon.svg"
                             }
                             TextField{
+                                id: textField
                                 width: parent.width - 48
-                                height: 42
+                                height: 36
                                 font.family: font.font.family
                                 placeholderText: rootWindow.selectedLanguage === "pl" ? "Wyszukaj" : "Search"
+                                placeholderTextColor: textField.activeFocus || (textField.length !== 0) ? "transparent" : accentColor
+                                background: Rectangle {
+                                    color: primaryColor
+                                    border.width: 0
+                                }
+                                opacity: 0.5
+                                cursorDelegate: Rectangle {
+                                    visible: textField.cursorVisible
+                                    color: accentColor
+                                    width: textField.cursorRectangle.width
+                                }
+                                onTextChanged: searchLocations(textField.text)
+                                onEditingFinished: searchLocations(textField.text)
                             }
                         }
                     }
                 }
-
             }
         }
         ScrollView {
@@ -226,10 +258,12 @@ Item {
                                 width: parent.width * 0.35
                                 height: 44
                                 RoundButton{
+                                    id: moreButton
                                     width: 105
                                     height: 44
                                     radius: 5
                                     anchors.right: parent.right
+
                                     contentItem: Text {
                                         text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                         font.pixelSize: 15
@@ -245,6 +279,7 @@ Item {
                                         implicitHeight: 34
                                         color: accentColor
                                         radius: 5
+                                        opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
                                         stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})

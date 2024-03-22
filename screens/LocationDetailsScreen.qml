@@ -38,6 +38,7 @@ Item {
                 topPadding: 35
                 leftPadding: 340
                 RoundButton{
+                    id: closeButton
                     width: 40
                     height: 40
                     contentItem: Text {
@@ -51,6 +52,7 @@ Item {
                     background: Rectangle {
                         color: accentColor
                         radius: 5
+                        opacity: closeButton.pressed ? 0.5 : 1.0
                     }
                     onClicked: {
                         stackView.pop()
