@@ -38,7 +38,7 @@ Item{
             bottomPadding: 8
             width: rootWindow.width
             height: 100
-            text: "WPROWADZENIE"
+            text: rootWindow.selectedLanguage === "pl" ? "WPROWADZENIE" : "INTRODUCTION"
             font.pixelSize: 24
             //font.weight: 900
             font.family: font.font.family
@@ -95,7 +95,7 @@ Item{
                             topPadding: 6
                             width: parent.width
                             height: 45
-                            text: "Poznaj historię Tarnów 1000 lat Nowoczesności"
+                            text: rootWindow.selectedLanguage === "pl" ? "Poznaj historię Tarnów 1000 lat Nowoczesności" : "Explore the history of Tarnow 1000 Years of Modernity"
                             font.bold: true
                             font.pixelSize: 17
                             font.family: font.font.family
@@ -107,7 +107,7 @@ Item{
                             height: 45
                             radius: 5
                             contentItem: Text {
-                                text: "Więcej"
+                                text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                 color: primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
@@ -169,7 +169,7 @@ Item{
                             rightPadding: 14
                             width: parent.width
                             height: 45
-                            text: "Odkryj twórczość Jana Głuszaka Dagamary"
+                            text: rootWindow.selectedLanguage === "pl" ? "Odkryj twórczość Jana Głuszaka Dagamary" : "Discover the work of Jan Glushak Dagamara"
                             font.bold: true
                             font.pixelSize: 17
                             font.family: font.font.family
@@ -181,7 +181,7 @@ Item{
                             height: 45
                             radius: 5
                             contentItem: Text {
-                                text: "Więcej"
+                                text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                 color: primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
@@ -234,7 +234,7 @@ Item{
             bottomPadding: 8
             width: rootWindow.width
             height: 50
-            text: "POLECANE TRASY"
+            text: rootWindow.selectedLanguage === "pl" ? "POLECANE TRASY" : "RECOMMENDED ROUTES"
             font.pixelSize: 24
             font.family: font.font.family
         }
@@ -308,7 +308,7 @@ Item{
                             }
 
                             Text{
-                                text: "Przez mościckie wille"
+                                text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
                                 font.family: font.font.family
                             }
@@ -317,7 +317,7 @@ Item{
                                 height: parent.height *0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 contentItem: Text {
-                                    text: "Więcej"
+                                    text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
                                     font.family: font.name
                                     color: primaryColor
@@ -395,7 +395,7 @@ Item{
                                 height: parent.height *0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 contentItem: Text {
-                                    text: "Więcej"
+                                    text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
                                     font.family: font.name
                                     color: primaryColor
@@ -477,7 +477,7 @@ Item{
                             }
 
                             Text{
-                                text: "Przez mościckie wille"
+                                text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
                                 font.family: font.font.family
                             }
@@ -486,7 +486,7 @@ Item{
                                 height: parent.height *0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 contentItem: Text {
-                                    text: "Więcej"
+                                    text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
                                     font.family: font.name
                                     color: primaryColor
@@ -506,7 +506,7 @@ Item{
                         }
                     }
                     Rectangle{
-                        width: firstRoute.width *0.5 - 15
+                        width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
                         color: accentColor
                         radius: 20
@@ -516,7 +516,7 @@ Item{
                             anchors.fill: parent
                             contentItem: Text {
                                 anchors.centerIn: parent
-                                text: "Zobacz \n Wszystkie"
+                                text: rootWindow.selectedLanguage === "pl" ? "Zobacz \n Wszystkie" : "See All"
                                 font.pixelSize: 20
                                 font.family: font.name
                                 color: primaryColor
@@ -530,6 +530,7 @@ Item{
                                 color: accentColor
                                 radius: 20
                             }
+                            onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
                         }
 
                         // anchors.horizontalCenter: parent.horizontalCenter
@@ -537,8 +538,6 @@ Item{
                     }
                 }
             }
-
-
         }
         PageIndicator {
             topPadding: 30

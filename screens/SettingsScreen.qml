@@ -4,7 +4,6 @@ import QtQuick.Controls.Material 2.15
 import QtQuick.Effects
 
 Item {
-
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
@@ -18,15 +17,17 @@ Item {
         settingsButton.icon.color = accentColor
     }
 
-
-
-
     ListModel {
         id: languageModel
         ListElement { name: "Polski"; code: "pl" }
         ListElement { name: "English"; code: "en" }
     }
 
+    Rectangle{
+        anchors.fill: parent
+        z:0
+        color: primaryColor
+    }
     Column {
         width: rootWindow.width
         height: rootWindow.height
@@ -94,6 +95,7 @@ Item {
             Rectangle {
                 width: parent.width * 0.55
                 height: parent.height
+                color: primaryColor
                 Text {
                     width: parent.width
                     height: parent.height
@@ -107,6 +109,7 @@ Item {
             Rectangle{
                 width: parent.width * 0.45
                 height: parent.height
+                color: primaryColor
                 RoundButton {
                     id: languageButton
                     width: 105
@@ -165,6 +168,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
+            color: primaryColor
             RoundButton {
                 id: aboutAppButton
                 width: parent.width
@@ -196,6 +200,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
+            color: primaryColor
             RoundButton {
                 id: authorsButton
                 width: parent.width
@@ -227,6 +232,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
+            color: primaryColor
             RoundButton {
                 id: licensesButton
                 width: parent.width

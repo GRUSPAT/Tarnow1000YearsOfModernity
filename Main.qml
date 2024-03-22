@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
+import QtPositioning
 
 ApplicationWindow {
     id: rootWindow
@@ -16,6 +17,8 @@ ApplicationWindow {
     property var jsonContext
     property var jsonRoutes
     property string selectedLanguage: "pl"
+    property geoCoordinate lastMapCenter: QtPositioning.coordinate(50.01, 20.98)
+    property real lastMapZoom: 15
 
     function loadData(){
         let xhr = new XMLHttpRequest();
@@ -50,16 +53,16 @@ ApplicationWindow {
         color: "white"
         Rectangle{
 
-        z:1
-        anchors.top: parent.top
-        height: 1
-        width: parent.width
-        color: "#C5C5C5"
+            z:1
+            anchors.top: parent.top
+            height: 1
+            width: parent.width
+            color: "#C5C5C5"
         }
         RowLayout {
-           // anchors.centerIn: parent
-           anchors.top: parent.top
-           anchors.horizontalCenter: parent.horizontalCenter
+            // anchors.centerIn: parent
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
             Button {
                 id:homeButton
                 flat: true
@@ -126,6 +129,19 @@ ApplicationWindow {
             from: "fromState"
             to: "toState"
             enabled: false
+        }
+        popEnter: Transition {
+            from: "fromState"
+            to: "toState"
+            enabled: false
+        }
+        popExit: Transition {
+            NumberAnimation {
+                properties: "y"
+                from: 0
+                to: stackView.height
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 }
