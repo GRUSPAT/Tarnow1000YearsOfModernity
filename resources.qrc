@@ -240,5 +240,6 @@
         <file>offline_tiles/osm_100-l-1-12-2287-1389.png</file>
         <file>fonts/Montserrat-VariableFont_wght.ttf</file>
         <file>screens/LocationDetailsScreen.qml</file>
+        <file>screens/RouteDetailsScreen.qml</file>
     </qresource>
 </RCC>
