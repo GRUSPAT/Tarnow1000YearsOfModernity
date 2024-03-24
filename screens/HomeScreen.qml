@@ -251,7 +251,7 @@ Item{
 
             Item {
                 id: firstRoute
-                width: idSwipeViewSecond.width * 0.5
+                width: idSwipeViewSecond.width
                 height: idSwipeViewSecond.height
                 Row{
                     leftPadding: 10
@@ -420,7 +420,7 @@ Item{
             }
             Item {
                 id: secondRoute
-                width: idSwipeViewSecond.width * 0.5
+                width: idSwipeViewSecond.width
                 height: idSwipeViewSecond.height
                 Row{
                     leftPadding: 10

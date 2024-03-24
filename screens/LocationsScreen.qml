@@ -157,7 +157,7 @@ Item {
             ListView {
                 id: objectsList
                 width: parent.width
-                model: rootWindow.jsonContext.context_pl
+                model: rootWindow.selectedLanguage === "pl" ? rootWindow.jsonContext.context_pl : rootWindow.jsonContext.context_en
                 spacing: 20
 
                 delegate:
@@ -282,19 +282,14 @@ Item {
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
+                                        slideAnimation.enabled = true
                                         stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})
                                     }
                                 }
                             }
-
                         }
                     }
-
                 }
-
-                //Text {
-                //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
-                //}
             }
         }
     }

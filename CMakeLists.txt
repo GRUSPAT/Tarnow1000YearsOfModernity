@@ -12,6 +12,7 @@ qt_standard_project_setup()
 qt_add_executable(appTarnow1000YearsOfModernity
     main.cpp
     resources.qrc
+    MANUAL_FINALIZATION
 )
 
 if(APPLE)
@@ -36,21 +37,25 @@ else()
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.cmake.macos.plist"
     )
 endif()
+else()
+    set_property(TARGET appTarnow1000YearsOfModernity APPEND PROPERTY
+        QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
+    )
+    qt_finalize_executable(appTarnow1000YearsOfModernity)
 endif()
 
 qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
-    VERSION 1.0 
+    VERSION 1.0
 
     QML_FILES
-        Main.qml
+    Main.qml
 
     RESOURCES
-        Info.cmake.macos.plist
-        ios/Info.cmake.ios.plist
-        ios/LaunchScreen.storyboard
-        resources.qrc
-
+    Info.cmake.macos.plist
+    ios/Info.cmake.ios.plist
+    ios/LaunchScreen.storyboard
+    resources.qrc
 )
 
 

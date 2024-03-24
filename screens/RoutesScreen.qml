@@ -91,7 +91,7 @@ Item {
             ListView {
                 id: objectsList
                 width: parent.width
-                model: rootWindow.jsonRoutes.routes_pl
+                model: rootWindow.selectedLanguage === "pl" ? rootWindow.jsonRoutes.routes_pl : rootWindow.jsonRoutes.routes_en
                 spacing: 12
 
                 delegate:
@@ -196,6 +196,7 @@ Item {
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
+                                        slideAnimation.enabled = true
                                         stackView.push("qrc:/screens/RouteDetailsScreen.qml", {modelData})
                                     }
                                 }
@@ -242,16 +243,13 @@ Item {
                                         opacity: navigateButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
-                                        Qt.openUrlExternally("https://www.google.com/maps/dir/?api=1&origin=Google+Pyrmont+NSW&destination=QVB&destination_place_id=ChIJISz8NjyuEmsRFTQ9Iw7Ear8&travelmode=walking")
+                                        Qt.openUrlExternally(`https://www.google.com/maps/dir/?api=1&destination=${modelData.destination}&waypoints=${modelData.waypoints}&travelmode=walking`)
                                     }
                                 }
                             }
                         }
                     }
                 }
-                //Text {
-                //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
-                //}
             }
         }
     }
