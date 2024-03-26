@@ -19,6 +19,7 @@ ApplicationWindow {
     property string selectedLanguage: "pl"
     property geoCoordinate lastMapCenter: QtPositioning.coordinate(50.01, 20.98)
     property real lastMapZoom: 15
+    property var userRoute: []
 
     function loadData(){
         let xhr = new XMLHttpRequest();
