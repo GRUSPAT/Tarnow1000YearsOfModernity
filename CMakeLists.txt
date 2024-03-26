@@ -3,15 +3,19 @@ cmake_minimum_required(VERSION 3.16)
 project(Tarnow1000YearsOfModernity VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTORCC OFF)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg Location Positioning)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg Location Positioning Core)
 
 qt_standard_project_setup()
 
+set(SOURCES main.cpp)
+qt_add_resources(SOURCES resources.qrc)
+
 qt_add_executable(appTarnow1000YearsOfModernity
     main.cpp
-    resources.qrc
+    ${SOURCES}
+   # resources.qrc
 )
 
 if(APPLE)
@@ -24,6 +28,11 @@ if(APPLE)
         set_source_files_properties( ${asset_catalog_path} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources
         )
+
+
+
+
+
     #Added .plist; launchScreen; icon
     set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/ios/Info.cmake.ios.plist"
@@ -49,7 +58,7 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
         Info.cmake.macos.plist
         ios/Info.cmake.ios.plist
         ios/LaunchScreen.storyboard
-        resources.qrc
+        #resources.qrc
 
 )
 

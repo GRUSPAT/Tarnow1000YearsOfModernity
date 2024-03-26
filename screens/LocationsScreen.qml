@@ -164,6 +164,7 @@ Item {
 
                 delegate:
                     Rectangle{
+                    property int idTemp : '${modelData.id}' + 1
                     id:objectCard
                     FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                     width: objectsList.width - 20
@@ -196,7 +197,7 @@ Item {
                                 height: parent.height
                                 //fillMode: Image.PreserveAspectCrop
                                 //clip:true
-                                source: "qrc:/images/objects/object_1/miniature_1.png"
+                                source: "qrc:/images/objects/" + idTemp.toString() + "/miniature.png"
                             }
                             Row{
                                 topPadding: 8
