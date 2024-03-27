@@ -122,13 +122,14 @@ Item {
                                 width: parent.width - 48
                                 height: 36
                                 font.family: font.font.family
+                                color: textColor
                                 placeholderText: rootWindow.selectedLanguage === "pl" ? "Wyszukaj" : "Search"
                                 placeholderTextColor: textField.activeFocus || (textField.length !== 0) ? "transparent" : accentColor
                                 background: Rectangle {
                                     color: primaryColor
                                     border.width: 0
                                 }
-                                opacity: 0.5
+                                opacity: textField.activeFocus || (textField.length !== 0) ? 1 : 0.5
                                 cursorDelegate: Rectangle {
                                     visible: textField.cursorVisible
                                     color: accentColor
@@ -205,6 +206,7 @@ Item {
                                 id: objectImage
                                 width: parent.width
                                 height: parent.height
+
                                 source: `qrc:/images/objects/${modelData.id + 1}/miniature.png`
                             }
                             Row{

@@ -459,6 +459,10 @@ Item {
                     name: 'osm.mapping.offline.directory'
                     value: ':/offline_tiles/'
                 }
+                PluginParameter{
+                    name: "osm.mapping.providersrepository.disabled"
+                    value: "true"
+                }
             }
 
             MapItemGroup {
@@ -848,3 +852,4 @@ Item {
         }
     }
 }
+
