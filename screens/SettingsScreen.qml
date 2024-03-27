@@ -8,6 +8,7 @@ Item {
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
+    property color borderColor: "#C5C5C5"
 
     Component.onCompleted: {
         homeButton.icon.color = textColor
@@ -136,24 +137,79 @@ Item {
                     }
                     onClicked: languagePopup.visible = true
                     Popup {
+                        FontLoader {
+                            id: font2
+                            source: "qrc:/fonts/Montserrat-Bold.ttf"
+                        }
                         id: languagePopup
                         width: languageButton.width
-                        height: 120
+                        height: 100
                         parent: languageButton
                         x: parent.x
                         y: parent.y + 26
+                        padding: 10
+                        enter: Transition {
+                            NumberAnimation {
+                                target: languagePopup
+                                properties: "opacity"
+                                from: 0
+                                to: 1
+                                duration: 200
+                                easing.type: Easing.InOutQuad
+                            }
+                        }
+                        exit: Transition {
+                            NumberAnimation {
+                                target: languagePopup
+                                properties: "opacity"
+                                from: 1
+                                to: 0
+                                duration: 200
+                                easing.type: Easing.InOutQuad
+                            }
+                        }
                         contentItem: ListView {
+                            anchors.horizontalCenter: parent.horizontalCenter
                             model: languageModel
                             delegate: ItemDelegate {
-                                width: languagePopup.width
-                                height: 50
-                                text: model.name
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                width: parent.width - 20
+                                height: 40
+                                //text: model.name
+                                contentItem: Text {
+                                    anchors.centerIn: parent
+                                    width: parent.width
+                                    height: parent.width
+                                    text: model.name
+                                    font.pixelSize: 14
+                                    font.family: font2.font.family
+                                    color: "black"
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                background: Rectangle{
+                                    anchors.fill: parent
+                                    implicitWidth:  parent.width
+                                    implicitHeight: parent.height
+                                    color: "transparent"
+                                    radius: 8
+                                }
                                 onClicked: {
                                     rootWindow.selectedLanguage = model.code
                                     languagePopup.visible = false
                                 }
                             }
                         }
+                        background: Rectangle{
+                            anchors.fill: parent
+                            implicitWidth:  parent.width
+                            implicitHeight: parent.height
+                            color: "white"
+                            radius: 8
+                            border.color: borderColor
+                            border.width: 1
+                        }
+
                         onClosed: languageButton.forceActiveFocus()
                         focus: true
                     }

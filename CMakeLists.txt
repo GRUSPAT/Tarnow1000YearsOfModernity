@@ -16,9 +16,9 @@ set_property(SOURCE resources.qrc PROPERTY SKIP_AUTORCC ON)
 qt_standard_project_setup()
 
 qt_add_executable(appTarnow1000YearsOfModernity
-    main.cpp
+    #main.cpp
     #resources.qrc
-    MANUAL_FINALIZATION
+    #MANUAL_FINALIZATION
     ${SOURCES}
 )
 
@@ -48,7 +48,7 @@ else()
     set_property(TARGET appTarnow1000YearsOfModernity APPEND PROPERTY
         QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
     )
-    qt_finalize_executable(appTarnow1000YearsOfModernity)
+    #qt_finalize_executable(appTarnow1000YearsOfModernity)
 endif()
 
 qt_add_qml_module(appTarnow1000YearsOfModernity

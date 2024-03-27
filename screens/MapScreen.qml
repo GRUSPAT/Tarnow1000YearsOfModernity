@@ -6,6 +6,9 @@ import QtPositioning
 import QtQuick.Effects
 
 Item {
+    id: mapWindowItem
+    width: rootWindow.width
+    height: rootWindow.height
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
@@ -20,13 +23,14 @@ Item {
         id: routeWindowPopup
         width: rootWindow.width
         height: routeList.contentHeight + rootWindow.height * 0.07 + 30
-        x: rootWindow.x
-        y: rootWindow.y
+        parent: mapWindowItem
+        x: 0
+        y: 0
         enter: Transition {
             ParallelAnimation {
                 NumberAnimation {
                     properties: "height"
-                    from: rootWindow.height * 0.14
+                    from: 0
                     to: routeWindowPopup.height
                     duration: 300
                     easing.type: Easing.InOutQuad
@@ -56,7 +60,7 @@ Item {
             id: routeWindowRectangle
             width: routeWindowPopup.width
             height: routeList.contentHeight + rootWindow.height * 0.07 + 30
-            color: primaryColor
+            color: 'transparent'
             radius: 20
             z:1
             Column{
@@ -75,7 +79,7 @@ Item {
                         width: parent.width * 0.5 - 10
                         height: parent.height - 15
                         anchors.bottom: parent.bottom
-                        color: primaryColor
+                        color: 'transparent'
                         Text {
                             id:routePopupLabel
                             font.family: font1.font.family
@@ -87,7 +91,7 @@ Item {
                         width: parent.width * 0.5 - 10
                         height: parent.height - 20
                         anchors.bottom: parent.bottom
-                        color: primaryColor
+                        color: 'transparent'
                         RoundButton{
                             id: hideRouteButton
                             width: parent.width
@@ -143,7 +147,7 @@ Item {
                         delegate: Rectangle {
                             width: parent.width
                             height: 40
-                            color: primaryColor
+                            color: 'transparent'
                             FontLoader { id: font3; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                             Row{
                                 width: parent.width
@@ -174,7 +178,7 @@ Item {
                                     anchors.verticalCenter: parent.verticalCenter
                                     width: parent.width * 0.08
                                     height: 40
-                                    color: primaryColor
+                                    color: 'transparent'
                                     RoundButton{
                                         id: deleteButton
                                         width: 36
