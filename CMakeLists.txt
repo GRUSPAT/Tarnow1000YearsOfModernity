@@ -5,7 +5,7 @@ project(Tarnow1000YearsOfModernity VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg Location Positioning Core)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Qml Svg Location Positioning)
 
 set(SOURCES main.cpp)
 qt_add_resources(SOURCES resources.qrc)
@@ -18,7 +18,7 @@ qt_standard_project_setup()
 qt_add_executable(appTarnow1000YearsOfModernity
     #main.cpp
     #resources.qrc
-    # MANUAL_FINALIZATION
+   # MANUAL_FINALIZATION
     ${SOURCES}
 )
 
@@ -38,7 +38,7 @@ if(APPLE)
         QT_IOS_LAUNCH_SCREEN "${CMAKE_CURRENT_SOURCE_DIR}/ios/LaunchScreen.storyboard"
         XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME AppIcon
     )
-#qt_finalize_executable(appTarnow1000YearsOfModernity)
+ #qt_finalize_executable(appTarnow1000YearsOfModernity)
 else()
     #Added .plist for macos
     set_target_properties(appTarnow1000YearsOfModernity PROPERTIES
@@ -49,7 +49,7 @@ else()
     set_property(TARGET appTarnow1000YearsOfModernity APPEND PROPERTY
         QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
     )
-# qt_finalize_executable(appTarnow1000YearsOfModernity)
+   # qt_finalize_executable(appTarnow1000YearsOfModernity)
 endif()
 
 qt_add_qml_module(appTarnow1000YearsOfModernity
@@ -63,7 +63,7 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
     Info.cmake.macos.plist
     ios/Info.cmake.ios.plist
     ios/LaunchScreen.storyboard
-    #resources.qrc
+   # resources.qrc
 )
 
 
