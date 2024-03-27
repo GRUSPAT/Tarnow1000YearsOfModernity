@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 
 Item {
+    id: detailsLocationWindow
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
@@ -14,21 +15,75 @@ Item {
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
+        spacing: -20
         FontLoader {
             id: font
             source: "qrc:/fonts/Montserrat-Bold.ttf"
         }
         Rectangle{
+            id: imagesRectangle
             width: parent.width
-            height: parent.height * 0.55
-            Image {
-                id: objectImage
-                anchors.fill: parent
+            height: parent.height * 0.35
+            color: primaryColor
+            SwipeView{
+                id: imagesSwipeView
                 width: parent.width
                 height: parent.height
-                fillMode: Image.PreserveAspectCrop
-                clip:true
-                source: "qrc:/images/objects/object_1/miniature_1.png"
+                currentIndex: 0
+                Repeater{
+                    width: parent.width
+                    height: parent.height
+                    model: modelData.photos
+                    Image {
+                        id: objectImage
+                        width: imagesSwipeView.width
+                        height: imagesSwipeView.height
+                        fillMode: Image.PreserveAspectCrop
+                        clip:true
+                        asynchronous: true
+                        source: `qrc:/images/objects/${detailsLocationWindow.modelData.id + 1}/${index + 1}`
+                        onStatusChanged: {
+                            if(status === Image.Ready){
+                                loadingImage.visible = false
+                            }
+                        }
+                    }
+                }
+            }
+            BusyIndicator {
+                id: loadingImage
+                anchors.centerIn: parent
+                width: 40
+                height: 40
+                running: true
+                z:1
+            }
+            PageIndicator {
+                id: indicator
+                bottomPadding: 25
+                count: imagesSwipeView.count
+                currentIndex: imagesSwipeView.currentIndex
+                anchors.horizontalCenter: imagesSwipeView.horizontalCenter
+                anchors.bottom: parent.bottom
+                visible: modelData.photos > 1 ? true : false
+                delegate: Rectangle {
+                    implicitWidth: index === indicator.currentIndex ? 20 : 8
+                    implicitHeight: 8
+
+                    radius: width / 2
+                    color: index === indicator.currentIndex ? accentColor : primaryColor
+
+                    opacity: 1
+
+                    required property int index
+
+                    Behavior on implicitWidth {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
             }
             Row{
                 width: parent.width
@@ -55,6 +110,7 @@ Item {
                         opacity: closeButton.pressed ? 0.5 : 1.0
                     }
                     onClicked: {
+                        slideAnimation.enabled = false
                         stackView.pop()
                     }
                 }
@@ -62,59 +118,78 @@ Item {
         }
         Rectangle {
             width: rootWindow.width
-            height: rootWindow.height * 0.45
+            height: rootWindow.height * 0.65
             color: primaryColor
             radius: 20
-
-            Column{
-                width: parent.width - 64
-                height: parent.height
-                padding: 32
-                Rectangle{
-                    width: parent.width
-                    height: 50
-                    Text {
-                        anchors.fill: parent
-                        text: `${modelData.name}`
-                        wrapMode: Text.WordWrap
-                        font.family: font.font.family
-                        font.pixelSize: 16
-                        color: textColor
-                    }
-                }
-                Rectangle{
-                    width: parent.width
-                    height: 40
-                    Row{
+            ScrollView {
+                id: objectDataScroll
+                width: parent.width
+                height: parent.height - rootWindow.height * 0.04
+                contentHeight: nameRectangle.height + addressRectangle.height + descriptionText.contentHeight + 60
+                ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+                Column{
+                    width: parent.width - 64
+                    height: parent.height
+                    padding: 32
+                    //bottomPadding: 80
+                    Rectangle{
+                        id: nameRectangle
                         width: parent.width
-                        height: parent.height
-                        IconImage {
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: 20
-                            height: 20
-                            source: "qrc:/icons/SettingsIcon.svg"
-                        }
+                        height: labelText.contentHeight
+                        color: primaryColor
                         Text {
-                            anchors.verticalCenter: parent.verticalCenter
-                            text: `${modelData.address}`
-                            font.family: font.name
-                            font.pixelSize: 10
+                            id: labelText
+                            anchors.fill: parent
+                            text: `${modelData.name}`
+                            wrapMode: Text.WordWrap
+                            font.family: font.font.family
+                            font.pixelSize: 22
                             color: textColor
                         }
                     }
-                }
-                Rectangle{
-                    width: parent.width
-                    height: 400
-                    Text {
-                        anchors.fill: parent
-                        text: `${modelData.description}`
-                        wrapMode: Text.WordWrap
-                        font.family: font.font.family
-                        font.pixelSize: 11
-                        color: textColor
-                        horizontalAlignment: Text.AlignJustify
-                        verticalAlignment: Text.AlignTop
+                    Rectangle{
+                        id: addressRectangle
+                        width: parent.width
+                        height: 48
+                        color: primaryColor
+                        Row{
+                            width: parent.width
+                            height: parent.height - 20
+                            spacing: 8
+                            anchors.centerIn: parent
+                            IconImage {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: 20
+                                height: 20
+                                source: "qrc:/icons/AddressIcon.svg"
+                            }
+                            Text {
+                                anchors.verticalCenter: parent.verticalCenter
+                                text: `${modelData.address}`
+                                font.family: font.name
+                                font.pixelSize: 11
+                                color: textColor
+                            }
+                        }
+                    }
+                    Rectangle{
+                        id: descriptionRectangle
+                        width: parent.width
+                        height: parent.height * 0.5
+                        color: primaryColor
+                        Text {
+                            id: descriptionText
+                            anchors.fill: parent
+                            text: `${modelData.description}`
+                            wrapMode: Text.WordWrap
+                            font.family: font.font.family
+                            font.pixelSize: 13
+                            color: textColor
+                            lineHeight: 20
+                            lineHeightMode: Text.FixedHeight
+                            horizontalAlignment: Text.AlignJustify
+                            verticalAlignment: Text.AlignTop
+                        }
                     }
                 }
             }

@@ -47,7 +47,6 @@ Item {
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
-        //leftPadding: 20
         Rectangle{
             id: topBar
             width: rootWindow.width
@@ -75,9 +74,6 @@ Item {
                             anchors.leftMargin: 20
                             anchors.topMargin: 45
                             font.family: font.font.family
-                            //    font.weight: font.font.weight
-                            //   font.styleName: font.font.styleName
-                            // font.family: font.name
                             id:topBarLabel
                             text: rootWindow.selectedLanguage === "pl" ? "OBIEKTY" : "OBJECTS"
                             font.pixelSize: 32
@@ -155,31 +151,47 @@ Item {
             bottomPadding: 180
             contentWidth: parent.width - 20
             contentHeight: objectsList.height
-            //ScrollBar.vertical.policy: ScrollBar.AlwaysOn
+            ScrollBar.vertical: ScrollBar{
+                interactive: false
+                policy: ScrollBar.AsNeeded
+                contentItem: Rectangle {
+                    implicitWidth: 4
+                    color: 'transparent'
+                }
+                background: Rectangle {
+                    implicitWidth: 4
+                    color: 'transparent'
+                }
+            }
             ListView {
                 id: objectsList
                 width: parent.width
-                model: rootWindow.jsonContext.context_pl
+                model: rootWindow.selectedLanguage === "pl" ? rootWindow.jsonContext.context_pl : rootWindow.jsonContext.context_en
                 spacing: 20
-
+                ScrollBar.vertical: ScrollBar{
+                    id: scroller
+                    interactive: false
+                    policy: ScrollBar.AsNeeded
+                    contentItem: Rectangle {
+                        implicitWidth: 4
+                        radius: 2
+                        color: accentColor
+                    }
+                    background: Rectangle {
+                        implicitWidth: 4
+                        color: 'transparent'
+                    }
+                }
                 delegate:
                     Rectangle{
-                    property int idTemp : '${modelData.id}' + 1
                     id:objectCard
                     FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                     width: objectsList.width - 20
                     height: 260
                     radius: 20
                     color: primaryColor
-                    border.width: 1
                     border.color: borderColor
-                    /*Image {
-                        id: objectBG
-                        source: "qrc:/images/objects/objectBG.svg"
-                        anchors.fill: parent
-                        width: parent.width
-                        height: parent.height
-                    }*/
+                    border.width: 1
                     Column{
                         width: parent.width
                         height: parent.height
@@ -192,12 +204,10 @@ Item {
                             radius: 12
                             Image {
                                 id: objectImage
-                                //anchors.fill: parent
                                 width: parent.width
                                 height: parent.height
-                                //fillMode: Image.PreserveAspectCrop
-                                //clip:true
-                                source: "qrc:/images/objects/" + idTemp.toString() + "/miniature.png"
+
+                                source: `qrc:/images/objects/${modelData.id + 1}/miniature.png`
                             }
                             Row{
                                 topPadding: 8
@@ -215,7 +225,6 @@ Item {
                                         font.family: font2.font.family
                                         font.pixelSize: 8
                                         color: primaryColor
-
                                     }
                                 }
                             }
@@ -231,7 +240,6 @@ Item {
                                 height: 40
                                 text: `${modelData.id + 1}. ${modelData.name}`
                             }
-
                         }
                         Row{
                             width: parent.width - 32
@@ -240,29 +248,30 @@ Item {
                             Rectangle{
                                 width: parent.width * 0.65
                                 height: 44
+                                color: primaryColor
                                 Row{
                                     width: parent.width
                                     height: parent.height
-                                    spacing: 10
+                                    spacing: 8
                                     IconImage {
                                         //anchors.margins: 4
                                         anchors.verticalCenter: parent.verticalCenter
-                                        width: 30
-                                        height: 30
-                                        source: "qrc:/icons/SettingsIcon.svg"
+                                        width: 20
+                                        height: 20
+                                        source: "qrc:/icons/AddressIcon.svg"
                                     }
                                     Text {
                                         anchors.verticalCenter: parent.verticalCenter
                                         text: `${modelData.address}`
                                         font.family: font2.name
-                                        font.pixelSize: 13
+                                        font.pixelSize: 11
                                     }
                                 }
-
                             }
                             Rectangle{
                                 width: parent.width * 0.35
                                 height: 44
+                                color: primaryColor
                                 RoundButton{
                                     id: moreButton
                                     width: 105
@@ -288,19 +297,14 @@ Item {
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
+                                        slideAnimation.enabled = true
                                         stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})
                                     }
                                 }
                             }
-
                         }
                     }
-
                 }
-
-                //Text {
-                //    text: `\n Nazwa: ${modelData.name} \n Lokalizacja: ${modelData.location} \n Adres: ${modelData.address} \n Opis: ${modelData.description}`
-                //}
             }
         }
     }

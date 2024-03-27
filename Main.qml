@@ -19,6 +19,7 @@ ApplicationWindow {
     property string selectedLanguage: "pl"
     property geoCoordinate lastMapCenter: QtPositioning.coordinate(50.01, 20.98)
     property real lastMapZoom: 15
+    property var userRoute: []
 
     function loadData(){
         let xhr = new XMLHttpRequest();
@@ -30,7 +31,6 @@ ApplicationWindow {
                 return;
             }
             jsonContext = JSON.parse(xhr.responseText);
-            console.log(jsonContext.context_pl[0].name)
         }
         xhr2.onreadystatechange = function() {
             if (xhr2.readyState !== XMLHttpRequest.DONE) {
@@ -121,19 +121,32 @@ ApplicationWindow {
         initialItem: "qrc:/screens/HomeScreen.qml"
         anchors.fill: parent
         pushEnter: Transition {
-            from: "fromState"
-            to: "toState"
+            id: slideAnimation
             enabled: false
+            NumberAnimation {
+                properties: "y"
+                from: stackView.height
+                to: 0
+                easing.type: Easing.InOutQuad
+            }
         }
         pushExit: Transition {
-            from: "fromState"
-            to: "toState"
-            enabled: false
+            NumberAnimation {
+                properties: "opacity"
+                from: 1
+                to: 0
+                duration: 300
+                easing.type: Easing.InOutQuad
+            }
         }
         popEnter: Transition {
-            from: "fromState"
-            to: "toState"
-            enabled: false
+            NumberAnimation {
+                properties: "opacity"
+                from: 0
+                to: 1
+                duration: 300
+                easing.type: Easing.InOutQuad
+            }
         }
         popExit: Transition {
             NumberAnimation {
