@@ -1,386 +1,387 @@
 <RCC>
-<qresource prefix="/">
-<file>icons/HomeIcon.svg</file>
-<file>icons/LocationsIcon.svg</file>
-<file>icons/MapIcon.svg</file>
-<file>icons/RoutesIcon.svg</file>
-<file>icons/SettingsIcon.svg</file>
-<file>images/AppIcon.png</file>
-<file>json/context.json</file>
-<file>json/routes.json</file>
-<file>images/Tarnow1000LatLogo.png</file>
-<file>images/objects/object_1/miniature_1.png</file>
-<file>images/objects/objectBG.svg</file>
-<file>fonts/Montserrat-Bold.ttf</file>
-<file>images/main/main_1_miniature.png</file>
-<file>images/main/main_2_miniature.png</file>
-<file>images/paths/path_example.png</file>
-<file>screens/HomeScreen.qml</file>
-<file>screens/LocationsScreen.qml</file>
-<file>screens/MapScreen.qml</file>
-<file>screens/RoutesScreen.qml</file>
-<file>screens/SettingsScreen.qml</file>
-<file>screens/AboutAppScreen.qml</file>
-<file>screens/AuthorsScreen.qml</file>
-<file>screens/LicensesScreen.qml</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18285-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18286-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18287-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18288-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18289-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18290-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18291-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18292-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18293-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18294-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18295-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11118.png</file>
-<file>offline_tiles/osm_100-l-1-15-18296-11107.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9142-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9143-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9144-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9145-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9146-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9147-5559.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5553.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5554.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5555.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5556.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5557.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5558.png</file>
-<file>offline_tiles/osm_100-l-1-14-9148-5559.png</file>
-<file>offline_tiles/osm_100-l-1-13-4571-2776.png</file>
-<file>offline_tiles/osm_100-l-1-13-4571-2777.png</file>
-<file>offline_tiles/osm_100-l-1-13-4571-2778.png</file>
-<file>offline_tiles/osm_100-l-1-13-4571-2779.png</file>
-<file>offline_tiles/osm_100-l-1-13-4572-2776.png</file>
-<file>offline_tiles/osm_100-l-1-13-4572-2777.png</file>
-<file>offline_tiles/osm_100-l-1-13-4572-2778.png</file>
-<file>offline_tiles/osm_100-l-1-13-4572-2779.png</file>
-<file>offline_tiles/osm_100-l-1-13-4573-2776.png</file>
-<file>offline_tiles/osm_100-l-1-13-4573-2777.png</file>
-<file>offline_tiles/osm_100-l-1-13-4573-2778.png</file>
-<file>offline_tiles/osm_100-l-1-13-4573-2779.png</file>
-<file>offline_tiles/osm_100-l-1-13-4574-2776.png</file>
-<file>offline_tiles/osm_100-l-1-13-4574-2777.png</file>
-<file>offline_tiles/osm_100-l-1-13-4574-2778.png</file>
-<file>offline_tiles/osm_100-l-1-13-4574-2779.png</file>
-<file>offline_tiles/osm_100-l-1-12-2285-1388.png</file>
-<file>offline_tiles/osm_100-l-1-12-2285-1389.png</file>
-<file>offline_tiles/osm_100-l-1-12-2286-1388.png</file>
-<file>offline_tiles/osm_100-l-1-12-2286-1389.png</file>
-<file>offline_tiles/osm_100-l-1-12-2287-1388.png</file>
-<file>offline_tiles/osm_100-l-1-12-2287-1389.png</file>
-<file>fonts/Montserrat-VariableFont_wght.ttf</file>
-<file>screens/LocationDetailsScreen.qml</file>
-<file>screens/RouteDetailsScreen.qml</file>
-<file>icons/MarkerIcon.svg</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11107.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11108.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11109.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11110.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11111.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11112.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11113.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11114.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11115.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11116.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11117.png</file>
-<file>offline_tiles/osm_100-l-1-15-18297-11118.png</file>
-<file>images/objects/1/1.jpeg</file>
-<file>images/objects/1/2.jpeg</file>
-<file>images/objects/1/3.jpeg</file>
-<file>images/objects/1/4.jpeg</file>
-<file>images/objects/1/5.jpeg</file>
-<file>images/objects/1/miniature.png</file>
-<file>images/objects/2/1.jpeg</file>
-<file>images/objects/2/miniature.png</file>
-<file>images/objects/3/1.jpeg</file>
-<file>images/objects/3/2.jpeg</file>
-<file>images/objects/3/3.jpeg</file>
-<file>images/objects/3/4.jpeg</file>
-<file>images/objects/3/miniature.png</file>
-<file>images/objects/4/1.jpeg</file>
-<file>images/objects/4/2.jpeg</file>
-<file>images/objects/4/3.jpeg</file>
-<file>images/objects/4/miniature.png</file>
-<file>images/objects/5/1.jpeg</file>
-<file>images/objects/5/2.jpeg</file>
-<file>images/objects/5/3.jpeg</file>
-<file>images/objects/5/4.jpeg</file>
-<file>images/objects/5/miniature.png</file>
-<file>images/objects/6/1.jpeg</file>
-<file>images/objects/6/2.jpeg</file>
-<file>images/objects/6/3.jpeg</file>
-<file>images/objects/6/4.jpeg</file>
-<file>images/objects/6/miniature.png</file>
-<file>images/objects/7/1.jpeg</file>
-<file>images/objects/7/2.jpeg</file>
-<file>images/objects/7/3.jpeg</file>
-<file>images/objects/7/4.jpeg</file>
-<file>images/objects/7/5.jpeg</file>
-<file>images/objects/7/miniature.png</file>
-<file>images/objects/8/1.jpeg</file>
-<file>images/objects/8/miniature.png</file>
-<file>images/objects/9/1.jpeg</file>
-<file>images/objects/9/2.jpeg</file>
-<file>images/objects/9/3.jpeg</file>
-<file>images/objects/9/4.jpeg</file>
-<file>images/objects/9/miniature.png</file>
-<file>images/objects/10/1.png</file>
-<file>images/objects/10/miniature.png</file>
-<file>images/objects/11/1.jpeg</file>
-<file>images/objects/11/2.jpeg</file>
-<file>images/objects/11/3.jpeg</file>
-<file>images/objects/11/4.jpeg</file>
-<file>images/objects/11/miniature.png</file>
-<file>images/objects/12/1.jpeg</file>
-<file>images/objects/12/2.jpeg</file>
-<file>images/objects/12/3.jpeg</file>
-<file>images/objects/12/4.jpeg</file>
-<file>images/objects/12/5.jpeg</file>
-<file>images/objects/12/6.jpeg</file>
-<file>images/objects/12/miniature.png</file>
-<file>images/objects/13/1.jpeg</file>
-<file>images/objects/13/2.jpeg</file>
-<file>images/objects/13/3.jpeg</file>
-<file>images/objects/13/4.jpeg</file>
-<file>images/objects/13/miniature.png</file>
-<file>images/objects/14/1.jpeg</file>
-<file>images/objects/14/2.jpeg</file>
-<file>images/objects/14/3.jpeg</file>
-<file>images/objects/14/4.jpeg</file>
-<file>images/objects/14/5.jpeg</file>
-<file>images/objects/14/6.jpeg</file>
-<file>images/objects/14/miniature.png</file>
-<file>images/objects/15/1.png</file>
-<file>images/objects/15/miniature.png</file>
-<file>images/objects/16/1.png</file>
-<file>images/objects/16/miniature.png</file>
-<file>images/objects/17/1.png</file>
-<file>images/objects/17/miniature.png</file>
-<file>images/objects/18/1.png</file>
-<file>images/objects/18/miniature.png</file>
-<file>images/objects/19/1.png</file>
-<file>images/objects/19/miniature.png</file>
-<file>images/objects/20/1.png</file>
-<file>images/objects/20/miniature.png</file>
-<file>images/objects/21/1.png</file>
-<file>images/objects/21/miniature.png</file>
-<file>images/objects/22/1.png</file>
-<file>images/objects/22/miniature.png</file>
-<file>images/objects/23/1.jpeg</file>
-<file>images/objects/23/2.jpeg</file>
-<file>images/objects/23/3.jpeg</file>
-<file>images/objects/23/4.jpeg</file>
-<file>images/objects/23/5.jpeg</file>
-<file>images/objects/23/6.jpeg</file>
-<file>images/objects/23/miniature.png</file>
-<file>images/objects/24/1.jpeg</file>
-<file>images/objects/24/2.jpeg</file>
-<file>images/objects/24/3.jpeg</file>
-<file>images/objects/24/4.jpeg</file>
-<file>images/objects/24/5.jpeg</file>
-<file>images/objects/24/miniature.png</file>
-<file>images/objects/25/1.jpeg</file>
-<file>images/objects/25/2.jpeg</file>
-<file>images/objects/25/3.jpeg</file>
-<file>images/objects/25/4.jpeg</file>
-<file>images/objects/25/5.jpeg</file>
-<file>images/objects/25/6.jpeg</file>
-<file>images/objects/25/miniature.png</file>
-<file>images/objects/26/1.jpeg</file>
-<file>images/objects/26/miniature.png</file>
-<file>images/objects/27/1.jpeg</file>
-<file>images/objects/27/2.jpeg</file>
-<file>images/objects/27/3.jpeg</file>
-<file>images/objects/27/4.jpeg</file>
-<file>images/objects/27/5.jpeg</file>
-<file>images/objects/27/miniature.png</file>
-<file>images/objects/28/1.jpeg</file>
-<file>images/objects/28/2.jpeg</file>
-<file>images/objects/28/3.jpeg</file>
-<file>images/objects/28/4.jpeg</file>
-<file>images/objects/28/5.jpeg</file>
-<file>images/objects/28/6.jpeg</file>
-<file>images/objects/28/miniature.png</file>
-<file>images/objects/29/1.jpeg</file>
-<file>images/objects/29/2.jpeg</file>
-<file>images/objects/29/3.jpeg</file>
-<file>images/objects/29/4.jpeg</file>
-<file>images/objects/29/5.jpeg</file>
-<file>images/objects/29/miniature.png</file>
-<file>icons/AddressIcon.svg</file>
-<file>icons/AddToRouteIcon.svg</file>
-<file>icons/CloseIcon.svg</file>
-<file>icons/NavigateIcon.svg</file>
-<file>icons/UserRouteIcon.svg</file>
-</qresource>
+    <qresource prefix="/">
+        <file>icons/HomeIcon.svg</file>
+        <file>icons/LocationsIcon.svg</file>
+        <file>icons/MapIcon.svg</file>
+        <file>icons/RoutesIcon.svg</file>
+        <file>icons/SettingsIcon.svg</file>
+        <file>images/AppIcon.png</file>
+        <file>json/context.json</file>
+        <file>json/routes.json</file>
+        <file>images/Tarnow1000LatLogo.png</file>
+        <file>images/objects/object_1/miniature_1.png</file>
+        <file>images/objects/objectBG.svg</file>
+        <file>fonts/Montserrat-Bold.ttf</file>
+        <file>images/main/main_1_miniature.png</file>
+        <file>images/main/main_2_miniature.png</file>
+        <file>images/paths/path_example.png</file>
+        <file>screens/HomeScreen.qml</file>
+        <file>screens/LocationsScreen.qml</file>
+        <file>screens/MapScreen.qml</file>
+        <file>screens/RoutesScreen.qml</file>
+        <file>screens/SettingsScreen.qml</file>
+        <file>screens/AboutAppScreen.qml</file>
+        <file>screens/AuthorsScreen.qml</file>
+        <file>screens/LicensesScreen.qml</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18285-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18286-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18287-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18288-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18289-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18290-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18291-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18292-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18293-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18294-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18295-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11118.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18296-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9142-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9143-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9144-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9145-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9146-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9147-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5553.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5554.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5555.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5556.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5557.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5558.png</file>
+        <file>offline_tiles/osm_100-l-1-14-9148-5559.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4571-2776.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4571-2777.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4571-2778.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4571-2779.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4572-2776.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4572-2777.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4572-2778.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4572-2779.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4573-2776.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4573-2777.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4573-2778.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4573-2779.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4574-2776.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4574-2777.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4574-2778.png</file>
+        <file>offline_tiles/osm_100-l-1-13-4574-2779.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2285-1388.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2285-1389.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2286-1388.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2286-1389.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2287-1388.png</file>
+        <file>offline_tiles/osm_100-l-1-12-2287-1389.png</file>
+        <file>fonts/Montserrat-VariableFont_wght.ttf</file>
+        <file>screens/LocationDetailsScreen.qml</file>
+        <file>screens/RouteDetailsScreen.qml</file>
+        <file>icons/MarkerIcon.svg</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11107.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11108.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11109.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11110.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11111.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11112.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11113.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11114.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11115.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11116.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11117.png</file>
+        <file>offline_tiles/osm_100-l-1-15-18297-11118.png</file>
+        <file>images/objects/1/1.jpeg</file>
+        <file>images/objects/1/2.jpeg</file>
+        <file>images/objects/1/3.jpeg</file>
+        <file>images/objects/1/4.jpeg</file>
+        <file>images/objects/1/5.jpeg</file>
+        <file>images/objects/1/miniature.png</file>
+        <file>images/objects/2/1.jpeg</file>
+        <file>images/objects/2/miniature.png</file>
+        <file>images/objects/3/1.jpeg</file>
+        <file>images/objects/3/2.jpeg</file>
+        <file>images/objects/3/3.jpeg</file>
+        <file>images/objects/3/4.jpeg</file>
+        <file>images/objects/3/miniature.png</file>
+        <file>images/objects/4/1.jpeg</file>
+        <file>images/objects/4/2.jpeg</file>
+        <file>images/objects/4/3.jpeg</file>
+        <file>images/objects/4/miniature.png</file>
+        <file>images/objects/5/1.jpeg</file>
+        <file>images/objects/5/2.jpeg</file>
+        <file>images/objects/5/3.jpeg</file>
+        <file>images/objects/5/4.jpeg</file>
+        <file>images/objects/5/miniature.png</file>
+        <file>images/objects/6/1.jpeg</file>
+        <file>images/objects/6/2.jpeg</file>
+        <file>images/objects/6/3.jpeg</file>
+        <file>images/objects/6/4.jpeg</file>
+        <file>images/objects/6/miniature.png</file>
+        <file>images/objects/7/1.jpeg</file>
+        <file>images/objects/7/2.jpeg</file>
+        <file>images/objects/7/3.jpeg</file>
+        <file>images/objects/7/4.jpeg</file>
+        <file>images/objects/7/5.jpeg</file>
+        <file>images/objects/7/miniature.png</file>
+        <file>images/objects/8/1.jpeg</file>
+        <file>images/objects/8/miniature.png</file>
+        <file>images/objects/9/1.jpeg</file>
+        <file>images/objects/9/2.jpeg</file>
+        <file>images/objects/9/3.jpeg</file>
+        <file>images/objects/9/4.jpeg</file>
+        <file>images/objects/9/miniature.png</file>
+        <file>images/objects/10/1.png</file>
+        <file>images/objects/10/miniature.png</file>
+        <file>images/objects/11/1.jpeg</file>
+        <file>images/objects/11/2.jpeg</file>
+        <file>images/objects/11/3.jpeg</file>
+        <file>images/objects/11/4.jpeg</file>
+        <file>images/objects/11/miniature.png</file>
+        <file>images/objects/12/1.jpeg</file>
+        <file>images/objects/12/2.jpeg</file>
+        <file>images/objects/12/3.jpeg</file>
+        <file>images/objects/12/4.jpeg</file>
+        <file>images/objects/12/5.jpeg</file>
+        <file>images/objects/12/6.jpeg</file>
+        <file>images/objects/12/miniature.png</file>
+        <file>images/objects/13/1.jpeg</file>
+        <file>images/objects/13/2.jpeg</file>
+        <file>images/objects/13/3.jpeg</file>
+        <file>images/objects/13/4.jpeg</file>
+        <file>images/objects/13/miniature.png</file>
+        <file>images/objects/14/1.jpeg</file>
+        <file>images/objects/14/2.jpeg</file>
+        <file>images/objects/14/3.jpeg</file>
+        <file>images/objects/14/4.jpeg</file>
+        <file>images/objects/14/5.jpeg</file>
+        <file>images/objects/14/6.jpeg</file>
+        <file>images/objects/14/miniature.png</file>
+        <file>images/objects/15/1.png</file>
+        <file>images/objects/15/miniature.png</file>
+        <file>images/objects/16/1.png</file>
+        <file>images/objects/16/miniature.png</file>
+        <file>images/objects/17/1.png</file>
+        <file>images/objects/17/miniature.png</file>
+        <file>images/objects/18/1.png</file>
+        <file>images/objects/18/miniature.png</file>
+        <file>images/objects/19/1.png</file>
+        <file>images/objects/19/miniature.png</file>
+        <file>images/objects/20/1.png</file>
+        <file>images/objects/20/miniature.png</file>
+        <file>images/objects/21/1.png</file>
+        <file>images/objects/21/miniature.png</file>
+        <file>images/objects/22/1.png</file>
+        <file>images/objects/22/miniature.png</file>
+        <file>images/objects/23/1.jpeg</file>
+        <file>images/objects/23/2.jpeg</file>
+        <file>images/objects/23/3.jpeg</file>
+        <file>images/objects/23/4.jpeg</file>
+        <file>images/objects/23/5.jpeg</file>
+        <file>images/objects/23/6.jpeg</file>
+        <file>images/objects/23/miniature.png</file>
+        <file>images/objects/24/1.jpeg</file>
+        <file>images/objects/24/2.jpeg</file>
+        <file>images/objects/24/3.jpeg</file>
+        <file>images/objects/24/4.jpeg</file>
+        <file>images/objects/24/5.jpeg</file>
+        <file>images/objects/24/miniature.png</file>
+        <file>images/objects/25/1.jpeg</file>
+        <file>images/objects/25/2.jpeg</file>
+        <file>images/objects/25/3.jpeg</file>
+        <file>images/objects/25/4.jpeg</file>
+        <file>images/objects/25/5.jpeg</file>
+        <file>images/objects/25/6.jpeg</file>
+        <file>images/objects/25/miniature.png</file>
+        <file>images/objects/26/1.jpeg</file>
+        <file>images/objects/26/miniature.png</file>
+        <file>images/objects/27/1.jpeg</file>
+        <file>images/objects/27/2.jpeg</file>
+        <file>images/objects/27/3.jpeg</file>
+        <file>images/objects/27/4.jpeg</file>
+        <file>images/objects/27/5.jpeg</file>
+        <file>images/objects/27/miniature.png</file>
+        <file>images/objects/28/1.jpeg</file>
+        <file>images/objects/28/2.jpeg</file>
+        <file>images/objects/28/3.jpeg</file>
+        <file>images/objects/28/4.jpeg</file>
+        <file>images/objects/28/5.jpeg</file>
+        <file>images/objects/28/6.jpeg</file>
+        <file>images/objects/28/miniature.png</file>
+        <file>images/objects/29/1.jpeg</file>
+        <file>images/objects/29/2.jpeg</file>
+        <file>images/objects/29/3.jpeg</file>
+        <file>images/objects/29/4.jpeg</file>
+        <file>images/objects/29/5.jpeg</file>
+        <file>images/objects/29/miniature.png</file>
+        <file>icons/AddressIcon.svg</file>
+        <file>icons/AddToRouteIcon.svg</file>
+        <file>icons/CloseIcon.svg</file>
+        <file>icons/NavigateIcon.svg</file>
+        <file>icons/UserRouteIcon.svg</file>
+        <file>icons/SearchIcon.svg</file>
+    </qresource>
 </RCC>
