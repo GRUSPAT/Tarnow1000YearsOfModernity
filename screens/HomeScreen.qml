@@ -122,6 +122,10 @@ Item{
                             anchors.right: parent.right
                             anchors.rightMargin: 8
                             anchors.bottomMargin: 8
+                            onClicked: {
+                                slideAnimation.enabled = true
+                                stackView.push("qrc:/screens/TarnowScreen.qml")
+                            }
                         }
                     }
                 }
@@ -196,6 +200,10 @@ Item{
                             anchors.right: parent.right
                             anchors.rightMargin: 8
                             anchors.bottomMargin: 8
+                            onClicked: {
+                                slideAnimation.enabled = true
+                                stackView.push("qrc:/screens/DagaramaScreen.qml")
+                            }
                         }
                     }
                 }
