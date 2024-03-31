@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
+import QtPositioning
 
 Item {
     id: detailsLocationWindow
@@ -14,7 +15,7 @@ Item {
     Column {
         width: rootWindow.width
         height: rootWindow.height
-        bottomPadding: rootWindow.height * 0.07
+        bottomPadding: rootWindow.height * 0.095
         spacing: -20
         FontLoader {
             id: font
@@ -110,6 +111,7 @@ Item {
                         opacity: closeButton.pressed ? 0.5 : 1.0
                     }
                     onClicked: {
+                        mainNavBar.visible = true
                         slideAnimation.enabled = false
                         stackView.pop()
                     }
@@ -124,7 +126,7 @@ Item {
             ScrollView {
                 id: objectDataScroll
                 width: parent.width
-                height: parent.height - rootWindow.height * 0.04
+                height: parent.height - rootWindow.height * 0.095 + 20
                 contentHeight: nameRectangle.height + addressRectangle.height + descriptionText.contentHeight + 60
                 ScrollBar.vertical.policy: ScrollBar.AlwaysOff
                 Column{
@@ -189,6 +191,132 @@ Item {
                             lineHeightMode: Text.FixedHeight
                             horizontalAlignment: Text.AlignJustify
                             verticalAlignment: Text.AlignTop
+                        }
+                    }
+                }
+            }
+            Rectangle{
+                id: secondNavBar
+                anchors{
+                    //margins: 0
+                    horizontalCenter: parent.horizontalCenter
+                    bottom: parent.bottom
+                }
+                height: parent.height * 0.095 + 8
+                width: parent.width
+                z:1
+                color: "white"
+                Rectangle{
+                    anchors.margins: 0
+                    z:1
+                    //anchors.top: parent.top
+                    height: 1
+                    width: parent.width
+                    color: "#C5C5C5"
+                }
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    topPadding: 12
+                    width: parent.width
+                    height: parent.height
+                    leftPadding: 10
+                    spacing: -20
+                    Rectangle{
+                        width: parent.width * 0.5
+                        height: parent.height * 0.5
+                        color: "transparent"
+                        Button{
+                            id: showOnMap
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: parent.width * 0.7
+                            height: 32
+                            contentItem: Row{
+                                width: parent.width
+                                height: parent.height
+                                leftPadding: -15
+                                spacing: 6
+                                IconImage {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    width: 18
+                                    height: 18
+                                    source: "qrc:/icons/AddressIcon.svg"
+                                    color: primaryColor
+                                }
+                                Text {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    text: rootWindow.selectedLanguage === "pl" ? "Pokaż na mapie" : "Show on map"
+                                    font.pixelSize: 11
+                                    font.family: font.name
+                                    color: primaryColor
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                    elide: Text.ElideRight
+                                }
+                            }
+                            background: Rectangle {
+                                anchors.fill: parent
+                                implicitWidth: parent.width
+                                implicitHeight: parent.height
+                                color: accentColor
+                                radius: 5
+                                opacity: showOnMap.pressed ? 0.5 : 1.0
+                            }
+                            onClicked: {
+                                var resultCoordinate = detailsLocationWindow.modelData.coordinate.trim().split(",")
+                                rootWindow.lastMapCenter = QtPositioning.coordinate(resultCoordinate[0], resultCoordinate[1])
+                                rootWindow.lastMapZoom = 15.5
+                                slideAnimation.enabled = false
+                                secondNavBar.visible = false
+                                mainNavBar.visible = true
+                                stackView.push("qrc:/screens/MapScreen.qml", {modelData})
+                            }
+                        }
+                    }
+                    Rectangle{
+                        width: parent.width * 0.5
+                        height: parent.height * 0.5
+                        color: "transparent"
+                        Button{
+                            id: secondNavigateButton
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: parent.width * 0.7
+                            height: 32
+                            contentItem: Row{
+                                width: parent.width
+                                height: parent.height
+                                leftPadding: 2
+                                spacing: 16
+                                IconImage {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    width: 18
+                                    height: 18
+                                    source: "qrc:/icons/NavigateIcon.svg"
+                                    color: primaryColor
+                                }
+                                Text {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    text: rootWindow.selectedLanguage === "pl" ? "Nawiguj" : "Navigate"
+                                    font.pixelSize: 11
+                                    font.family: font.name
+                                    color: primaryColor
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                    elide: Text.ElideRight
+                                }
+                            }
+                            background: Rectangle {
+                                anchors.fill: parent
+                                implicitWidth: parent.width
+                                implicitHeight: parent.height
+                                color: accentColor
+                                radius: 5
+                                opacity: secondNavigateButton.pressed ? 0.5 : 1.0
+                            }
+                            onClicked: {
+                                var resultDestination = detailsLocationWindow.modelData.coordinate.trim().split(",")
+                                Qt.openUrlExternally(`https://www.google.com/maps/dir/?api=1&destination=${resultDestination[0] + "%2C" +resultDestination[1]}&travelmode=walking`)
+                            }
                         }
                     }
                 }

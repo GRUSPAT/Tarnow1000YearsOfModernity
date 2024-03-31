@@ -46,7 +46,7 @@ Item {
         FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
         width: rootWindow.width
         height: rootWindow.height
-        bottomPadding: rootWindow.height * 0.07
+        bottomPadding: rootWindow.height * 0.095
         Rectangle{
             id: topBar
             width: rootWindow.width
@@ -112,21 +112,27 @@ Item {
                             width: parent.width
                             height: 38
                             padding: 2
+                            leftPadding: 16
+                            spacing: -8
                             IconImage{
-                                width: 36
-                                height: 36
-                                source: "qrc:/icons/SettingsIcon.svg"
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: 20
+                                height: 20
+                                visible: textField.activeFocus || (textField.length !== 0) ? false : true
+                                source: "qrc:/icons/SearchIcon.svg"
                             }
                             TextField{
                                 id: textField
-                                width: parent.width - 48
-                                height: 36
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: parent.width - 50
+                                height: 34
                                 font.family: font.font.family
+                                font.pixelSize: 18
                                 color: textColor
                                 placeholderText: rootWindow.selectedLanguage === "pl" ? "Wyszukaj" : "Search"
                                 placeholderTextColor: textField.activeFocus || (textField.length !== 0) ? "transparent" : accentColor
                                 background: Rectangle {
-                                    color: primaryColor
+                                    color: "transparent"
                                     border.width: 0
                                 }
                                 opacity: textField.activeFocus || (textField.length !== 0) ? 1 : 0.5
@@ -145,12 +151,12 @@ Item {
         }
         ScrollView {
             width: parent.width
-            height: parent.height - rootWindow.height * 0.07
+            height: parent.height - rootWindow.height * 0.095
             leftPadding: 20
             topPadding: 10
             bottomPadding: 180
             contentWidth: parent.width - 20
-            contentHeight: objectsList.height
+            contentHeight: objectsList.contentHeight
             ScrollBar.vertical: ScrollBar{
                 interactive: false
                 policy: ScrollBar.AsNeeded
@@ -297,6 +303,7 @@ Item {
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
+                                        mainNavBar.visible = false
                                         slideAnimation.enabled = true
                                         stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})
                                     }

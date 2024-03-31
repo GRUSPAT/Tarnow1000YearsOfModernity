@@ -9,6 +9,7 @@ Item {
     id: mapWindowItem
     width: rootWindow.width
     height: rootWindow.height
+    property var modelData
     property color backgroundColor: "#F2F3F3"
     property color primaryColor: "#FCFCFC"
     property color textColor: "#000000"
@@ -443,7 +444,7 @@ Item {
         Map {
             id: map
             width: parent.width
-            height: parent.height * 0.8
+            height: parent.height * 0.785
             anchors.horizontalCenter: parent.horizontalCenter
             activeMapType: map.supportedMapTypes[0]
             z:0
@@ -494,6 +495,17 @@ Item {
                                 parent: markerButton
                                 x: parent.x - parseInt(width / 2) + 9
                                 y: parent.y - 340
+                                visible: {
+                                    if(mapWindowItem.modelData) {
+                                        if(mapWindowItem.modelData.id == index) {
+                                            return true
+                                        } else {
+                                            return false
+                                        }
+                                    } else {
+                                        return false
+                                    }
+                                }
                                 contentItem: Rectangle {
                                     id: markerMenuRectangle
                                     width: markerPopup.width
@@ -848,6 +860,12 @@ Item {
             }
             onZoomLevelChanged: {
                 rootWindow.lastMapZoom = map.zoomLevel
+            }
+            Component.onCompleted: {
+                if(mapWindowItem.modelData){
+                    var tempCoordinate =  mapWindowItem.modelData.coordinate.trim().split(",")
+                    map.alignCoordinateToPoint(QtPositioning.coordinate(tempCoordinate[0], tempCoordinate[1]), Qt.point(parseInt(map.width / 2), parseInt(map.height * 0.7)))
+                }
             }
         }
     }

@@ -43,17 +43,17 @@ ApplicationWindow {
     }
 
     Rectangle{
+        id: mainNavBar
         anchors{
-            horizontalCenter: parent.hohorizontalCenter
+            horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
         }
-        height: parent.height * 0.08
+        height: parent.height * 0.095
         width: parent.width
         z:1
         color: "white"
         Rectangle{
-
-            z:1
+            //z:1
             anchors.top: parent.top
             height: 1
             width: parent.width
@@ -70,9 +70,11 @@ ApplicationWindow {
                 width: parent.width * 0.2
                 height: parent.height
                 icon.height: 25
-                onClicked: stackView.push("qrc:/screens/HomeScreen.qml")
+                onClicked: {
+                    slideAnimation.enabled = false
+                    stackView.push("qrc:/screens/HomeScreen.qml")
+                }
             }
-
             Button {
                 id:objectsButton
                 flat: true
@@ -81,9 +83,11 @@ ApplicationWindow {
                 icon.width: 20
                 icon.height: 25
                 height: parent.height
-                onClicked: stackView.push("qrc:/screens/LocationsScreen.qml")
+                onClicked: {
+                    slideAnimation.enabled = false
+                    stackView.push("qrc:/screens/LocationsScreen.qml")
+                }
             }
-
             Button {
                 id:mapButton
                 flat: true
@@ -91,9 +95,11 @@ ApplicationWindow {
                 width: parent.width * 0.2
                 height: parent.height
                 icon.height: 25
-                onClicked: stackView.push("qrc:/screens/MapScreen.qml")
+                onClicked: {
+                    slideAnimation.enabled = false
+                    stackView.push("qrc:/screens/MapScreen.qml")
+                }
             }
-
             Button {
                 id:routesButton
                 flat: true
@@ -101,9 +107,11 @@ ApplicationWindow {
                 width: parent.width * 0.2
                 height: parent.height
                 icon.height: 25
-                onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
+                onClicked: {
+                    slideAnimation.enabled = false
+                    stackView.push("qrc:/screens/RoutesScreen.qml")
+                }
             }
-
             Button {
                 id:settingsButton
                 flat: true
@@ -111,7 +119,10 @@ ApplicationWindow {
                 width: parent.width * 0.2
                 height: parent.height
                 icon.height: 25
-                onClicked: stackView.push("qrc:/screens/SettingsScreen.qml")
+                onClicked: {
+                    slideAnimation.enabled = false
+                    stackView.push("qrc:/screens/SettingsScreen.qml")
+                }
             }
         }
     }

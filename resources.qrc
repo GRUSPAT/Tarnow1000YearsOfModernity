@@ -402,5 +402,6 @@
         <file>images/dagarama/8.png</file>
         <file>images/dagarama/17.png</file>
         <file>images/dagarama/16.png</file>
+        <file>icons/SearchIcon.svg</file>
     </qresource>
 </RCC>
