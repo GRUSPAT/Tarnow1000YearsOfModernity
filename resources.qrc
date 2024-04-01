@@ -294,8 +294,6 @@
         <file>images/objects/9/3.jpeg</file>
         <file>images/objects/9/4.jpeg</file>
         <file>images/objects/9/miniature.png</file>
-        <file>images/objects/10/1.png</file>
-        <file>images/objects/10/miniature.png</file>
         <file>images/objects/11/1.jpeg</file>
         <file>images/objects/11/2.jpeg</file>
         <file>images/objects/11/3.jpeg</file>
@@ -320,22 +318,6 @@
         <file>images/objects/14/5.jpeg</file>
         <file>images/objects/14/6.jpeg</file>
         <file>images/objects/14/miniature.png</file>
-        <file>images/objects/15/1.png</file>
-        <file>images/objects/15/miniature.png</file>
-        <file>images/objects/16/1.png</file>
-        <file>images/objects/16/miniature.png</file>
-        <file>images/objects/17/1.png</file>
-        <file>images/objects/17/miniature.png</file>
-        <file>images/objects/18/1.png</file>
-        <file>images/objects/18/miniature.png</file>
-        <file>images/objects/19/1.png</file>
-        <file>images/objects/19/miniature.png</file>
-        <file>images/objects/20/1.png</file>
-        <file>images/objects/20/miniature.png</file>
-        <file>images/objects/21/1.png</file>
-        <file>images/objects/21/miniature.png</file>
-        <file>images/objects/22/1.png</file>
-        <file>images/objects/22/miniature.png</file>
         <file>images/objects/23/1.jpeg</file>
         <file>images/objects/23/2.jpeg</file>
         <file>images/objects/23/3.jpeg</file>
@@ -403,5 +385,49 @@
         <file>images/dagarama/17.png</file>
         <file>images/dagarama/16.png</file>
         <file>icons/SearchIcon.svg</file>
+        <file>images/objects/21/1.jpeg</file>
+        <file>images/objects/21/4.jpeg</file>
+        <file>images/objects/21/2.jpeg</file>
+        <file>images/objects/21/3.jpeg</file>
+        <file>images/objects/21/miniature.png</file>
+        <file>images/objects/10/1.jpeg</file>
+        <file>images/objects/10/4.jpeg</file>
+        <file>images/objects/10/2.jpeg</file>
+        <file>images/objects/10/3.jpeg</file>
+        <file>images/objects/10/miniature.png</file>
+        <file>images/objects/17/1.jpeg</file>
+        <file>images/objects/17/2.jpeg</file>
+        <file>images/objects/17/miniature.png</file>
+        <file>images/objects/18/1.jpeg</file>
+        <file>images/objects/18/2.jpeg</file>
+        <file>images/objects/18/3.jpeg</file>
+        <file>images/objects/18/miniature.png</file>
+        <file>images/objects/16/1.jpeg</file>
+        <file>images/objects/16/4.jpeg</file>
+        <file>images/objects/16/2.jpeg</file>
+        <file>images/objects/16/3.jpeg</file>
+        <file>images/objects/16/miniature.png</file>
+        <file>images/objects/15/1.jpeg</file>
+        <file>images/objects/15/4.jpeg</file>
+        <file>images/objects/15/2.jpeg</file>
+        <file>images/objects/15/3.jpeg</file>
+        <file>images/objects/15/miniature.png</file>
+        <file>images/objects/20/1.jpeg</file>
+        <file>images/objects/20/4.jpeg</file>
+        <file>images/objects/20/2.jpeg</file>
+        <file>images/objects/20/3.jpeg</file>
+        <file>images/objects/20/miniature.png</file>
+        <file>images/objects/19/1.jpeg</file>
+        <file>images/objects/19/4.jpeg</file>
+        <file>images/objects/19/5.jpeg</file>
+        <file>images/objects/19/2.jpeg</file>
+        <file>images/objects/19/3.jpeg</file>
+        <file>images/objects/19/miniature.png</file>
+        <file>images/objects/22/1.jpeg</file>
+        <file>images/objects/22/4.jpeg</file>
+        <file>images/objects/22/5.jpeg</file>
+        <file>images/objects/22/2.jpeg</file>
+        <file>images/objects/22/3.jpeg</file>
+        <file>images/objects/22/miniature.png</file>
     </qresource>
 </RCC>

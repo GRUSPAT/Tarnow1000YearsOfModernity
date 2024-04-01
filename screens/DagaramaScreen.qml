@@ -19,7 +19,7 @@ Item {
         Rectangle {
             id: topBar
             width: rootWindow.width
-            height: rootWindow.height * 0.2
+            height: rootWindow.height * 0.1
             color: primaryColor
             z:1
             Row{
