@@ -245,7 +245,11 @@ Item {
                     implicitHeight: parent.height
                     color: primaryColor
                 }
-                onClicked: stackView.push("qrc:/screens/AboutAppScreen.qml")
+                onClicked: {
+                    mainNavBar.visible = false
+                    slideAnimation.enabled = true
+                    stackView.push("qrc:/screens/AboutAppScreen.qml")
+                }
             }
         }
         Rectangle {
@@ -277,7 +281,11 @@ Item {
                     implicitHeight: parent.height
                     color: primaryColor
                 }
-                onClicked: stackView.push("qrc:/screens/AuthorsScreen.qml")
+                onClicked: {
+                    mainNavBar.visible = false
+                    slideAnimation.enabled = true
+                    stackView.push("qrc:/screens/AuthorsScreen.qml")
+                }
             }
         }
         Rectangle {
@@ -309,7 +317,11 @@ Item {
                     implicitHeight: parent.height
                     color: primaryColor
                 }
-                onClicked: stackView.push("qrc:/screens/LicensesScreen.qml")
+                onClicked: {
+                    mainNavBar.visible = false
+                    slideAnimation.enabled = true
+                    stackView.push("qrc:/screens/LicensesScreen.qml")
+                }
             }
         }
         Rectangle {

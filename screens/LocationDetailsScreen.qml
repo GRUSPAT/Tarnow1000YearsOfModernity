@@ -97,13 +97,12 @@ Item {
                     id: closeButton
                     width: 40
                     height: 40
-                    contentItem: Text {
-                        text: "X"
-                        font.family: font.font.family
-                        font.pixelSize: 20
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
+                    contentItem: IconImage {
+                        anchors.centerIn: parent
+                        width: 34
+                        height: 34
                         color: primaryColor
+                        source: "qrc:/icons/CloseIcon.svg"
                     }
                     background: Rectangle {
                         color: accentColor
