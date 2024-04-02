@@ -8,6 +8,11 @@ Item {
     property color textColor: "#000000"
     property color accentColor: "#5A8A98"
 
+    Rectangle{
+        anchors.fill: parent
+        z:0
+        color: backgroundColor
+    }
     Column {
         width: rootWindow.width
         height: rootWindow.height
@@ -19,11 +24,11 @@ Item {
         Rectangle {
             id: topBar
             width: rootWindow.width
-            height: rootWindow.height * 0.1
+            height: rootWindow.height * 0.12
             color: primaryColor
             z:1
             Row{
-                height: topBar.height * 0.5
+                height: topBar.height
                 width: topBar.width
                 topPadding: 36
                 leftPadding: 20
@@ -31,7 +36,7 @@ Item {
                 Rectangle{
                     anchors.bottom: parent.bottom
                     width: topBar.width * 0.65 - 20
-                    height: topBar.height * 0.5 - 45
+                    height: topBar.height - 45
                     color: primaryColor
                     id: objekty
                     z:1
@@ -46,40 +51,53 @@ Item {
                 }
                 Rectangle{
                     width: topBar.width * 0.35 - 20
-                    height: topBar.height * 0.5 - 36
+                    height: topBar.height - 45
+                    anchors.bottom: parent.bottom
                     color: primaryColor
                     z:1
-                    Image {
+                    RoundButton{
+                        id: closeButton
+                        width: 40
+                        height: 40
                         anchors.right: parent.right
-                        id: topBarLogo
-                        width: 93
-                        height: 44
-                        source: "qrc:/images/Tarnow1000LatLogo.png"
+                        anchors.topMargin: 45
+                        contentItem: IconImage {
+                            anchors.centerIn: parent
+                            width: 34
+                            height: 34
+                            color: primaryColor
+                            source: "qrc:/icons/CloseIcon.svg"
+                        }
+                        background: Rectangle {
+                            color: accentColor
+                            radius: 5
+                            opacity: closeButton.pressed ? 0.5 : 1.0
+                        }
+                        onClicked: {
+                            mainNavBar.visible = true
+                            slideAnimation.enabled = false
+                            stackView.pop()
+                        }
                     }
                 }
             }
         }
-        Rectangle {
-            width: rootWindow.width
-            height: 1
-            color: "black"
-        }
         ScrollView{
             id: jakies
             width: rootWindow.width
-            height: rootWindow.height *0.73
+            height: rootWindow.height * 0.88
             contentHeight: rowcontent.height
             //clip: true
             ScrollBar.vertical.policy: ScrollBar.AlwaysOn
 
             Row{
                 id: rowcontent
-                width: rootWindow.width-198
+                width: rootWindow.width - 198
                 height: 2000
                 spacing: 0
 
                 Column{
-                    width: rootWindow.width* 0.5 -9
+                    width: rootWindow.width * 0.5 - 9
                     height: parent.height
                     spacing: 9
 
@@ -87,15 +105,14 @@ Item {
                         width: parent.width
                         model: 8
                         Image{
-                            width: rootWindow.width* 0.5 -9
+                            width: rootWindow.width* 0.5 - 9
                             source: `qrc:/images/dagarama/${index + 1}`
                             fillMode: Image.PreserveAspectFit
                         }
                     }
-
                 }
                 Column{
-                    width: rootWindow.width* 0.5 -9
+                    width: rootWindow.width * 0.5 - 9
                     height: parent.height
                     spacing: 9
 
@@ -103,15 +120,13 @@ Item {
                         width: parent.width
                         model: 10
                         Image{
-                            width: rootWindow.width* 0.5 -9
+                            width: rootWindow.width* 0.5 - 9
                             source: `qrc:/images/dagarama/${index + 9}`
                             fillMode: Image.PreserveAspectFit
                         }
                     }
-
                 }
             }
         }
-
     }
 }

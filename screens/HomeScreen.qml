@@ -76,7 +76,6 @@ Item{
                             id: imageRectangle
                             width: parent.width - 24
                             height: parent.height * 0.58
-                            color: "blue"
                             radius: 20
                            // anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -118,11 +117,13 @@ Item{
                             background: Rectangle {
                                 radius: detailsButton.radius
                                 color: accentColor
+                                opacity: detailsButton.pressed ? 0.5 : 1.0
                             }
                             anchors.right: parent.right
                             anchors.rightMargin: 8
                             anchors.bottomMargin: 8
                             onClicked: {
+                                mainNavBar.visible = false
                                 slideAnimation.enabled = true
                                 stackView.push("qrc:/screens/TarnowScreen.qml")
                             }
@@ -154,7 +155,6 @@ Item{
                             id: imageRectangleSecond
                             width: parent.width - 24
                             height: parent.height * 0.58
-                            color: "red"
                             radius: 20
                             anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -196,11 +196,13 @@ Item{
                             background: Rectangle {
                                 radius: detailsButton.radius
                                 color: accentColor
+                                opacity: detailsButtonSecond.pressed ? 0.5 : 1.0
                             }
                             anchors.right: parent.right
                             anchors.rightMargin: 8
                             anchors.bottomMargin: 8
                             onClicked: {
+                                mainNavBar.visible = false
                                 slideAnimation.enabled = true
                                 stackView.push("qrc:/screens/DagaramaScreen.qml")
                             }
