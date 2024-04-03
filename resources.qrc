@@ -429,5 +429,6 @@
         <file>images/objects/22/2.jpeg</file>
         <file>images/objects/22/3.jpeg</file>
         <file>images/objects/22/miniature.png</file>
+        <file>screens/InitialScreen.qml</file>
     </qresource>
 </RCC>
