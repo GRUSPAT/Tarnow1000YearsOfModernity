@@ -485,8 +485,8 @@ Item {
 
                         sourceItem: RoundButton {
                             id: markerButton
-                            width: 18
-                            height: 23
+                            width: markerPopup.visible ? 23 : 18
+                            height: markerPopup.visible ? 28 : 23
 
                             Popup {
                                 id: markerPopup
@@ -621,6 +621,7 @@ Item {
                                                     }
                                                     onClicked: {
                                                         markerPopup.visible = false
+                                                        mainNavBar.visible = false
                                                         slideAnimation.enabled = true
                                                         stackView.push("qrc:/screens/LocationDetailsScreen.qml", {modelData})
                                                     }
@@ -751,7 +752,7 @@ Item {
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: font2.font.family
-                                font.pixelSize: 9
+                                font.pixelSize: markerPopup.visible ? 11 : 9
                             }
                             background: Rectangle {
                                 anchors.fill: parent
@@ -765,6 +766,18 @@ Item {
                                     height: parent.height
                                     anchors.fill: parent
                                     source: "qrc:/icons/MarkerIcon.svg"
+                                }
+                            }
+                            Behavior on width {
+                                NumberAnimation {
+                                    duration: 300
+                                    easing.type: Easing.InOutQuad
+                                }
+                            }
+                            Behavior on height {
+                                NumberAnimation {
+                                    duration: 300
+                                    easing.type: Easing.InOutQuad
                                 }
                             }
                             onClicked: {

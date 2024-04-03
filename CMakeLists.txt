@@ -63,6 +63,7 @@ qt_add_qml_module(appTarnow1000YearsOfModernity
     Info.cmake.macos.plist
     ios/Info.cmake.ios.plist
     ios/LaunchScreen.storyboard
+
     # resources.qrc
 )
 

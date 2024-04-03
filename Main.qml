@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
 import QtPositioning
+import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: rootWindow
@@ -11,8 +12,22 @@ ApplicationWindow {
     height: 932
     visible: true
     title: qsTr("Tarnów 1000 lat nowoczesności")
+    Settings {
+        id: appSettings
+        property string selectedLanguage: "pl"
+        property bool initialScreenDisplayed: false
+    }
 
-    Component.onCompleted: loadData()
+    Component.onCompleted: {
+        if(appSettings.initialScreenDisplayed){
+            selectedLanguage = appSettings.selectedLanguage
+        } else {
+            slideAnimation.enabled = true
+            mainNavBar.visible = false
+            stackView.push("qrc:/screens/InitialScreen.qml")
+        }
+        loadData()
+    }
 
     property var jsonContext
     property var jsonRoutes
@@ -24,6 +39,7 @@ ApplicationWindow {
     function loadData(){
         let xhr = new XMLHttpRequest();
         let xhr2 = new XMLHttpRequest();
+        let xhr3 = new XMLHttpRequest();
         xhr.open("GET", "qrc:/json/context.json");
         xhr2.open("GET", "qrc:/json/routes.json");
         xhr.onreadystatechange = function() {
@@ -40,6 +56,10 @@ ApplicationWindow {
         }
         xhr.send();
         xhr2.send();
+    }
+
+    onSelectedLanguageChanged: {
+        appSettings.setValue("selectedLanguage", selectedLanguage)
     }
 
     Rectangle{
