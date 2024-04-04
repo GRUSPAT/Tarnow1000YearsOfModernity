@@ -37,7 +37,7 @@ Item{
             leftPadding: 16
             bottomPadding: 8
             width: rootWindow.width
-            height: 100
+            height: parent.height * 0.12
             text: rootWindow.selectedLanguage === "pl" ? "WPROWADZENIE" : "INTRODUCTION"
             font.pixelSize: 24
             //font.weight: 900
@@ -46,7 +46,7 @@ Item{
         SwipeView {
             id: idSwipeView
             width: rootWindow.width
-            height: 300
+            height: parent.height * 0.34
             currentIndex: 0
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
@@ -71,13 +71,11 @@ Item{
                         height: parent.height
                         topPadding: 12
                         bottomPadding: 12
-                        spacing: 8
                         Rectangle {
                             id: imageRectangle
                             width: parent.width - 24
-                            height: parent.height * 0.58
+                            height: parent.height * 0.6
                             radius: 20
-                           // anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
                             Image {
                                 anchors.fill: parent
@@ -91,9 +89,8 @@ Item{
                             verticalAlignment: Text.AlignTop
                             leftPadding: 14
                             rightPadding: 14
-                            topPadding: 6
+                            topPadding: 8
                             width: parent.width
-                            height: 45
                             text: rootWindow.selectedLanguage === "pl" ? "Poznaj historię Tarnów 1000 lat Nowoczesności" : "Explore the history of Tarnow 1000 Years of Modernity"
                             font.bold: true
                             font.pixelSize: 17
@@ -103,7 +100,10 @@ Item{
                         RoundButton {
                             id: detailsButton
                             width: 110
-                            height: 45
+                            height: parent.height * 0.16
+                            anchors.right: parent.right
+                            anchors.rightMargin: 8
+                            anchors.bottomMargin: 8
                             radius: 5
                             contentItem: Text {
                                 text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
@@ -119,9 +119,6 @@ Item{
                                 color: accentColor
                                 opacity: detailsButton.pressed ? 0.5 : 1.0
                             }
-                            anchors.right: parent.right
-                            anchors.rightMargin: 8
-                            anchors.bottomMargin: 8
                             onClicked: {
                                 mainNavBar.visible = false
                                 slideAnimation.enabled = true
@@ -150,13 +147,11 @@ Item{
                         height: parent.height
                         topPadding: 12
                         bottomPadding: 12
-                        spacing: 8
                         Rectangle {
                             id: imageRectangleSecond
                             width: parent.width - 24
-                            height: parent.height * 0.58
+                            height: parent.height * 0.6
                             radius: 20
-                            anchors.margins: 12
                             anchors.horizontalCenter: parent.horizontalCenter
                             Image {
                                 anchors.fill: parent
@@ -168,11 +163,10 @@ Item{
                             id: titleTextSecond
                             horizontalAlignment: Text.AlignLeft
                             verticalAlignment: Text.AlignTop
-                            topPadding: 6
                             leftPadding: 14
                             rightPadding: 14
+                            topPadding: 8
                             width: parent.width
-                            height: 45
                             text: rootWindow.selectedLanguage === "pl" ? "Odkryj twórczość Jana Głuszaka Dagamary" : "Discover the work of Jan Glushak Dagamara"
                             font.bold: true
                             font.pixelSize: 17
@@ -182,7 +176,10 @@ Item{
                         RoundButton {
                             id: detailsButtonSecond
                             width: 110
-                            height: 45
+                            height: parent.height * 0.16
+                            anchors.right: parent.right
+                            anchors.rightMargin: 8
+                            anchors.bottomMargin: 8
                             radius: 5
                             contentItem: Text {
                                 text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
@@ -198,9 +195,6 @@ Item{
                                 color: accentColor
                                 opacity: detailsButtonSecond.pressed ? 0.5 : 1.0
                             }
-                            anchors.right: parent.right
-                            anchors.rightMargin: 8
-                            anchors.bottomMargin: 8
                             onClicked: {
                                 mainNavBar.visible = false
                                 slideAnimation.enabled = true
@@ -212,8 +206,8 @@ Item{
             }
         }
         PageIndicator {
-            topPadding: 30
-            bottomPadding: 15
+            topPadding: 10
+            bottomPadding: 14
             id: indicator
             count: idSwipeView.count
             currentIndex: idSwipeView.currentIndex
@@ -242,23 +236,21 @@ Item{
             verticalAlignment: Text.AlignBottom
             leftPadding: 16
             bottomPadding: 8
-            width: rootWindow.width
-            height: 50
+            width: parent.width
+            height: parent.height * 0.04
             text: rootWindow.selectedLanguage === "pl" ? "POLECANE TRASY" : "RECOMMENDED ROUTES"
             font.pixelSize: 24
             font.family: font.font.family
         }
         SwipeView {
             id: idSwipeViewSecond
-            width: rootWindow.width
-            height: 260
-            //contentWidth: rootWindow.width
+            width: parent.width
+            height: parent.height * 0.29
             currentIndex: 0
+            //contentWidth: rootWindow.width
             //anchors.horizontalCenter: parent.horizontalCenter
             //width: rootWindow.width
             //height: 120
-
-
             Item {
                 id: firstRoute
                 width: idSwipeViewSecond.width
@@ -268,7 +260,7 @@ Item{
                     rightPadding: 10
                     spacing: 10
                     Rectangle{
-                        width: firstRoute.width *0.5 - 15
+                        width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
@@ -321,10 +313,11 @@ Item{
                                 text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
                                 font.family: font.font.family
+                                wrapMode: Text.WordWrap
                             }
                             RoundButton{
                                 width: parent.width * 0.5
-                                height: parent.height *0.13
+                                height: parent.height * 0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 contentItem: Text {
                                     text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
@@ -335,7 +328,6 @@ Item{
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
                                 }
-
                                 background: Rectangle {
                                     anchors.fill: parent
                                     width: parent.width
@@ -345,11 +337,10 @@ Item{
                                 }
                             }
                         }
-
                         // anchors.horizontalCenter: parent.horizontalCenter
                     }
                     Rectangle{
-                        width: firstRoute.width *0.5 - 15
+                        width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
@@ -396,9 +387,10 @@ Item{
                                 }
                             }
                             Text{
-                                text: "Przez mościckie wille"
+                                text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
                                 font.family: font.font.family
+                                wrapMode: Text.WordWrap
                             }
                             RoundButton{
                                 width: parent.width * 0.5
@@ -437,7 +429,7 @@ Item{
                     rightPadding: 10
                     spacing: 10
                     Rectangle{
-                        width: firstRoute.width *0.5 - 15
+                        width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
                         color: primaryColor
                         radius: 20
@@ -490,10 +482,11 @@ Item{
                                 text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
                                 font.family: font.font.family
+                                wrapMode: Text.WordWrap
                             }
                             RoundButton{
                                 width: parent.width * 0.5
-                                height: parent.height *0.13
+                                height: parent.height * 0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 contentItem: Text {
                                     text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
@@ -550,7 +543,7 @@ Item{
             }
         }
         PageIndicator {
-            topPadding: 30
+            topPadding: 12
             id: indicatorSecond
             count: idSwipeViewSecond.count
             currentIndex: idSwipeViewSecond.currentIndex

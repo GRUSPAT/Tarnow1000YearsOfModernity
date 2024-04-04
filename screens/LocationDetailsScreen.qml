@@ -110,6 +110,7 @@ Item {
                         opacity: closeButton.pressed ? 0.5 : 1.0
                     }
                     onClicked: {
+                        secondNavBar.visible = false
                         mainNavBar.visible = true
                         slideAnimation.enabled = false
                         stackView.pop()
