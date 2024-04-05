@@ -196,6 +196,7 @@ Item {
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
                                     onClicked: {
+                                        mainNavBar.visible = false
                                         slideAnimation.enabled = true
                                         stackView.push("qrc:/screens/RouteDetailsScreen.qml", {modelData})
                                     }
@@ -220,8 +221,8 @@ Item {
                                             //anchors.margins: 4
                                             anchors.verticalCenter: parent.verticalCenter
                                             width: 16
-                                            height: 16
-                                            source: "qrc:/icons/SettingsIcon.svg"
+                                            height: 16                                            
+                                            source: "qrc:/icons/NavigateIcon.svg"
                                         }
                                         Text {
                                             text: rootWindow.selectedLanguage === "pl" ? "Nawiguj po trasie" : "Navigate the route"
