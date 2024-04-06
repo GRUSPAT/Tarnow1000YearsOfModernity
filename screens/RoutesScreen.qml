@@ -19,43 +19,30 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
+import App 1.0
 
 Item {
-
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-    property color borderColor: "#C5C5C5"
-
-
     Rectangle{
         anchors.fill: parent
         z:0
-        color: backgroundColor
+        color: Style.backgroundColor
     }
     Column {
 
         Component.onCompleted: {
-            homeButton.icon.color = textColor
-            objectsButton.icon.color = textColor
-            mapButton.icon.color = textColor
-            routesButton.icon.color = accentColor
-            settingsButton.icon.color = textColor
+            homeButton.icon.color = Style.textColor
+            objectsButton.icon.color = Style.textColor
+            mapButton.icon.color = Style.textColor
+            routesButton.icon.color = Style.accentColor
+            settingsButton.icon.color = Style.textColor
         }
-
-
         width: rootWindow.width
         height: rootWindow.height
-        FontLoader {
-            id: font
-            source: "qrc:/fonts/Montserrat-Bold.ttf"
-        }
         Rectangle {
             id: topBar
             width: rootWindow.width
             height: rootWindow.height * 0.12
-            color: primaryColor
+            color: Style.primaryColor
             z:1
             Row{
                 height: topBar.height
@@ -67,17 +54,14 @@ Item {
                     anchors.bottom: parent.bottom
                     width: topBar.width * 0.65 - 20
                     height: topBar.height - 45
-                    color: primaryColor
+                    color: Style.primaryColor
                     id: objekty
                     z:1
                     Text {
                         id:topBarLabel
                         anchors.leftMargin: 20
                         anchors.topMargin: 45
-                        font.family: font.font.family
-                        //    font.weight: font.font.weight
-                        //   font.styleName: font.font.styleName
-                        // font.family: font.name
+                        font.family: Style.bold
                         text: rootWindow.selectedLanguage === "pl" ? "TRASY" : "ROUTES"
                         font.pixelSize: 32
                     }
@@ -85,7 +69,7 @@ Item {
                 Rectangle{
                     width: topBar.width * 0.35 - 20
                     height: topBar.height - 36
-                    color: primaryColor
+                    color: Style.primaryColor
                     z:1
                     Image {
                         anchors.right: parent.right
@@ -115,13 +99,12 @@ Item {
                 delegate:
                     Rectangle{
                     id:objectCard
-                    FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                     width: objectsList.width - 20
                     height: 252
                     radius: 20
-                    color: primaryColor
+                    color: Style.primaryColor
                     border.width: 1
-                    border.color: borderColor
+                    border.color: Style.borderColor
                     /*Image {
                         id: objectBG
                         source: "qrc:/images/objects/objectBG.svg"
@@ -132,7 +115,7 @@ Item {
                     Rectangle{
                         width: 104
                         height: 18
-                        color: accentColor
+                        color: Style.accentColor
                         z:1
                         radius: 4
                         anchors.top: parent.top
@@ -142,8 +125,8 @@ Item {
                             anchors.centerIn: parent
                             text: `${modelData.location}`
                             font.pixelSize: 10
-                            font.family: font2.font.family
-                            color: primaryColor
+                            font.family: Style.bold
+                            color: Style.primaryColor
                         }
                     }
                     Column{
@@ -157,7 +140,7 @@ Item {
                             width: parent.width - 32
                             height: parent.width * 0.45
                             border.width: 2
-                            border.color: accentColor
+                            border.color: Style.accentColor
                             color: "transparent"
                             z:0
                             Image {
@@ -178,7 +161,7 @@ Item {
                                 height: parent.height
                                 wrapMode: Text.WordWrap
                                 font.pixelSize: 15
-                                font.family: font2.name
+                                font.family: Style.bold
                                 text: `${modelData.name}`
                             }
                         }
@@ -189,7 +172,7 @@ Item {
                             Rectangle{
                                 width: parent.width * 0.36
                                 height: 44
-                                color: primaryColor
+                                color: Style.primaryColor
                                 RoundButton{
                                     id: moreButton
                                     width: 115
@@ -199,8 +182,8 @@ Item {
                                     contentItem: Text {
                                         text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                         font.pixelSize: 15
-                                        font.family: font2.name
-                                        color: primaryColor
+                                        font.family: Style.bold
+                                        color: Style.primaryColor
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
                                         elide: Text.ElideRight
@@ -209,7 +192,7 @@ Item {
                                     background: Rectangle {
                                         implicitWidth: 115
                                         implicitHeight: 34
-                                        color: accentColor
+                                        color: Style.accentColor
                                         radius: 5
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }
@@ -224,7 +207,7 @@ Item {
                             Rectangle{
                                 width: parent.width * 0.64
                                 height: 44
-                                color: primaryColor
+                                color: Style.primaryColor
                                 RoundButton{
                                     id: navigateButton
                                     width: parent.width - 4
@@ -245,8 +228,8 @@ Item {
                                         Text {
                                             text: rootWindow.selectedLanguage === "pl" ? "Nawiguj po trasie" : "Navigate the route"
                                             font.pixelSize: 15
-                                            font.family: font2.name
-                                            color: accentColor
+                                            font.family: Style.bold
+                                            color: Style.accentColor
                                             horizontalAlignment: Text.AlignHCenter
                                             verticalAlignment: Text.AlignVCenter
                                             elide: Text.ElideRight
@@ -255,9 +238,9 @@ Item {
                                     background: Rectangle {
                                         implicitWidth: parent.width - 4
                                         implicitHeight: 34
-                                        color: navigateButton.pressed ? accentColor : primaryColor
+                                        color: navigateButton.pressed ? Style.accentColor : Style.primaryColor
                                         radius: 5
-                                        border.color: accentColor
+                                        border.color: Style.accentColor
                                         border.width: 1
                                         opacity: navigateButton.pressed ? 0.5 : 1.0
                                     }

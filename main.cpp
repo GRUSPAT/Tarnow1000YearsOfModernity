@@ -3,10 +3,13 @@
 #include <QQmlContext>
 #include <QVariant>
 #include <QGeoRoute>
+#include <QtQml>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
+    qmlRegisterSingletonType(QUrl("qrc:///components/Style.qml"), "App",1,0,"Style");
 
     QQmlApplicationEngine engine;
 

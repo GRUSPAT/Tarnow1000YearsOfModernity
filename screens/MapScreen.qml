@@ -22,21 +22,13 @@ import QtQuick.Controls.Material 2.15
 import QtLocation
 import QtPositioning
 import QtQuick.Effects
+import App 1.0
 
 Item {
     id: mapWindowItem
     width: rootWindow.width
     height: rootWindow.height
     property var modelData
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-    property color borderColor: "#C5C5C5"
-    FontLoader {
-        id: font1
-        source: "qrc:/fonts/Montserrat-Bold.ttf"
-    }
 
     Popup {
         id: routeWindowPopup
@@ -101,7 +93,7 @@ Item {
                         color: 'transparent'
                         Text {
                             id:routePopupLabel
-                            font.family: font1.font.family
+                            font.family: Style.bold
                             text: rootWindow.selectedLanguage === "pl" ? "TRASA" : "ROUTE"
                             font.pixelSize: 32
                         }
@@ -126,8 +118,8 @@ Item {
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     text: rootWindow.selectedLanguage === "pl" ? "UKRYJ TWOJĄ TRASĘ" : "HIDE YOUR ROUTE"
                                     font.pixelSize: 12
-                                    font.family: font1.name
-                                    color: accentColor
+                                    font.family: Style.bold
+                                    color: Style.accentColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -137,10 +129,10 @@ Item {
                                 anchors.fill: parent
                                 implicitWidth: parent.width
                                 implicitHeight: parent.height
-                                color: hideRouteButton.pressed ? accentColor : primaryColor
+                                color: hideRouteButton.pressed ? Style.accentColor : Style.primaryColor
                                 radius: 6
                                 opacity: hideRouteButton.pressed ? 0.5 : 1.0
-                                border.color: accentColor
+                                border.color: Style.accentColor
                                 border.width: 2
                             }
                             onClicked: {
@@ -167,7 +159,6 @@ Item {
                             width: parent.width
                             height: 40
                             color: 'transparent'
-                            FontLoader { id: font3; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                             Row{
                                 width: parent.width
                                 height: parent.height
@@ -179,7 +170,7 @@ Item {
                                     horizontalAlignment: Text.AlignLeft
                                     verticalAlignment: Text.AlignVCenter
                                     font.pixelSize: 26
-                                    font.family: font3.name
+                                    font.family: Style.bold
                                     text: index + 1
                                 }
                                 Text {
@@ -189,7 +180,7 @@ Item {
                                     horizontalAlignment: Text.AlignLeft
                                     verticalAlignment: Text.AlignVCenter
                                     font.pixelSize: 14
-                                    font.family: font3.name
+                                    font.family: Style.bold
                                     wrapMode: Text.WordWrap
                                     text: `${modelData.name}`
                                 }
@@ -210,7 +201,7 @@ Item {
                                             source: "qrc:/icons/CloseIcon.svg"
                                         }
                                         background: Rectangle {
-                                            color: accentColor
+                                            color: Style.accentColor
                                             radius: 5
                                             opacity: deleteButton.pressed ? 0.5 : 1.0
                                         }
@@ -233,11 +224,7 @@ Item {
                             id: footerRectangle
                             width: parent.width
                             height: 40
-                            color: primaryColor
-                            FontLoader {
-                                id: font4
-                                source: "qrc:/fonts/Montserrat-Bold.ttf"
-                            }
+                            color: Style.primaryColor
                             RoundButton{
                                 anchors.centerIn: parent
                                 id: navigateRouteButton
@@ -255,8 +242,8 @@ Item {
                                         anchors.horizontalCenter: parent.horizontalCenter
                                         text: rootWindow.selectedLanguage === "pl" ? "Nawiguj po trasie" : "Navigate to route"
                                         font.pixelSize: 12
-                                        font.family: font4.name
-                                        color: primaryColor
+                                        font.family: Style.bold
+                                        color: Style.primaryColor
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
                                     }
@@ -265,7 +252,7 @@ Item {
                                     anchors.fill: parent
                                     implicitWidth: parent.width
                                     implicitHeight: parent.height
-                                    color: accentColor
+                                    color: Style.accentColor
                                     radius: 6
                                     opacity: navigateRouteButton.pressed ? 0.5 : 1.0
                                 }
@@ -299,8 +286,8 @@ Item {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: rootWindow.selectedLanguage === "pl" ? "Pusta" : "Empty"
                                 font.pixelSize: 12
-                                font.family: font4.name
-                                color: accentColor
+                                font.family: Style.bold
+                                color: Style.accentColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                             }
@@ -331,7 +318,7 @@ Item {
             anchors.fill: parent
             implicitWidth: parent.width
             implicitHeight: parent.height
-            color: primaryColor
+            color: Style.primaryColor
             radius: 20
         }
     }
@@ -339,15 +326,11 @@ Item {
     Column {
         width: rootWindow.width
         height: rootWindow.height
-        FontLoader {
-            id: font
-            source: "qrc:/fonts/Montserrat-Bold.ttf"
-        }
         Rectangle {
             id: topBar
             width: rootWindow.width
             height: rootWindow.height * 0.12
-            color: primaryColor
+            color: Style.primaryColor
             z:1
             Row{
                 height: topBar.height
@@ -359,13 +342,13 @@ Item {
                     anchors.bottom: parent.bottom
                     width: topBar.width * 0.6 - 20
                     height: topBar.height - 45
-                    color: primaryColor
+                    color: Style.primaryColor
                     z:1
                     Text {
                         id:topBarLabel
                         anchors.leftMargin: 20
                         anchors.topMargin: 45
-                        font.family: font.font.family
+                        font.family: Style.bold
                         text: rootWindow.selectedLanguage === "pl" ? "MAPA" : "MAP"
                         font.pixelSize: 32
                     }
@@ -374,7 +357,7 @@ Item {
                     anchors.bottom: parent.bottom
                     width: topBar.width * 0.40 - 20
                     height: topBar.height - 50
-                    color: primaryColor
+                    color: Style.primaryColor
                     z:1
                     RoundButton{
                         id: yourRouteButton
@@ -399,8 +382,8 @@ Item {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: rootWindow.selectedLanguage === "pl" ? "TWOJA TRASA" : "YOUR ROUTE"
                                 font.pixelSize: 13
-                                font.family: font.name
-                                color: accentColor
+                                font.family: Style.bold
+                                color: Style.accentColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
@@ -410,10 +393,10 @@ Item {
                             anchors.fill: parent
                             implicitWidth: parent.width
                             implicitHeight: parent.height
-                            color: yourRouteButton.pressed ? accentColor : primaryColor
+                            color: yourRouteButton.pressed ? Style.accentColor : Style.primaryColor
                             radius: 6
                             opacity: yourRouteButton.pressed ? 0.5 : 1.0
-                            border.color: accentColor
+                            border.color: Style.accentColor
                             border.width: 2
                         }
                         onClicked: {
@@ -432,7 +415,7 @@ Item {
                             width: 20
                             height: 20
                             radius: 10
-                            color: accentColor
+                            color: Style.accentColor
                             Text {
                                 id: circleRouteLength
                                 anchors.centerIn: parent
@@ -440,8 +423,8 @@ Item {
                                 height: parent.height
                                 text: rootWindow.userRoute.length
                                 font.pixelSize: 10
-                                font.family: font.name
-                                color: primaryColor
+                                font.family: Style.bold
+                                color: Style.primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                             }
@@ -450,11 +433,11 @@ Item {
                 }
 
                 Component.onCompleted: {
-                    homeButton.icon.color = textColor
-                    objectsButton.icon.color = textColor
-                    mapButton.icon.color = accentColor
-                    routesButton.icon.color = textColor
-                    settingsButton.icon.color = textColor
+                    homeButton.icon.color = Style.textColor
+                    objectsButton.icon.color = Style.textColor
+                    mapButton.icon.color = Style.accentColor
+                    routesButton.icon.color = Style.textColor
+                    settingsButton.icon.color = Style.textColor
                 }
 
             }
@@ -490,10 +473,6 @@ Item {
                     model: rootWindow.selectedLanguage === "pl" ? rootWindow.jsonContext.context_pl : rootWindow.jsonContext.context_en
 
                     MapQuickItem {
-                        FontLoader {
-                            id: font2
-                            source: "qrc:/fonts/Montserrat-Bold.ttf"
-                        }
                         id: marker
                         property var tempCoordinate: modelData.coordinate.trim().split(",")
                         property int tempId: modelData.id + 1
@@ -528,7 +507,7 @@ Item {
                                     id: markerMenuRectangle
                                     width: markerPopup.width
                                     height: markerPopup.height
-                                    color: primaryColor
+                                    color: Style.primaryColor
                                     radius: 20
                                     z:1
                                     Column{
@@ -542,7 +521,7 @@ Item {
                                             width: parent.width - 6
                                             height: parent.height * 0.5
                                             radius: 12
-                                            color: primaryColor
+                                            color: Style.primaryColor
                                             Image {
                                                 id: objectImage
                                                 width: parent.width
@@ -558,13 +537,13 @@ Item {
                                                     width: 63
                                                     height: 17
                                                     radius: 3
-                                                    color: accentColor
+                                                    color: Style.accentColor
                                                     Text{
                                                         anchors.centerIn: parent
                                                         text: `${modelData.location}`
-                                                        font.family: font2.font.family
+                                                        font.family: Style.bold
                                                         font.pixelSize: 8
-                                                        color: primaryColor
+                                                        color: Style.primaryColor
 
                                                     }
                                                 }
@@ -578,14 +557,14 @@ Item {
                                                 height: 38
                                                 wrapMode: Text.WordWrap
                                                 font.pixelSize: 15
-                                                font.family: font2.name
+                                                font.family: Style.bold
                                                 text: `${modelData.id + 1}. ${modelData.name}`
                                             }
                                         }
                                         Rectangle{
                                             width: parent.width - 6
                                             height: 26
-                                            color: primaryColor
+                                            color: Style.primaryColor
                                             Row{
                                                 anchors.top: parent.top
                                                 width: parent.width
@@ -599,7 +578,7 @@ Item {
                                                 Text {
                                                     topPadding: 3
                                                     text: `${modelData.address}`
-                                                    font.family: font2.name
+                                                    font.family: Style.bold
                                                     font.pixelSize: 11
                                                 }
                                             }
@@ -622,8 +601,8 @@ Item {
                                                     contentItem: Text {
                                                         text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                                         font.pixelSize: 14
-                                                        font.family: font2.name
-                                                        color: primaryColor
+                                                        font.family: Style.bold
+                                                        color: Style.primaryColor
                                                         horizontalAlignment: Text.AlignHCenter
                                                         verticalAlignment: Text.AlignVCenter
                                                         elide: Text.ElideRight
@@ -633,7 +612,7 @@ Item {
                                                         anchors.fill: parent
                                                         implicitWidth: parent.width
                                                         implicitHeight: parent.height
-                                                        color: accentColor
+                                                        color: Style.accentColor
                                                         radius: 6
                                                         opacity: moreButton2.pressed ? 0.5 : 1.0
                                                     }
@@ -674,8 +653,8 @@ Item {
                                                                 anchors.verticalCenter: parent.verticalCenter
                                                                 text: rootWindow.selectedLanguage === "pl" ? "Dodaj do twojej trasy" : "Add to your route"
                                                                 font.pixelSize: 14
-                                                                font.family: font2.name
-                                                                color: primaryColor
+                                                                font.family: Style.bold
+                                                                color: Style.primaryColor
                                                                 horizontalAlignment: Text.AlignHCenter
                                                                 verticalAlignment: Text.AlignVCenter
                                                                 elide: Text.ElideRight
@@ -685,7 +664,7 @@ Item {
                                                             anchors.fill: parent
                                                             implicitWidth: parent.width
                                                             implicitHeight: parent.height
-                                                            color: accentColor
+                                                            color: Style.accentColor
                                                             radius: 6
                                                             opacity: addToRouteButton2.pressed ? 0.5 : 1.0
                                                         }
@@ -720,8 +699,8 @@ Item {
                                                                 anchors.verticalCenter: parent.verticalCenter
                                                                 text: rootWindow.selectedLanguage === "pl" ? "Nawiguj do punktu" : "Navigate to point"
                                                                 font.pixelSize: 14
-                                                                font.family: font2.name
-                                                                color: accentColor
+                                                                font.family: Style.bold
+                                                                color: Style.accentColor
                                                                 horizontalAlignment: Text.AlignHCenter
                                                                 verticalAlignment: Text.AlignVCenter
                                                                 elide: Text.ElideRight
@@ -731,10 +710,10 @@ Item {
                                                             anchors.fill: parent
                                                             implicitWidth: parent.width
                                                             implicitHeight: parent.height
-                                                            color: navigateButton.pressed ? accentColor : primaryColor
+                                                            color: navigateButton.pressed ? Style.accentColor : Style.primaryColor
                                                             radius: 6
                                                             opacity: navigateButton.pressed ? 0.5 : 1.0
-                                                            border.color: accentColor
+                                                            border.color: Style.accentColor
                                                             border.width: 2
                                                         }
                                                         onClicked: {
@@ -750,9 +729,9 @@ Item {
                                     id: markerMenuBackgroundRectangle
                                     width: markerPopup.width
                                     height: markerPopup.height
-                                    color: primaryColor
+                                    color: Style.primaryColor
                                     radius: 20
-                                    border.color: borderColor
+                                    border.color: Style.borderColor
                                     border.width: 1
                                     z:1
                                 }
@@ -766,10 +745,10 @@ Item {
                                 anchors.topMargin: 10
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: tempId
-                                color: primaryColor
+                                color: Style.primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
-                                font.family: font2.font.family
+                                font.family: Style.bold
                                 font.pixelSize: markerPopup.visible ? 11 : 9
                             }
                             background: Rectangle {

@@ -20,14 +20,10 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtPositioning
+import App 1.0
 
 Item {
     id: detailsLocationWindow
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-
     property var modelData
 
     Column {
@@ -35,15 +31,11 @@ Item {
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.095
         spacing: -20
-        FontLoader {
-            id: font
-            source: "qrc:/fonts/Montserrat-Bold.ttf"
-        }
         Rectangle{
             id: imagesRectangle
             width: parent.width
             height: parent.height * 0.35
-            color: primaryColor
+            color: Style.primaryColor
             SwipeView{
                 id: imagesSwipeView
                 width: parent.width
@@ -90,7 +82,7 @@ Item {
                     implicitHeight: 8
 
                     radius: width / 2
-                    color: index === indicator.currentIndex ? accentColor : primaryColor
+                    color: index === indicator.currentIndex ? Style.accentColor : Style.primaryColor
 
                     opacity: 1
 
@@ -119,11 +111,11 @@ Item {
                         anchors.centerIn: parent
                         width: 34
                         height: 34
-                        color: primaryColor
+                        color: Style.primaryColor
                         source: "qrc:/icons/CloseIcon.svg"
                     }
                     background: Rectangle {
-                        color: accentColor
+                        color: Style.accentColor
                         radius: 5
                         opacity: closeButton.pressed ? 0.5 : 1.0
                     }
@@ -139,7 +131,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.65
-            color: primaryColor
+            color: Style.primaryColor
             radius: 20
             ScrollView {
                 id: objectDataScroll
@@ -156,22 +148,22 @@ Item {
                         id: nameRectangle
                         width: parent.width
                         height: labelText.contentHeight
-                        color: primaryColor
+                        color: Style.primaryColor
                         Text {
                             id: labelText
                             anchors.fill: parent
                             text: `${modelData.name}`
                             wrapMode: Text.WordWrap
-                            font.family: font.font.family
+                            font.family: Style.bold
                             font.pixelSize: 22
-                            color: textColor
+                            color: Style.textColor
                         }
                     }
                     Rectangle{
                         id: addressRectangle
                         width: parent.width
                         height: 48
-                        color: primaryColor
+                        color: Style.primaryColor
                         Row{
                             width: parent.width
                             height: parent.height - 20
@@ -186,9 +178,9 @@ Item {
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: `${modelData.address}`
-                                font.family: font.name
+                                font.family: Style.bold
                                 font.pixelSize: 11
-                                color: textColor
+                                color: Style.textColor
                             }
                         }
                     }
@@ -196,15 +188,15 @@ Item {
                         id: descriptionRectangle
                         width: parent.width
                         height: parent.height * 0.5
-                        color: primaryColor
+                        color: Style.primaryColor
                         Text {
                             id: descriptionText
                             anchors.fill: parent
                             text: `${modelData.description}`
                             wrapMode: Text.WordWrap
-                            font.family: font.font.family
+                            font.family: Style.bold
                             font.pixelSize: 13
-                            color: textColor
+                            color: Style.textColor
                             lineHeight: 20
                             lineHeightMode: Text.FixedHeight
                             horizontalAlignment: Text.AlignJustify
@@ -259,14 +251,14 @@ Item {
                                     width: 18
                                     height: 18
                                     source: "qrc:/icons/AddressIcon.svg"
-                                    color: primaryColor
+                                    color: Style.primaryColor
                                 }
                                 Text {
                                     anchors.verticalCenter: parent.verticalCenter
                                     text: rootWindow.selectedLanguage === "pl" ? "Pokaż na mapie" : "Show on map"
                                     font.pixelSize: 11
-                                    font.family: font.name
-                                    color: primaryColor
+                                    font.family: Style.bold
+                                    color: Style.primaryColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -276,7 +268,7 @@ Item {
                                 anchors.fill: parent
                                 implicitWidth: parent.width
                                 implicitHeight: parent.height
-                                color: accentColor
+                                color: Style.accentColor
                                 radius: 5
                                 opacity: showOnMap.pressed ? 0.5 : 1.0
                             }
@@ -310,14 +302,14 @@ Item {
                                     width: 18
                                     height: 18
                                     source: "qrc:/icons/NavigateIcon.svg"
-                                    color: primaryColor
+                                    color: Style.primaryColor
                                 }
                                 Text {
                                     anchors.verticalCenter: parent.verticalCenter
                                     text: rootWindow.selectedLanguage === "pl" ? "Nawiguj" : "Navigate"
                                     font.pixelSize: 11
-                                    font.family: font.name
-                                    color: primaryColor
+                                    font.family: Style.bold
+                                    color: Style.primaryColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -327,7 +319,7 @@ Item {
                                 anchors.fill: parent
                                 implicitWidth: parent.width
                                 implicitHeight: parent.height
-                                color: accentColor
+                                color: Style.accentColor
                                 radius: 5
                                 opacity: secondNavigateButton.pressed ? 0.5 : 1.0
                             }

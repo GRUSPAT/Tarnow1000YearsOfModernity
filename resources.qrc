@@ -238,7 +238,6 @@
         <file>offline_tiles/osm_100-l-1-12-2286-1389.png</file>
         <file>offline_tiles/osm_100-l-1-12-2287-1388.png</file>
         <file>offline_tiles/osm_100-l-1-12-2287-1389.png</file>
-        <file>fonts/Montserrat-VariableFont_wght.ttf</file>
         <file>screens/LocationDetailsScreen.qml</file>
         <file>screens/RouteDetailsScreen.qml</file>
         <file>icons/MarkerIcon.svg</file>
@@ -430,5 +429,7 @@
         <file>images/objects/22/3.jpeg</file>
         <file>images/objects/22/miniature.png</file>
         <file>screens/InitialScreen.qml</file>
+        <file>fonts/Montserrat-Regular.ttf</file>
+        <file>components/Style.qml</file>
     </qresource>
 </RCC>

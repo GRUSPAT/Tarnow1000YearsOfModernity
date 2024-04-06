@@ -20,14 +20,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Effects
+import App 1.0
 
 Item {
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-    property color borderColor: "#C5C5C5"
-
     function searchLocations(text) {
         var searchingText = text.toLocaleLowerCase()
         var tempContext = []
@@ -48,20 +43,19 @@ Item {
     }
 
     Component.onCompleted: {
-        homeButton.icon.color = textColor
-        objectsButton.icon.color = accentColor
-        mapButton.icon.color = textColor
-        routesButton.icon.color = textColor
-        settingsButton.icon.color = textColor
+        homeButton.icon.color = Style.textColor
+        objectsButton.icon.color = Style.accentColor
+        mapButton.icon.color = Style.textColor
+        routesButton.icon.color = Style.textColor
+        settingsButton.icon.color = Style.textColor
     }
 
     Rectangle{
         anchors.fill: parent
         z:0
-        color: backgroundColor
+        color: Style.backgroundColor
     }
     Column{
-        FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.095
@@ -69,7 +63,7 @@ Item {
             id: topBar
             width: rootWindow.width
             height: rootWindow.height * 0.2
-            color: primaryColor
+            color: Style.primaryColor
             z:1
             radius: 18
             Column{
@@ -85,13 +79,13 @@ Item {
                         anchors.bottom: parent.bottom
                         width: topBar.width * 0.5 -20
                         height: topBar.height *0.5 -45
-                        color: primaryColor
+                        color: Style.primaryColor
                         id: objekty
                         z:1
                         Text {
                             anchors.leftMargin: 20
                             anchors.topMargin: 45
-                            font.family: font.font.family
+                            font.family: Style.bold
                             id:topBarLabel
                             text: rootWindow.selectedLanguage === "pl" ? "OBIEKTY" : "OBJECTS"
                             font.pixelSize: 32
@@ -100,7 +94,7 @@ Item {
                     Rectangle{
                         width: topBar.width * 0.5 -20
                         height: topBar.height *0.5 -36
-                        color: primaryColor
+                        color: Style.primaryColor
                         z:1
                         Image {
                             anchors.right: parent.right
@@ -121,9 +115,9 @@ Item {
                         height: 42
                         width: parent.width - 40
                         radius: 16
-                        color: primaryColor
+                        color: Style.primaryColor
                         border.width: 1
-                        border.color: accentColor
+                        border.color: Style.accentColor
                         z:1
                         Row{
                             anchors.verticalCenter: parent.verticalCenter
@@ -144,11 +138,11 @@ Item {
                                 anchors.verticalCenter: parent.verticalCenter
                                 width: parent.width - 50
                                 height: 34
-                                font.family: font.font.family
+                                font.family: Style.bold
                                 font.pixelSize: 18
-                                color: textColor
+                                color: Style.textColor
                                 placeholderText: rootWindow.selectedLanguage === "pl" ? "Wyszukaj" : "Search"
-                                placeholderTextColor: textField.activeFocus || (textField.length !== 0) ? "transparent" : accentColor
+                                placeholderTextColor: textField.activeFocus || (textField.length !== 0) ? "transparent" : Style.accentColor
                                 background: Rectangle {
                                     color: "transparent"
                                     border.width: 0
@@ -156,7 +150,7 @@ Item {
                                 opacity: textField.activeFocus || (textField.length !== 0) ? 1 : 0.5
                                 cursorDelegate: Rectangle {
                                     visible: textField.cursorVisible
-                                    color: accentColor
+                                    color: Style.accentColor
                                     width: textField.cursorRectangle.width
                                 }
                                 onTextChanged: searchLocations(textField.text)
@@ -199,7 +193,7 @@ Item {
                     contentItem: Rectangle {
                         implicitWidth: 4
                         radius: 2
-                        color: accentColor
+                        color: Style.accentColor
                     }
                     background: Rectangle {
                         implicitWidth: 4
@@ -209,12 +203,11 @@ Item {
                 delegate:
                     Rectangle{
                     id:objectCard
-                    FontLoader { id: font2; source: "qrc:/fonts/Montserrat-Bold.ttf" }
                     width: objectsList.width - 20
                     height: 260
                     radius: 20
-                    color: primaryColor
-                    border.color: borderColor
+                    color: Style.primaryColor
+                    border.color: Style.borderColor
                     border.width: 1
                     Column{
                         width: parent.width
@@ -242,13 +235,13 @@ Item {
                                     width: 63
                                     height: 17
                                     radius: 3
-                                    color: accentColor
+                                    color: Style.accentColor
                                     Text{
                                         anchors.centerIn: parent
                                         text: `${modelData.location}`
-                                        font.family: font2.font.family
+                                        font.family: Style.bold
                                         font.pixelSize: 8
-                                        color: primaryColor
+                                        color: Style.primaryColor
                                     }
                                 }
                             }
@@ -260,7 +253,7 @@ Item {
                                 width: parent.width - 32
                                 wrapMode: Text.WordWrap
                                 font.pixelSize: 15
-                                font.family: font2.name
+                                font.family: Style.bold
                                 height: 40
                                 text: `${modelData.id + 1}. ${modelData.name}`
                             }
@@ -272,7 +265,7 @@ Item {
                             Rectangle{
                                 width: parent.width * 0.65
                                 height: 44
-                                color: primaryColor
+                                color: Style.primaryColor
                                 Row{
                                     width: parent.width
                                     height: parent.height
@@ -287,7 +280,7 @@ Item {
                                     Text {
                                         anchors.verticalCenter: parent.verticalCenter
                                         text: `${modelData.address}`
-                                        font.family: font2.name
+                                        font.family: Style.bold
                                         font.pixelSize: 11
                                     }
                                 }
@@ -295,7 +288,7 @@ Item {
                             Rectangle{
                                 width: parent.width * 0.35
                                 height: 44
-                                color: primaryColor
+                                color: Style.primaryColor
                                 RoundButton{
                                     id: moreButton
                                     width: 105
@@ -306,8 +299,8 @@ Item {
                                     contentItem: Text {
                                         text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                         font.pixelSize: 15
-                                        font.family: font2.name
-                                        color: primaryColor
+                                        font.family: Style.bold
+                                        color: Style.primaryColor
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
                                         elide: Text.ElideRight
@@ -316,7 +309,7 @@ Item {
                                     background: Rectangle {
                                         implicitWidth: 105
                                         implicitHeight: 34
-                                        color: accentColor
+                                        color: Style.accentColor
                                         radius: 5
                                         opacity: moreButton.pressed ? 0.5 : 1.0
                                     }

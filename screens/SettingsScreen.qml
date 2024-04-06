@@ -20,20 +20,15 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Effects
+import App 1.0
 
 Item {
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-    property color borderColor: "#C5C5C5"
-
     Component.onCompleted: {
-        homeButton.icon.color = textColor
-        objectsButton.icon.color = textColor
-        mapButton.icon.color = textColor
-        routesButton.icon.color = textColor
-        settingsButton.icon.color = accentColor
+        homeButton.icon.color = Style.textColor
+        objectsButton.icon.color = Style.textColor
+        mapButton.icon.color = Style.textColor
+        routesButton.icon.color = Style.textColor
+        settingsButton.icon.color = Style.accentColor
     }
 
     ListModel {
@@ -45,22 +40,18 @@ Item {
     Rectangle{
         anchors.fill: parent
         z:0
-        color: primaryColor
+        color: Style.primaryColor
     }
     Column {
         width: rootWindow.width
         height: rootWindow.height
         bottomPadding: rootWindow.height * 0.07
         //leftPadding: 20
-        FontLoader {
-            id: font
-            source: "qrc:/fonts/Montserrat-Bold.ttf"
-        }
         Rectangle {
             id: topBar
             width: rootWindow.width
             height: rootWindow.height * 0.2
-            color: primaryColor
+            color: Style.primaryColor
             z:1
             Row{
                 height: topBar.height * 0.5
@@ -72,17 +63,14 @@ Item {
                     anchors.bottom: parent.bottom
                     width: topBar.width * 0.65 - 20
                     height: topBar.height *0.5 - 45
-                    color: primaryColor
+                    color: Style.primaryColor
                     id: objekty
                     z:1
                     Text {
                         id:topBarLabel
                         anchors.leftMargin: 20
                         anchors.topMargin: 45
-                        font.family: font.font.family
-                        //    font.weight: font.font.weight
-                        //   font.styleName: font.font.styleName
-                        // font.family: font.name
+                        font.family: Style.bold
                         text: rootWindow.selectedLanguage === "pl" ? "USTAWIENIA" : "SETTINGS"
                         font.pixelSize: 32
                     }
@@ -90,7 +78,7 @@ Item {
                 Rectangle{
                     width: topBar.width * 0.35 - 20
                     height: topBar.height *0.5 - 36
-                    color: primaryColor
+                    color: Style.primaryColor
                     z:1
                     Image {
                         anchors.right: parent.right
@@ -114,13 +102,13 @@ Item {
             Rectangle {
                 width: parent.width * 0.55
                 height: parent.height
-                color: primaryColor
+                color: Style.primaryColor
                 Text {
                     width: parent.width
                     height: parent.height
                     horizontalAlignment: Text.AlignRight
                     verticalAlignment: Text.AlignVCenter
-                    font.family: font.font.family
+                    font.family: Style.bold
                     font.pixelSize: 18
                     text: rootWindow.selectedLanguage === "pl" ? "Wybierz język" : "Select language"
                 }
@@ -128,7 +116,7 @@ Item {
             Rectangle{
                 width: parent.width * 0.45
                 height: parent.height
-                color: primaryColor
+                color: Style.primaryColor
                 RoundButton {
                     id: languageButton
                     width: 105
@@ -139,7 +127,7 @@ Item {
                     contentItem: Text {
                         text: rootWindow.selectedLanguage === "pl" ? "POLSKI" : "ENGLISH"
                         font.pixelSize: 15
-                        font.family: font.font.family
+                        font.family: Style.bold
                         color: "black"
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
@@ -148,17 +136,13 @@ Item {
                     background: Rectangle {
                         implicitWidth: 105
                         implicitHeight: 34
-                        color: primaryColor
+                        color: Style.primaryColor
                         radius: 5
-                        border.color: accentColor
+                        border.color: Style.accentColor
                         border.width: 1
                     }
                     onClicked: languagePopup.visible = true
                     Popup {
-                        FontLoader {
-                            id: font2
-                            source: "qrc:/fonts/Montserrat-Bold.ttf"
-                        }
                         id: languagePopup
                         width: languageButton.width
                         height: 100
@@ -200,7 +184,7 @@ Item {
                                     height: parent.width
                                     text: model.name
                                     font.pixelSize: 14
-                                    font.family: font2.font.family
+                                    font.family: Style.bold
                                     color: "black"
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
@@ -224,7 +208,7 @@ Item {
                             implicitHeight: parent.height
                             color: "white"
                             radius: 8
-                            border.color: borderColor
+                            border.color: Style.borderColor
                             border.width: 1
                         }
 
@@ -242,7 +226,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
-            color: primaryColor
+            color: Style.primaryColor
             RoundButton {
                 id: aboutAppButton
                 width: parent.width
@@ -252,7 +236,7 @@ Item {
                 contentItem: Text {
                     text: rootWindow.selectedLanguage === "pl" ? "O aplikacji" : "About the application"
                     font.pixelSize: 18
-                    font.family: font.font.family
+                    font.family: Style.bold
                     color: "black"
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -261,7 +245,7 @@ Item {
                 background: Rectangle {
                     implicitWidth: parent.width
                     implicitHeight: parent.height
-                    color: primaryColor
+                    color: Style.primaryColor
                 }
                 onClicked: {
                     mainNavBar.visible = false
@@ -278,7 +262,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
-            color: primaryColor
+            color: Style.primaryColor
             RoundButton {
                 id: authorsButton
                 width: parent.width
@@ -288,7 +272,7 @@ Item {
                 contentItem: Text {
                     text: rootWindow.selectedLanguage === "pl" ? "Autorzy" : "Authors"
                     font.pixelSize: 18
-                    font.family: font.font.family
+                    font.family: Style.bold
                     color: "black"
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -297,7 +281,7 @@ Item {
                 background: Rectangle {
                     implicitWidth: parent.width
                     implicitHeight: parent.height
-                    color: primaryColor
+                    color: Style.primaryColor
                 }
                 onClicked: {
                     mainNavBar.visible = false
@@ -314,7 +298,7 @@ Item {
         Rectangle {
             width: rootWindow.width
             height: rootWindow.height * 0.1
-            color: primaryColor
+            color: Style.primaryColor
             RoundButton {
                 id: licensesButton
                 width: parent.width
@@ -324,7 +308,7 @@ Item {
                 contentItem: Text {
                     text: rootWindow.selectedLanguage === "pl" ? "Licencje" : "Licenses"
                     font.pixelSize: 18
-                    font.family: font.font.family
+                    font.family: Style.bold
                     color: "black"
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -333,7 +317,7 @@ Item {
                 background: Rectangle {
                     implicitWidth: parent.width
                     implicitHeight: parent.height
-                    color: primaryColor
+                    color: Style.primaryColor
                 }
                 onClicked: {
                     mainNavBar.visible = false

@@ -19,28 +19,19 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
+import App 1.0
 
 Item {
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-
-    FontLoader {
-        id: font
-        source: "qrc:/fonts/Montserrat-Bold.ttf"
-    }
-
     Rectangle{
         anchors.fill: parent
         z:0
-        color: backgroundColor
+        color: Style.backgroundColor
     }
     Rectangle{
         width: parent.width
         height: parent.height
         anchors.fill: parent
-        color: primaryColor
+        color: Style.primaryColor
         z:1
         RoundButton{
             id: acceptButton
@@ -51,11 +42,11 @@ Item {
                 anchors.centerIn: parent
                 width: parent.width
                 height: parent.height
-                color: primaryColor
+                color: Style.primaryColor
                 text: "Dalej"
             }
             background: Rectangle {
-                color: accentColor
+                color: Style.accentColor
                 radius: 5
                 opacity: acceptButton.pressed ? 0.5 : 1.0
             }

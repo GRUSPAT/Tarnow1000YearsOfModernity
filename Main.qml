@@ -55,6 +55,8 @@ ApplicationWindow {
     property real lastMapZoom: 15
     property var userRoute: []
 
+
+
     function loadData(){
         let xhr = new XMLHttpRequest();
         let xhr2 = new XMLHttpRequest();

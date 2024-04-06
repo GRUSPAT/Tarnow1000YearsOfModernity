@@ -19,32 +19,24 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
+import App 1.0
 
 Item{
     width: rootWindow.width
     height: rootWindow.height
-    property color backgroundColor: "#F2F3F3"
-    property color primaryColor: "#FCFCFC"
-    property color textColor: "#000000"
-    property color accentColor: "#5A8A98"
-    property color borderColor: "#C5C5C5"
-
     Component.onCompleted: {
-        homeButton.icon.color = accentColor
-        objectsButton.icon.color = textColor
-        mapButton.icon.color = textColor
-        routesButton.icon.color = textColor
-        settingsButton.icon.color = textColor
+        homeButton.icon.color = Style.accentColor
+        objectsButton.icon.color = Style.textColor
+        mapButton.icon.color = Style.textColor
+        routesButton.icon.color = Style.textColor
+        settingsButton.icon.color = Style.textColor
     }
-
     Rectangle{
         anchors.fill: parent
         z:0
-        color: backgroundColor
+        color: Style.backgroundColor
     }
     Column{
-        FontLoader { id: font; source: "qrc:/fonts/Montserrat-Bold.ttf" }
-        //FontLoader { id: font22; source: "qrc:/fonts/Montserrat-VariableFont_wght.ttf" }
         width: rootWindow.width
         height: rootWindow.height
         //spacing: 5
@@ -58,8 +50,7 @@ Item{
             height: parent.height * 0.12
             text: rootWindow.selectedLanguage === "pl" ? "WPROWADZENIE" : "INTRODUCTION"
             font.pixelSize: 24
-            //font.weight: 900
-            font.family: font.font.family
+            font.family: Style.regular
         }
         SwipeView {
             id: idSwipeView
@@ -77,13 +68,13 @@ Item{
                 Rectangle{
                     width: idSwipeView.width - 20
                     height: idSwipeView.height
-                    color: primaryColor
+                    color: Style.primaryColor
                     radius: 20
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
                     anchors.horizontalCenter: parent.horizontalCenter
                     border.width: 1
-                    border.color: borderColor
+                    border.color: Style.borderColor
                     Column {
                         width: parent.width
                         height: parent.height
@@ -112,7 +103,7 @@ Item{
                             text: rootWindow.selectedLanguage === "pl" ? "Poznaj historię Tarnów 1000 lat Nowoczesności" : "Explore the history of Tarnow 1000 Years of Modernity"
                             font.bold: true
                             font.pixelSize: 17
-                            font.family: font.font.family
+                            font.family: Style.bold
                             wrapMode: Text.WordWrap
                         }
                         RoundButton {
@@ -125,16 +116,16 @@ Item{
                             radius: 5
                             contentItem: Text {
                                 text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
-                                color: primaryColor
+                                color: Style.primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
                                 font.bold: true
-                                font.family: font.font.family
+                                font.family: Style.bold
                             }
                             background: Rectangle {
                                 radius: detailsButton.radius
-                                color: accentColor
+                                color: Style.accentColor
                                 opacity: detailsButton.pressed ? 0.5 : 1.0
                             }
                             onClicked: {
@@ -153,13 +144,13 @@ Item{
                 Rectangle{
                     width: idSwipeView.width - 20
                     height: idSwipeView.height
-                    color: primaryColor
+                    color: Style.primaryColor
                     radius: 20
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
                     anchors.horizontalCenter: parent.horizontalCenter
                     border.width: 1
-                    border.color: borderColor
+                    border.color: Style.borderColor
                     Column {
                         width: parent.width
                         height: parent.height
@@ -188,7 +179,7 @@ Item{
                             text: rootWindow.selectedLanguage === "pl" ? "Odkryj twórczość Jana Głuszaka Dagamary" : "Discover the work of Jan Glushak Dagamara"
                             font.bold: true
                             font.pixelSize: 17
-                            font.family: font.font.family
+                            font.family: Style.bold
                             wrapMode: Text.WordWrap
                         }
                         RoundButton {
@@ -201,16 +192,16 @@ Item{
                             radius: 5
                             contentItem: Text {
                                 text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
-                                color: primaryColor
+                                color: Style.primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
                                 font.bold: true
-                                font.family: font.font.family
+                                font.family: Style.bold
                             }
                             background: Rectangle {
                                 radius: detailsButton.radius
-                                color: accentColor
+                                color: Style.accentColor
                                 opacity: detailsButtonSecond.pressed ? 0.5 : 1.0
                             }
                             onClicked: {
@@ -235,7 +226,7 @@ Item{
                     implicitHeight: 8
 
                     radius: width / 2
-                    color: accentColor
+                    color: Style.accentColor
 
                     opacity: index === indicator.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
 
@@ -258,7 +249,7 @@ Item{
             height: parent.height * 0.04
             text: rootWindow.selectedLanguage === "pl" ? "POLECANE TRASY" : "RECOMMENDED ROUTES"
             font.pixelSize: 24
-            font.family: font.font.family
+            font.family: Style.regular
         }
         SwipeView {
             id: idSwipeViewSecond
@@ -280,14 +271,14 @@ Item{
                     Rectangle{
                         width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
-                        color: primaryColor
+                        color: Style.primaryColor
                         radius: 20
                         border.width: 1
-                        border.color: borderColor
+                        border.color: Style.borderColor
                         Rectangle{
                             width: 63
                             height: 17
-                            color: accentColor
+                            color: Style.accentColor
                             z:1
                             anchors.top: parent.top
                             anchors.topMargin: 5
@@ -296,8 +287,8 @@ Item{
                                 anchors.centerIn: parent
                                 text: "Mościce"
                                 font.pixelSize: 10
-                                font.family: font.font.family
-                                color: primaryColor
+                                font.family: Style.bold
+                                color: Style.primaryColor
                             }
                         }
                         Column{
@@ -313,7 +304,7 @@ Item{
                                 width: parent.width - 26
                                 height: parent.width - 26
                                 border.width: 2
-                                border.color: accentColor
+                                border.color: Style.accentColor
                                 color: "transparent"
                                 z:0
                                 Image {
@@ -330,7 +321,7 @@ Item{
                             Text{
                                 text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
-                                font.family: font.font.family
+                                font.family: Style.bold
                                 wrapMode: Text.WordWrap
                             }
                             RoundButton{
@@ -340,8 +331,8 @@ Item{
                                 contentItem: Text {
                                     text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
-                                    font.family: font.name
-                                    color: primaryColor
+                                    font.family: Style.bold
+                                    color: Style.primaryColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -350,7 +341,7 @@ Item{
                                     anchors.fill: parent
                                     width: parent.width
                                     height: parent.height
-                                    color: accentColor
+                                    color: Style.accentColor
                                     radius: 3
                                 }
                             }
@@ -360,14 +351,14 @@ Item{
                     Rectangle{
                         width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
-                        color: primaryColor
+                        color: Style.primaryColor
                         radius: 20
                         border.width: 1
-                        border.color: borderColor
+                        border.color: Style.borderColor
                         Rectangle{
                             width: 63
                             height: 17
-                            color: accentColor
+                            color: Style.accentColor
                             z:1
                             anchors.top: parent.top
                             anchors.topMargin: 5
@@ -376,8 +367,8 @@ Item{
                                 anchors.centerIn: parent
                                 text: "Mościce"
                                 font.pixelSize: 10
-                                font.family: font.font.family
-                                color: primaryColor
+                                font.family: Style.bold
+                                color: Style.primaryColor
                             }
                         }
                         Column{
@@ -392,8 +383,8 @@ Item{
                                 width: parent.width - 26
                                 height: parent.width - 26
                                 border.width: 2
-                                border.color: accentColor
-                                color: backgroundColor
+                                border.color: Style.accentColor
+                                color: Style.backgroundColor
                                 Image {
                                     anchors.centerIn: parent
 
@@ -407,7 +398,7 @@ Item{
                             Text{
                                 text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
-                                font.family: font.font.family
+                                font.family: Style.bold
                                 wrapMode: Text.WordWrap
                             }
                             RoundButton{
@@ -417,8 +408,8 @@ Item{
                                 contentItem: Text {
                                     text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
-                                    font.family: font.name
-                                    color: primaryColor
+                                    font.family: Style.bold
+                                    color: Style.primaryColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -428,7 +419,7 @@ Item{
                                     anchors.fill: parent
                                     width: parent.width
                                     height: parent.height
-                                    color: accentColor
+                                    color: Style.accentColor
                                     radius: 3
                                 }
                             }
@@ -449,14 +440,14 @@ Item{
                     Rectangle{
                         width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
-                        color: primaryColor
+                        color: Style.primaryColor
                         radius: 20
                         border.width: 1
-                        border.color: borderColor
+                        border.color: Style.borderColor
                         Rectangle{
                             width: 63
                             height: 17
-                            color: accentColor
+                            color: Style.accentColor
                             z:1
                             anchors.top: parent.top
                             anchors.topMargin: 5
@@ -465,8 +456,8 @@ Item{
                                 anchors.centerIn: parent
                                 text: "Mościce"
                                 font.pixelSize: 10
-                                font.family: font.font.family
-                                color: primaryColor
+                                font.family: Style.bold
+                                color: Style.primaryColor
                             }
                         }
                         Column{
@@ -482,7 +473,7 @@ Item{
                                 width: parent.width - 26
                                 height: parent.width - 26
                                 border.width: 2
-                                border.color: accentColor
+                                border.color: Style.accentColor
                                 color: "transparent"
                                 z:0
                                 Image {
@@ -499,7 +490,7 @@ Item{
                             Text{
                                 text: rootWindow.selectedLanguage === "pl" ? "Przez wille w Mościcach" : "Through the villas of Mościce"
                                 font.pixelSize: 12
-                                font.family: font.font.family
+                                font.family: Style.bold
                                 wrapMode: Text.WordWrap
                             }
                             RoundButton{
@@ -509,8 +500,8 @@ Item{
                                 contentItem: Text {
                                     text: rootWindow.selectedLanguage === "pl" ? "Więcej" : "More"
                                     font.pixelSize: 12
-                                    font.family: font.name
-                                    color: primaryColor
+                                    font.family: Style.bold
+                                    color: Style.primaryColor
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     elide: Text.ElideRight
@@ -520,7 +511,7 @@ Item{
                                     anchors.fill: parent
                                     width: parent.width
                                     height: parent.height
-                                    color: accentColor
+                                    color: Style.accentColor
                                     radius: 3
                                 }
                             }
@@ -529,18 +520,18 @@ Item{
                     Rectangle{
                         width: firstRoute.width * 0.5 - 15
                         height: firstRoute.height
-                        color: accentColor
+                        color: Style.accentColor
                         radius: 20
                         border.width: 1
-                        border.color: borderColor
+                        border.color: Style.borderColor
                         RoundButton{
                             anchors.fill: parent
                             contentItem: Text {
                                 anchors.centerIn: parent
                                 text: rootWindow.selectedLanguage === "pl" ? "Zobacz \n Wszystkie" : "See All"
                                 font.pixelSize: 20
-                                font.family: font.name
-                                color: primaryColor
+                                font.family: Style.bold
+                                color: Style.primaryColor
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 elide: Text.ElideRight
@@ -548,7 +539,7 @@ Item{
 
                             background: Rectangle {
                                 anchors.fill: parent
-                                color: accentColor
+                                color: Style.accentColor
                                 radius: 20
                             }
                             onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
@@ -571,7 +562,7 @@ Item{
                     implicitHeight: 8
 
                     radius: width / 2
-                    color: accentColor
+                    color: Style.accentColor
 
                     opacity: index === indicatorSecond.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
 

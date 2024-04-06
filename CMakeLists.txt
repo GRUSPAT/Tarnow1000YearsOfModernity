@@ -22,6 +22,7 @@ qt_add_executable(appTarnow1000YearsOfModernity
     ${SOURCES}
 )
 
+
 if(APPLE)
     if(IOS)
         #Added name of app
@@ -52,12 +53,17 @@ else()
 #qt_finalize_executable(appTarnow1000YearsOfModernity)
 endif()
 
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/components/Style.qml PROPERTIES
+    QT_QML_SINGLETON_TYPE TRUE
+)
+
 qt_add_qml_module(appTarnow1000YearsOfModernity
     URI Tarnow1000YearsOfModernity
     VERSION 1.0
 
     QML_FILES
     Main.qml
+    components/Style.qml
 
     RESOURCES
     Info.cmake.macos.plist
