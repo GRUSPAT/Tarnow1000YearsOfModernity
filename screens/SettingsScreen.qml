@@ -177,7 +177,6 @@ Item {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 width: parent.width - 20
                                 height: 40
-                                //text: model.name
                                 contentItem: Text {
                                     anchors.centerIn: parent
                                     width: parent.width

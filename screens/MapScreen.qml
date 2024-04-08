@@ -578,8 +578,8 @@ Item {
                                                 Text {
                                                     topPadding: 3
                                                     text: `${modelData.address}`
-                                                    font.family: Style.bold
-                                                    font.pixelSize: 11
+                                                    font.family: Style.regular
+                                                    font.pixelSize: 12
                                                 }
                                             }
                                         }

@@ -21,7 +21,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
 import QtPositioning
-//import Qt.labs.settings 1.0
 import QtCore
 
 ApplicationWindow {
@@ -31,22 +30,6 @@ ApplicationWindow {
     height: 932
     visible: true
     title: qsTr("Tarnów 1000 lat nowoczesności")
-    Settings {
-        id: appSettings
-        property string selectedLanguage: "pl"
-        property bool initialScreenDisplayed: false
-    }
-
-    Component.onCompleted: {
-        if(appSettings.initialScreenDisplayed){
-            selectedLanguage = appSettings.selectedLanguage
-        } else {
-            slideAnimation.enabled = true
-            mainNavBar.visible = false
-            stackView.push("qrc:/screens/InitialScreen.qml")
-        }
-        loadData()
-    }
 
     property var jsonContext
     property var jsonRoutes
@@ -55,7 +38,11 @@ ApplicationWindow {
     property real lastMapZoom: 15
     property var userRoute: []
 
-
+    Settings {
+        id: appSettings
+        property string selectedLanguage: "pl"
+        property bool initialScreenDisplayed: false
+    }
 
     function loadData(){
         let xhr = new XMLHttpRequest();
@@ -83,6 +70,17 @@ ApplicationWindow {
         appSettings.setValue("selectedLanguage", selectedLanguage)
     }
 
+    Component.onCompleted: {
+        if(appSettings.initialScreenDisplayed){
+            selectedLanguage = appSettings.selectedLanguage
+        } else {
+            slideAnimation.enabled = true
+            mainNavBar.visible = false
+            stackView.push("qrc:/screens/InitialScreen.qml")
+        }
+        loadData()
+    }
+
     Rectangle{
         id: mainNavBar
         anchors{
@@ -94,14 +92,12 @@ ApplicationWindow {
         z:1
         color: "white"
         Rectangle{
-            //z:1
             anchors.top: parent.top
             height: 1
             width: parent.width
             color: "#C5C5C5"
         }
         RowLayout {
-            // anchors.centerIn: parent
             anchors.top: parent.top
             anchors.horizontalCenter: parent.horizontalCenter
             Button {

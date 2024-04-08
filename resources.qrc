@@ -431,5 +431,6 @@
         <file>screens/InitialScreen.qml</file>
         <file>fonts/Montserrat-Regular.ttf</file>
         <file>components/Style.qml</file>
+        <file>images/Tarnow1000LatLogo_2.png</file>
     </qresource>
 </RCC>

@@ -39,7 +39,6 @@ Item{
     Column{
         width: rootWindow.width
         height: rootWindow.height
-        //spacing: 5
         Text {
             id: firtsText
             horizontalAlignment: Text.AlignLeft
@@ -57,10 +56,6 @@ Item{
             width: rootWindow.width
             height: parent.height * 0.34
             currentIndex: 0
-            //anchors.horizontalCenter: parent.horizontalCenter
-            //width: rootWindow.width
-            //height: 120
-
             Item {
                 id: firstPage
                 width: idSwipeView.width
@@ -222,22 +217,18 @@ Item{
             currentIndex: idSwipeView.currentIndex
             anchors.horizontalCenter: idSwipeView.horizontalCenter
             delegate: Rectangle {
-                    implicitWidth: 8
-                    implicitHeight: 8
-
-                    radius: width / 2
-                    color: Style.accentColor
-
-                    opacity: index === indicator.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
-
-                    required property int index
-
-                    Behavior on opacity {
-                        OpacityAnimator {
-                            duration: 100
-                        }
+                required property int index
+                implicitWidth: 8
+                implicitHeight: 8
+                radius: width / 2
+                color: Style.accentColor
+                opacity: index === indicator.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: 100
                     }
                 }
+            }
         }
         Text {
             id: secondText
@@ -256,10 +247,6 @@ Item{
             width: parent.width
             height: parent.height * 0.29
             currentIndex: 0
-            //contentWidth: rootWindow.width
-            //anchors.horizontalCenter: parent.horizontalCenter
-            //width: rootWindow.width
-            //height: 120
             Item {
                 id: firstRoute
                 width: idSwipeViewSecond.width
@@ -325,6 +312,7 @@ Item{
                                 wrapMode: Text.WordWrap
                             }
                             RoundButton{
+                                id: firstRouteButton
                                 width: parent.width * 0.5
                                 height: parent.height * 0.13
                                 anchors.horizontalCenter: parent.horizontalCenter
@@ -342,11 +330,16 @@ Item{
                                     width: parent.width
                                     height: parent.height
                                     color: Style.accentColor
+                                    opacity: firstRouteButton.pressed ? 0.5 : 1.0
                                     radius: 3
+                                }
+                                onClicked: {
+                                    //mainNavBar.visible = false
+                                    //slideAnimation.enabled = true
+                                    //stackView.push("qrc:/screens/InitialScreen.qml")
                                 }
                             }
                         }
-                        // anchors.horizontalCenter: parent.horizontalCenter
                     }
                     Rectangle{
                         width: firstRoute.width * 0.5 - 15
@@ -424,7 +417,6 @@ Item{
                                 }
                             }
                         }
-                        // anchors.horizontalCenter: parent.horizontalCenter
                     }
                 }
 
@@ -544,9 +536,6 @@ Item{
                             }
                             onClicked: stackView.push("qrc:/screens/RoutesScreen.qml")
                         }
-
-                        // anchors.horizontalCenter: parent.horizontalCenter
-
                     }
                 }
             }
@@ -558,22 +547,18 @@ Item{
             currentIndex: idSwipeViewSecond.currentIndex
             anchors.horizontalCenter: parent.horizontalCenter
             delegate: Rectangle {
-                    implicitWidth: 8
-                    implicitHeight: 8
-
-                    radius: width / 2
-                    color: Style.accentColor
-
-                    opacity: index === indicatorSecond.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
-
-                    required property int index
-
-                    Behavior on opacity {
-                        OpacityAnimator {
-                            duration: 100
-                        }
+                required property int index
+                implicitWidth: 8
+                implicitHeight: 8
+                radius: width / 2
+                color: Style.accentColor
+                opacity: index === indicatorSecond.currentIndex ? 0.95 : pressed ? 0.7 : 0.45
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: 100
                     }
                 }
+            }
         }
     }
 }

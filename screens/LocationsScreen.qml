@@ -280,8 +280,8 @@ Item {
                                     Text {
                                         anchors.verticalCenter: parent.verticalCenter
                                         text: `${modelData.address}`
-                                        font.family: Style.bold
-                                        font.pixelSize: 11
+                                        font.family: Style.regular
+                                        font.pixelSize: 12
                                     }
                                 }
                             }
