@@ -334,9 +334,9 @@ Item{
                                     radius: 3
                                 }
                                 onClicked: {
-                                    //mainNavBar.visible = false
-                                    //slideAnimation.enabled = true
-                                    //stackView.push("qrc:/screens/InitialScreen.qml")
+                                    mainNavBar.visible = false
+                                    slideAnimation.enabled = true
+                                    stackView.push("qrc:/screens/InitialScreen.qml")
                                 }
                             }
                         }

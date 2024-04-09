@@ -60,6 +60,12 @@ Item {
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
                         source: `qrc:/images/objects/${index + 1}/miniature.png`
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 1
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
                     Timer {
                         id: timer
