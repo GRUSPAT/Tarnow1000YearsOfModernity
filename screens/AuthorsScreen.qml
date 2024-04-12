@@ -92,5 +92,107 @@ Item {
                 }
             }
         }
+        ListModel {
+            id: authorsModelPolish
+            ListElement{
+                title: 'Aplikacja mobilna:'
+                text: 'Patryk Gruszowski \nMichał Groński'
+            }
+            ListElement{
+                title: 'Zdjęcia:'
+                text: 'Adam Pieprzycki'
+            }
+            ListElement{
+                title: 'Materiały:'
+                text: 'Aleksandra Kubisztal'
+            }
+            ListElement{
+                title: 'Tekst:'
+                text: ''
+            }
+            ListElement{
+                title: 'Tłumaczenie:'
+                text: ''
+            }
+            ListElement{
+                title: 'Współpraca:'
+                text: 'Daniel Król \nEwa Łączyńska-Widz'
+            }
+        }
+        ListModel {
+            id: authorsModelEnglish
+            ListElement{
+                title: 'Mobile app:'
+                text: 'Patryk Gruszowski \nMichał Groński'
+            }
+            ListElement{
+                title: 'Photos:'
+                text: 'Adam Pieprzycki'
+            }
+            ListElement{
+                title: 'Materials:'
+                text: 'Aleksandra Kubisztal'
+            }
+            ListElement{
+                title: 'Text:'
+                text: ''
+            }
+            ListElement{
+                title: 'Translation:'
+                text: ''
+            }
+            ListElement{
+                title: 'Collaboration:'
+                text: 'Daniel Król \nEwa Łączyńska-Widz'
+            }
+        }
+        ScrollView {
+            height: rootWindow.height - rootWindow.height * 0.12
+            width: rootWindow.width
+            contentHeight: authorsList.height
+            contentWidth: authorsList.width
+            ListView {
+                id: authorsList
+                width: parent.width
+                topMargin: 20
+                model: rootWindow.selectedLanguage === "pl" ? authorsModelPolish : authorsModelEnglish
+                ScrollBar.vertical: ScrollBar{
+                    id: scroller
+                    interactive: false
+                    policy: ScrollBar.AsNeeded
+                    contentItem: Rectangle {
+                        implicitWidth: 4
+                        radius: 2
+                        color: Style.accentColor
+                    }
+                    background: Rectangle {
+                        implicitWidth: 4
+                        color: 'transparent'
+                    }
+                }
+                delegate:
+                    Column{
+                    width: rootWindow.width - leftPadding - rightPadding
+                    spacing: 5
+                    rightPadding: 20
+                    leftPadding: 20
+                    bottomPadding: 10
+                    Text {
+                        width: parent.width
+                        text: model.title
+                        font.bold: true
+                        font.pixelSize: 14
+                        wrapMode: Text.WordWrap
+                    }
+                    Text {
+                        width: parent.width
+                        text: model.text
+                        font.pixelSize: 12
+                        wrapMode: Text.WordWrap
+                        onLinkActivated: link1 => Qt.openUrlExternally(link1)
+                    }
+                }
+            }
+        }
     }
 }
