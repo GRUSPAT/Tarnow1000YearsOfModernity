@@ -60,6 +60,12 @@ Item {
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
                         source: `qrc:/images/objects/${index + 1}/miniature.png`
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 1
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
                     Timer {
                         id: timer
@@ -103,6 +109,12 @@ Item {
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
                         source: `qrc:/images/objects/${29 - index}/miniature.png`
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 1
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
                     Timer {
                         id: timer2
@@ -135,6 +147,12 @@ Item {
                     width: parent.width * 0.5 - 12
                     fillMode: Image.PreserveAspectFit
                     source: "qrc:/images/Tarnow1000LatLogo_2.png"
+                    Behavior on x {
+                        NumberAnimation {
+                            duration: 1
+                            easing.type: Easing.Linear
+                        }
+                    }
                 }
                 Text {
                     width: parent.width * 0.5 - 20
@@ -170,6 +188,12 @@ Item {
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
                         source: `qrc:/images/objects/${index + 7}/miniature.png`
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 1
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
                     Timer {
                         id: timer3
@@ -213,6 +237,12 @@ Item {
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
                         source: `qrc:/images/objects/${22 - index}/miniature.png`
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 1
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
                     Timer {
                         id: timer4
